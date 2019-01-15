@@ -2,30 +2,30 @@
 <model ref="r:c91a991b-ce09-4e31-a713-2bbd67f3a8e5(ArduinoML.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="6d5f5568-7845-4ac1-ba97-6d57e4d58942" name="Testo" version="0" />
+    <use id="6d5f5568-7845-4ac1-ba97-6d57e4d58942" name="ArduinoML" version="0" />
   </languages>
   <imports />
   <registry>
-    <language id="6d5f5568-7845-4ac1-ba97-6d57e4d58942" name="Testo">
-      <concept id="4335307747509044741" name="Testo.structure.Transition" flags="ng" index="1Qr9PC">
+    <language id="6d5f5568-7845-4ac1-ba97-6d57e4d58942" name="ArduinoML">
+      <concept id="4335307747509044741" name="ArduinoML.structure.Transition" flags="ng" index="1Qr9PC">
         <property id="4335307747509044744" name="value" index="1Qr9P_" />
         <reference id="4335307747509044750" name="sensor" index="1Qr9Pz" />
         <reference id="4335307747509044742" name="next" index="1Qr9PF" />
       </concept>
-      <concept id="4335307747509044705" name="Testo.structure.Brick" flags="ng" index="1Qr9Uc">
+      <concept id="4335307747509044705" name="ArduinoML.structure.Brick" flags="ng" index="1Qr9Uc">
         <property id="4335307747509044721" name="pin" index="1Qr9Us" />
       </concept>
-      <concept id="4335307747509044730" name="Testo.structure.Action" flags="ng" index="1Qr9Un">
+      <concept id="4335307747509044730" name="ArduinoML.structure.Action" flags="ng" index="1Qr9Un">
         <property id="4335307747509044733" name="value" index="1Qr9Ug" />
         <reference id="4335307747509044737" name="actuator" index="1Qr9PG" />
       </concept>
-      <concept id="4335307747509044724" name="Testo.structure.Actuator" flags="ng" index="1Qr9Up" />
-      <concept id="4335307747509044723" name="Testo.structure.Sensor" flags="ng" index="1Qr9Uu" />
-      <concept id="4335307747509044698" name="Testo.structure.State" flags="ng" index="1Qr9UR">
+      <concept id="4335307747509044724" name="ArduinoML.structure.Actuator" flags="ng" index="1Qr9Up" />
+      <concept id="4335307747509044723" name="ArduinoML.structure.Sensor" flags="ng" index="1Qr9Uu" />
+      <concept id="4335307747509044698" name="ArduinoML.structure.State" flags="ng" index="1Qr9UR">
         <child id="4335307747509044739" name="actions" index="1Qr9PI" />
         <child id="4335307747509044753" name="transition" index="1Qr9PW" />
       </concept>
-      <concept id="4335307747509044695" name="Testo.structure.App" flags="ng" index="1Qr9UU">
+      <concept id="4335307747509044695" name="ArduinoML.structure.App" flags="ng" index="1Qr9UU">
         <reference id="4335307747509044717" name="initial" index="1Qr9U0" />
         <child id="4335307747509044712" name="bricks" index="1Qr9U5" />
         <child id="4335307747509044714" name="states" index="1Qr9U7" />
@@ -59,8 +59,9 @@
         <ref role="1Qr9PG" node="3KE6QPahS9E" resolve="led" />
       </node>
       <node concept="1Qr9PC" id="3KE6QPahTHU" role="1Qr9PW">
-        <ref role="1Qr9PF" node="3KE6QPahTHS" resolve="on" />
+        <property role="1Qr9P_" value="HIGH" />
         <ref role="1Qr9Pz" node="3KE6QPahSb2" resolve="button" />
+        <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
       </node>
     </node>
     <node concept="1Qr9Uu" id="3KE6QPahSb2" role="1Qr9U5">

@@ -91,8 +91,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044695");
     b.version(2);
     b.associate("initial", 0x3c2a1b6d4a4685edL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).origin("4335307747509044717").done();
-    b.aggregate("bricks", 0x3c2a1b6d4a4685e8L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L).optional(true).ordered(true).multiple(true).origin("4335307747509044712").done();
-    b.aggregate("states", 0x3c2a1b6d4a4685eaL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(true).ordered(true).multiple(true).origin("4335307747509044714").done();
+    b.aggregate("bricks", 0x3c2a1b6d4a4685e8L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L).optional(false).ordered(true).multiple(true).origin("4335307747509044712").done();
+    b.aggregate("states", 0x3c2a1b6d4a4685eaL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).ordered(true).multiple(true).origin("4335307747509044714").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBrick() {

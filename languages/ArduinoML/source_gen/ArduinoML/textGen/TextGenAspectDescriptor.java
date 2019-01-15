@@ -8,6 +8,9 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.text.rt.TextGenDescriptor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.text.rt.TextGenModelOutline;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class TextGenAspectDescriptor extends TextGenAspectBase {
   private final LanguageConceptSwitch myIndex = new LanguageConceptSwitch();
@@ -19,8 +22,33 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
+      case LanguageConceptSwitch.Action:
+        return new Action_TextGen();
+      case LanguageConceptSwitch.App:
+        return new App_TextGen();
+      case LanguageConceptSwitch.Brick:
+        return new Brick_TextGen();
+      case LanguageConceptSwitch.State:
+        return new State_TextGen();
     }
     return null;
   }
 
+  @Override
+  public void breakdownToUnits(@NotNull TextGenModelOutline outline) {
+    for (SNode root : outline.getModel().getRootNodes()) {
+      if (root.getConcept().equals(MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, "ArduinoML.structure.App"))) {
+        String fname = getFileName_App(root);
+        String ext = getFileExtension_App(root);
+        outline.registerTextUnit((ext == null ? fname : (fname + '.' + ext)), root);
+        continue;
+      }
+    }
+  }
+  private static String getFileName_App(SNode node) {
+    return "main";
+  }
+  private static String getFileExtension_App(SNode node) {
+    return "c";
+  }
 }

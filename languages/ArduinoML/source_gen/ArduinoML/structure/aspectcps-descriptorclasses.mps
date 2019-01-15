@@ -1013,7 +1013,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="54" role="37wK5m">
-            <property role="Xl_RC" value="&quot;LOW&quot;" />
+            <property role="Xl_RC" value="low" />
             <node concept="cd27G" id="5a" role="lGtFl">
               <node concept="3u3nmq" id="5b" role="cd27D">
                 <property role="3u3nmv" value="4335307747509044725" />
@@ -1029,7 +1029,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="56" role="37wK5m">
-            <property role="Xl_RC" value="&quot;LOW&quot;" />
+            <property role="Xl_RC" value="LOW" />
             <node concept="cd27G" id="5e" role="lGtFl">
               <node concept="3u3nmq" id="5f" role="cd27D">
                 <property role="3u3nmv" value="4335307747509044725" />
@@ -1084,7 +1084,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="5u" role="37wK5m">
-            <property role="Xl_RC" value="&quot;HIGH&quot;" />
+            <property role="Xl_RC" value="high" />
             <node concept="cd27G" id="5$" role="lGtFl">
               <node concept="3u3nmq" id="5_" role="cd27D">
                 <property role="3u3nmv" value="4335307747509044725" />
@@ -1100,7 +1100,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="5w" role="37wK5m">
-            <property role="Xl_RC" value="&quot;HIGH&quot;" />
+            <property role="Xl_RC" value="HIGH" />
             <node concept="cd27G" id="5C" role="lGtFl">
               <node concept="3u3nmq" id="5D" role="cd27D">
                 <property role="3u3nmv" value="4335307747509044725" />
@@ -1566,7 +1566,7 @@
       <node concept="39e2AG" id="8j" role="39e3Y0">
         <ref role="39e2AK" to="a90u:3KE6QPahCnR" />
         <node concept="385nmt" id="8l" role="385vvn">
-          <property role="385vuF" value="&quot;HIGH&quot;" />
+          <property role="385vuF" value="high" />
           <node concept="2$VJBW" id="8n" role="385v07">
             <property role="2$VJBR" value="4335307747509044727" />
             <node concept="2x4n5u" id="8o" role="3iCydw">
@@ -1586,7 +1586,7 @@
       <node concept="39e2AG" id="8k" role="39e3Y0">
         <ref role="39e2AK" to="a90u:3KE6QPahCnQ" />
         <node concept="385nmt" id="8q" role="385vvn">
-          <property role="385vuF" value="&quot;LOW&quot;" />
+          <property role="385vuF" value="low" />
           <node concept="2$VJBW" id="8s" role="385v07">
             <property role="2$VJBR" value="4335307747509044726" />
             <node concept="2x4n5u" id="8t" role="3iCydw">
@@ -2779,9 +2779,7 @@
                     </node>
                     <node concept="liA8E" id="fu" role="2OqNvi">
                       <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.optional(boolean):jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2$AggregationLinkBuilder" resolve="optional" />
-                      <node concept="3clFbT" id="fC" role="37wK5m">
-                        <property role="3clFbU" value="true" />
-                      </node>
+                      <node concept="3clFbT" id="fC" role="37wK5m" />
                     </node>
                   </node>
                   <node concept="liA8E" id="fs" role="2OqNvi">
@@ -2846,9 +2844,7 @@
                     </node>
                     <node concept="liA8E" id="fQ" role="2OqNvi">
                       <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.optional(boolean):jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2$AggregationLinkBuilder" resolve="optional" />
-                      <node concept="3clFbT" id="g0" role="37wK5m">
-                        <property role="3clFbU" value="true" />
-                      </node>
+                      <node concept="3clFbT" id="g0" role="37wK5m" />
                     </node>
                   </node>
                   <node concept="liA8E" id="fO" role="2OqNvi">
