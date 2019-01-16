@@ -12,7 +12,12 @@
       <unit at="24,0,88,0" name="ArduinoML.editor.App_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="15,0,34,0" name="ArduinoML.editor.EditorAspectDescriptorImpl" />
+      <unit at="15,0,36,0" name="ArduinoML.editor.EditorAspectDescriptorImpl" />
+    </file>
+    <file name="Transition_SubstituteMenu.java">
+      <unit at="47,0,66,0" name="ArduinoML.editor.Transition_SubstituteMenu$SMP_ReferenceScope_ub2zs1_a" />
+      <unit at="66,0,87,0" name="ArduinoML.editor.Transition_SubstituteMenu$SMP_Subconcepts_ub2zs1_b" />
+      <unit at="24,0,88,0" name="ArduinoML.editor.Transition_SubstituteMenu" />
     </file>
   </root>
 </debug-info>

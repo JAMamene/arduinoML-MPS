@@ -19,9 +19,13 @@ public class App_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
 
-    tgs.append("long time = 0;");
+    tgs.append("#include <SimpleTimer.h>");
     tgs.newLine();
-    tgs.append("long debounce = 200;");
+    tgs.newLine();
+
+    tgs.append("SimpleTimer timer;");
+    tgs.newLine();
+    tgs.append("int timerId = 0;");
     tgs.newLine();
     tgs.newLine();
 
@@ -74,10 +78,16 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
 
-    tgs.append("void loop() { state_");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
-    tgs.append("(); }");
+    tgs.append("void loop() {");
     tgs.newLine();
-
+    ctx.getBuffer().area().increaseIndent();
+    tgs.indent();
+    tgs.append("state_");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+    tgs.append("();");
+    tgs.newLine();
+    ctx.getBuffer().area().decreaseIndent();
+    tgs.append("}");
+    tgs.newLine();
   }
 }

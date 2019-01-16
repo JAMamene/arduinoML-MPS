@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <product version="3" modelHash="9bi7zk9fm32te6hjhd4sox7a51pscwd">
-  <files names="Action_SubstituteMenu.java:App_SubstituteMenu.java:EditorAspectDescriptorImpl.java" />
+  <files names="Action_SubstituteMenu.java:App_SubstituteMenu.java:EditorAspectDescriptorImpl.java:Transition_SubstituteMenu.java" />
 </product>
 

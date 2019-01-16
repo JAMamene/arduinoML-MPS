@@ -14,7 +14,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
   private ConceptPresentation props_Sensor;
+  private ConceptPresentation props_SignalTransition;
   private ConceptPresentation props_State;
+  private ConceptPresentation props_TimedTransition;
   private ConceptPresentation props_Transition;
 
   @Override
@@ -57,6 +59,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Sensor = cpb.create();
         }
         return props_Sensor;
+      case LanguageConceptSwitch.SignalTransition:
+        if (props_SignalTransition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("signal transition");
+          props_SignalTransition = cpb.create();
+        }
+        return props_SignalTransition;
       case LanguageConceptSwitch.State:
         if (props_State == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -64,10 +73,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_State = cpb.create();
         }
         return props_State;
+      case LanguageConceptSwitch.TimedTransition:
+        if (props_TimedTransition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("timed transition");
+          props_TimedTransition = cpb.create();
+        }
+        return props_TimedTransition;
       case LanguageConceptSwitch.Transition:
         if (props_Transition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Transition");
+          cpb.presentationByReference(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next", "", "");
           props_Transition = cpb.create();
         }
         return props_Transition;

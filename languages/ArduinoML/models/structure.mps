@@ -21,6 +21,7 @@
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -166,20 +167,32 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="3KE6QPahCnq" resolve="State" />
     </node>
-    <node concept="1TJgyj" id="3KE6QPahCoe" role="1TKVEi">
-      <property role="IQ2ns" value="4335307747509044750" />
-      <property role="20lmBu" value="reference" />
-      <property role="20lbJX" value="1" />
-      <property role="20kJfa" value="sensor" />
-      <ref role="20lvS9" node="3KE6QPahCnN" resolve="Sensor" />
-    </node>
-    <node concept="1TJgyi" id="3KE6QPahCo8" role="1TKVEl">
-      <property role="IQ2nx" value="4335307747509044744" />
+  </node>
+  <node concept="1TIwiD" id="7oXlMRlT2tz">
+    <property role="EcuMT" value="8520061924428490595" />
+    <property role="TrG5h" value="SignalTransition" />
+    <property role="34LRSv" value="signal transition" />
+    <ref role="1TJDcQ" node="3KE6QPahCo5" resolve="Transition" />
+    <node concept="1TJgyi" id="7oXlMRlT2O6" role="1TKVEl">
+      <property role="IQ2nx" value="8520061924428492038" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" node="3KE6QPahCnP" resolve="SIGNAL" />
     </node>
-    <node concept="1TJgyi" id="7oXlMRlS9hG" role="1TKVEl">
-      <property role="IQ2nx" value="8520061924428256364" />
+    <node concept="1TJgyj" id="7oXlMRlT3eQ" role="1TKVEi">
+      <property role="IQ2ns" value="8520061924428493750" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="sensor" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3KE6QPahCnN" resolve="Sensor" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7oXlMRlT2O8">
+    <property role="EcuMT" value="8520061924428492040" />
+    <property role="TrG5h" value="TimedTransition" />
+    <property role="34LRSv" value="timed transition" />
+    <ref role="1TJDcQ" node="3KE6QPahCo5" resolve="Transition" />
+    <node concept="1TJgyi" id="7oXlMRlT2O9" role="1TKVEl">
+      <property role="IQ2nx" value="8520061924428492041" />
       <property role="TrG5h" value="delay" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
