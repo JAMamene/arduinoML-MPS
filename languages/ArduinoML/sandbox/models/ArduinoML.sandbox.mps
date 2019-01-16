@@ -27,8 +27,9 @@
       <concept id="4335307747509044724" name="ArduinoML.structure.Actuator" flags="ng" index="1Qr9Up" />
       <concept id="4335307747509044723" name="ArduinoML.structure.Sensor" flags="ng" index="1Qr9Uu" />
       <concept id="4335307747509044698" name="ArduinoML.structure.State" flags="ng" index="1Qr9UR">
+        <child id="8967157236216152565" name="timedTransition" index="1LNnKa" />
         <child id="4335307747509044739" name="actions" index="1Qr9PI" />
-        <child id="4335307747509044753" name="transition" index="1Qr9PW" />
+        <child id="4335307747509044753" name="signalTransitions" index="1Qr9PW" />
       </concept>
       <concept id="4335307747509044695" name="ArduinoML.structure.App" flags="ng" index="1Qr9UU">
         <reference id="4335307747509044717" name="initial" index="1Qr9U0" />
@@ -71,9 +72,56 @@
         <property role="1Qr9Ug" value="HIGH" />
         <ref role="1Qr9PG" node="3KE6QPahS9E" resolve="led" />
       </node>
-      <node concept="2zQnC_" id="7oXlMRlU$MX" role="1Qr9PW">
+      <node concept="2zQnC_" id="7LLJvWdK_9g" role="1LNnKa">
         <property role="2zQnC$" value="800" />
         <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
+      </node>
+    </node>
+  </node>
+  <node concept="1Qr9UU" id="7LLJvWdIdZ5">
+    <property role="TrG5h" value="switch2" />
+    <ref role="1Qr9U0" node="3KE6QPahS9$" resolve="off" />
+    <node concept="1Qr9UR" id="7LLJvWdIwX4" role="1Qr9U7">
+      <property role="TrG5h" value="on2" />
+      <node concept="2zQn1e" id="7LLJvWdIwXq" role="1Qr9PW">
+        <ref role="1Qr9PF" node="7LLJvWdIwWh" resolve="off2" />
+        <ref role="2zQmir" node="7LLJvWdIwVS" resolve="button1" />
+      </node>
+      <node concept="1Qr9Un" id="7LLJvWdIwXk" role="1Qr9PI">
+        <property role="1Qr9Ug" value="HIGH" />
+        <ref role="1Qr9PG" node="7LLJvWdIwWd" resolve="led2" />
+      </node>
+      <node concept="2zQn1e" id="7LLJvWdIwXh" role="1Qr9PW">
+        <ref role="1Qr9PF" node="7LLJvWdIwWh" resolve="off2" />
+        <ref role="2zQmir" node="7LLJvWdIwVY" resolve="button2" />
+      </node>
+    </node>
+    <node concept="1Qr9Uu" id="7LLJvWdIwVS" role="1Qr9U5">
+      <property role="TrG5h" value="button1" />
+      <property role="1Qr9Us" value="9" />
+    </node>
+    <node concept="1Qr9Uu" id="7LLJvWdIwVY" role="1Qr9U5">
+      <property role="TrG5h" value="button2" />
+      <property role="1Qr9Us" value="10" />
+    </node>
+    <node concept="1Qr9Up" id="7LLJvWdIwWd" role="1Qr9U5">
+      <property role="TrG5h" value="led2" />
+      <property role="1Qr9Us" value="12" />
+    </node>
+    <node concept="1Qr9UR" id="7LLJvWdIwWh" role="1Qr9U7">
+      <property role="TrG5h" value="off2" />
+      <node concept="1Qr9Un" id="7LLJvWdIwWM" role="1Qr9PI">
+        <ref role="1Qr9PG" node="7LLJvWdIwWd" resolve="led2" />
+      </node>
+      <node concept="2zQn1e" id="7LLJvWdIwWr" role="1Qr9PW">
+        <property role="2zQnCF" value="HIGH" />
+        <ref role="1Qr9PF" node="7LLJvWdIwX4" resolve="on2" />
+        <ref role="2zQmir" node="7LLJvWdIwVS" resolve="button1" />
+      </node>
+      <node concept="2zQn1e" id="7LLJvWdIwXD" role="1Qr9PW">
+        <property role="2zQnCF" value="HIGH" />
+        <ref role="2zQmir" node="7LLJvWdIwVY" resolve="button2" />
+        <ref role="1Qr9PF" node="7LLJvWdIwX4" resolve="on2" />
       </node>
     </node>
   </node>

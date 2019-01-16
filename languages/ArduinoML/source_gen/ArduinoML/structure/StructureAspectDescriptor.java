@@ -103,7 +103,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForBrick() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Brick", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044705");
     b.version(2);
@@ -136,7 +136,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044698");
     b.version(2);
     b.aggregate("actions", 0x3c2a1b6d4a468603L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL).optional(false).ordered(true).multiple(true).origin("4335307747509044739").done();
-    b.aggregate("transition", 0x3c2a1b6d4a468611L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L).optional(false).ordered(true).multiple(false).origin("4335307747509044753").done();
+    b.aggregate("timedTransition", 0x7c71bdff0dbcc1f5L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42d08L).optional(true).ordered(true).multiple(false).origin("8967157236216152565").done();
+    b.aggregate("signalTransitions", 0x3c2a1b6d4a468611L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L).optional(true).ordered(true).multiple(true).origin("4335307747509044753").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimedTransition() {
@@ -151,7 +152,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForTransition() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Transition", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044741");
     b.version(2);
     b.associate("next", 0x3c2a1b6d4a468606L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).origin("4335307747509044742").done();

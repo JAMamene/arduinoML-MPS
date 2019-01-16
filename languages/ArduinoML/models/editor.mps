@@ -6,7 +6,7 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="a90u" ref="r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)" implicit="true" />
+    <import index="a90u" ref="r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -109,9 +109,16 @@
         </node>
         <node concept="3F0ifn" id="5cuNfeiGPjX" role="3EZMnx">
           <property role="3F0ifm" value=":" />
+          <node concept="ljvvj" id="7LLJvWdHRRd" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
         </node>
-        <node concept="3F1sOY" id="5cuNfeiGPk5" role="3EZMnx">
-          <ref role="1NtTu8" to="a90u:3KE6QPahCoh" resolve="transition" />
+        <node concept="3F1sOY" id="7LLJvWdKkIr" role="3EZMnx">
+          <ref role="1NtTu8" to="a90u:7LLJvWdJc7P" resolve="timedTransition" />
+        </node>
+        <node concept="3F2HdR" id="7LLJvWdHRRw" role="3EZMnx">
+          <ref role="1NtTu8" to="a90u:3KE6QPahCoh" resolve="signalTransitions" />
+          <node concept="l2Vlx" id="7LLJvWdHRRy" role="2czzBx" />
         </node>
       </node>
       <node concept="3EZMnI" id="5cuNfeiGPkQ" role="3EZMnx">
