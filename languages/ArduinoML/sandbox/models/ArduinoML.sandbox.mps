@@ -8,6 +8,7 @@
   <registry>
     <language id="6d5f5568-7845-4ac1-ba97-6d57e4d58942" name="ArduinoML">
       <concept id="4335307747509044741" name="ArduinoML.structure.Transition" flags="ng" index="1Qr9PC">
+        <property id="8520061924428256364" name="delay" index="2zRsd1" />
         <property id="4335307747509044744" name="value" index="1Qr9P_" />
         <reference id="4335307747509044750" name="sensor" index="1Qr9Pz" />
         <reference id="4335307747509044742" name="next" index="1Qr9PF" />
@@ -48,6 +49,7 @@
       </node>
       <node concept="1Qr9PC" id="3KE6QPahS9A" role="1Qr9PW">
         <property role="1Qr9P_" value="HIGH" />
+        <property role="2zRsd1" value="100" />
         <ref role="1Qr9Pz" node="3KE6QPahSb2" resolve="button" />
         <ref role="1Qr9PF" node="3KE6QPahTHS" resolve="on" />
       </node>

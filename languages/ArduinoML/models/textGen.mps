@@ -43,10 +43,18 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
     </language>
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
       <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
@@ -439,6 +447,53 @@
             </node>
             <node concept="3izx1p" id="684RFP5JOwJ" role="3cqZAp">
               <node concept="3clFbS" id="684RFP5JOwL" role="3izTki">
+                <node concept="3clFbJ" id="7oXlMRlSC8A" role="3cqZAp">
+                  <node concept="3clFbS" id="7oXlMRlSC8C" role="3clFbx">
+                    <node concept="1bpajm" id="7oXlMRlSFJ3" role="3cqZAp" />
+                    <node concept="lc7rE" id="7oXlMRlSFJE" role="3cqZAp">
+                      <node concept="la8eA" id="7oXlMRlSFK3" role="lcghm">
+                        <property role="lacIc" value="delay(" />
+                      </node>
+                      <node concept="l9hG8" id="7oXlMRlSFLb" role="lcghm">
+                        <node concept="2YIFZM" id="7oXlMRlSHVY" role="lb14g">
+                          <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                          <ref role="37wK5l" to="wyt6:~String.valueOf(int):java.lang.String" resolve="valueOf" />
+                          <node concept="2OqwBi" id="7oXlMRlSJSP" role="37wK5m">
+                            <node concept="2OqwBi" id="7oXlMRlSITd" role="2Oq$k0">
+                              <node concept="117lpO" id="7oXlMRlSIdw" role="2Oq$k0" />
+                              <node concept="3TrEf2" id="7oXlMRlSJ6R" role="2OqNvi">
+                                <ref role="3Tt5mk" to="a90u:3KE6QPahCoh" resolve="transition" />
+                              </node>
+                            </node>
+                            <node concept="3TrcHB" id="7oXlMRlSKJx" role="2OqNvi">
+                              <ref role="3TsBF5" to="a90u:7oXlMRlS9hG" resolve="delay" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="la8eA" id="7oXlMRlSNBv" role="lcghm">
+                        <property role="lacIc" value=");" />
+                      </node>
+                      <node concept="l8MVK" id="7oXlMRlSOiF" role="lcghm" />
+                    </node>
+                  </node>
+                  <node concept="3y3z36" id="7oXlMRlSFA7" role="3clFbw">
+                    <node concept="3cmrfG" id="7oXlMRlSFEH" role="3uHU7w">
+                      <property role="3cmrfH" value="0" />
+                    </node>
+                    <node concept="2OqwBi" id="7oXlMRlSCWs" role="3uHU7B">
+                      <node concept="2OqwBi" id="7oXlMRlSClq" role="2Oq$k0">
+                        <node concept="117lpO" id="7oXlMRlSCdz" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="7oXlMRlSCGo" role="2OqNvi">
+                          <ref role="3Tt5mk" to="a90u:3KE6QPahCoh" resolve="transition" />
+                        </node>
+                      </node>
+                      <node concept="3TrcHB" id="7oXlMRlSD7g" role="2OqNvi">
+                        <ref role="3TsBF5" to="a90u:7oXlMRlS9hG" resolve="delay" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="1bpajm" id="684RFP5KN5I" role="3cqZAp" />
                 <node concept="lc7rE" id="684RFP5JP0y" role="3cqZAp">
                   <node concept="la8eA" id="684RFP5JP0S" role="lcghm">

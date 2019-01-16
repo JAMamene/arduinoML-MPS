@@ -1,16 +1,13 @@
-#include <Arduino.h>
+long time = 0;
+long debounce = 200;
 
 int button = 9;
 int led = 12;
 
-void setup() {
-  pinMode(button, INPUT);
-  pinMode(led, OUTPUT);
-}
-
 void state_off() {
   digitalWrite(12, LOW);  boolean guard = millis() - time > debounce;
   if (digitalRead(9 == HIGH && guard {
+    delay(100);
     time = millis();
     state_on();
   } else {
@@ -28,4 +25,9 @@ void state_on() {
   }
 }
 
+void setup() {
+  pinMode(button, INPUT);
+  pinMode(led, OUTPUT);
+}
 
+void loop() { state_off(); }

@@ -178,6 +178,11 @@
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" node="3KE6QPahCnP" resolve="SIGNAL" />
     </node>
+    <node concept="1TJgyi" id="7oXlMRlS9hG" role="1TKVEl">
+      <property role="IQ2nx" value="8520061924428256364" />
+      <property role="TrG5h" value="delay" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
 </model>
 
