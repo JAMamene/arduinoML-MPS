@@ -57,6 +57,14 @@
         <ref role="1Qr9PF" node="7oXlMRlUvKl" resolve="on" />
       </node>
     </node>
+    <node concept="1Qr9Uu" id="3KE6QPahSb2" role="1Qr9U5">
+      <property role="TrG5h" value="button" />
+      <property role="1Qr9Us" value="9" />
+    </node>
+    <node concept="1Qr9Up" id="3KE6QPahS9E" role="1Qr9U5">
+      <property role="TrG5h" value="led" />
+      <property role="1Qr9Us" value="12" />
+    </node>
     <node concept="1Qr9UR" id="7oXlMRlUvKl" role="1Qr9U7">
       <property role="TrG5h" value="on" />
       <node concept="1Qr9Un" id="7oXlMRlUvKm" role="1Qr9PI">
@@ -67,14 +75,6 @@
         <property role="2zQnC$" value="800" />
         <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
       </node>
-    </node>
-    <node concept="1Qr9Uu" id="3KE6QPahSb2" role="1Qr9U5">
-      <property role="TrG5h" value="button" />
-      <property role="1Qr9Us" value="9" />
-    </node>
-    <node concept="1Qr9Up" id="3KE6QPahS9E" role="1Qr9U5">
-      <property role="TrG5h" value="led" />
-      <property role="1Qr9Us" value="12" />
     </node>
   </node>
 </model>
