@@ -40,6 +40,7 @@ import jetbrains.mps.nodeEditor.cells.SPropertyAccessor;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteEasily;
 import jetbrains.mps.nodeEditor.cellMenu.SPropertySubstituteInfo;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
+import jetbrains.mps.nodeEditor.MPSFonts;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Indent;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
@@ -219,6 +220,9 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
   private EditorCell createConstant_3() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "bricks:");
     editorCell.setCellId("Constant_g38wqt_a2a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -323,6 +327,9 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
   private EditorCell createConstant_5() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "states:");
     editorCell.setCellId("Constant_g38wqt_a4a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }

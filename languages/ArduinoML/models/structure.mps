@@ -183,17 +183,12 @@
     <property role="TrG5h" value="SignalTransition" />
     <property role="34LRSv" value="signal transition" />
     <ref role="1TJDcQ" node="3KE6QPahCo5" resolve="Transition" />
-    <node concept="1TJgyi" id="7oXlMRlT2O6" role="1TKVEl">
-      <property role="IQ2nx" value="8520061924428492038" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" node="3KE6QPahCnP" resolve="SIGNAL" />
-    </node>
-    <node concept="1TJgyj" id="7oXlMRlT3eQ" role="1TKVEi">
-      <property role="IQ2ns" value="8520061924428493750" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="sensor" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3KE6QPahCnN" resolve="Sensor" />
+    <node concept="1TJgyj" id="7LLJvWdLn3M" role="1TKVEi">
+      <property role="IQ2ns" value="8967157236216721650" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="conditions" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="7LLJvWdLn3_" resolve="Condition" />
     </node>
   </node>
   <node concept="1TIwiD" id="7oXlMRlT2O8">
@@ -205,6 +200,23 @@
       <property role="IQ2nx" value="8520061924428492041" />
       <property role="TrG5h" value="delay" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7LLJvWdLn3_">
+    <property role="EcuMT" value="8967157236216721637" />
+    <property role="TrG5h" value="Condition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7LLJvWdLn3C" role="1TKVEi">
+      <property role="IQ2ns" value="8967157236216721640" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="sensor" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3KE6QPahCnN" resolve="Sensor" />
+    </node>
+    <node concept="1TJgyi" id="7LLJvWdLn3A" role="1TKVEl">
+      <property role="IQ2nx" value="8967157236216721638" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" node="3KE6QPahCnP" resolve="SIGNAL" />
     </node>
   </node>
 </model>
