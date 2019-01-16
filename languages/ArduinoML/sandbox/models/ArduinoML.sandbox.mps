@@ -49,7 +49,7 @@
       </node>
       <node concept="1Qr9PC" id="3KE6QPahS9A" role="1Qr9PW">
         <property role="1Qr9P_" value="HIGH" />
-        <property role="2zRsd1" value="100" />
+        <property role="2zRsd1" value="0" />
         <ref role="1Qr9Pz" node="3KE6QPahSb2" resolve="button" />
         <ref role="1Qr9PF" node="3KE6QPahTHS" resolve="on" />
       </node>
@@ -62,6 +62,7 @@
       </node>
       <node concept="1Qr9PC" id="3KE6QPahTHU" role="1Qr9PW">
         <property role="1Qr9P_" value="HIGH" />
+        <property role="2zRsd1" value="0" />
         <ref role="1Qr9Pz" node="3KE6QPahSb2" resolve="button" />
         <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
       </node>
