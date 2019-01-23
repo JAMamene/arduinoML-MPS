@@ -14,6 +14,7 @@ public class Action_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
+    tgs.indent();
     tgs.append("digitalWrite(");
     tgs.append(Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator"))));
     tgs.append(", ");
