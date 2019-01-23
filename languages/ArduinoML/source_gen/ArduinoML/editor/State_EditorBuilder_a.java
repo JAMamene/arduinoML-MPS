@@ -44,7 +44,7 @@ import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
-import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 
 /*package*/ class State_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -188,7 +188,7 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
       }
     }
     protected String getNoTargetText() {
-      return "<no timedTransition>";
+      return " ";
     }
   }
   private EditorCell createRefNodeList_0() {
@@ -231,7 +231,7 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
       getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(signalTransitionsListHandler_sjqidp_b3a0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions")));
       try {
         EditorCell emptyCell = null;
-        emptyCell = super.createEmptyCell();
+        emptyCell = createConstant_1();
         installElementCellActions(null, emptyCell, true);
         setCellContext(emptyCell);
         return emptyCell;
@@ -251,13 +251,19 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
         }
       }
     }
+    private EditorCell createConstant_1() {
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+      editorCell.setCellId("Constant_sjqidp_a1d0a");
+      editorCell.setDefaultText("");
+      return editorCell;
+    }
   }
   private EditorCell createCollection_3() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
     editorCell.setCellId("Collection_sjqidp_b0");
     editorCell.addEditorCell(createIndentCell_1());
     editorCell.addEditorCell(createCollection_4());
-    editorCell.addEditorCell(createCollection_7());
+    editorCell.addEditorCell(createCollection_6());
     return editorCell;
   }
   private EditorCell createIndentCell_1() {
@@ -267,31 +273,17 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
   private EditorCell createCollection_4() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
     editorCell.setCellId("Collection_sjqidp_b1a");
-    editorCell.addEditorCell(createCollection_5());
-    editorCell.addEditorCell(createCollection_6());
+    if (nodeCondition_sjqidp_a0b1a()) {
+      editorCell.addEditorCell(createCollection_5());
+    }
     return editorCell;
+  }
+  private boolean nodeCondition_sjqidp_a0b1a() {
+    return SLinkOperations.getChildren(myNode, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468603L, "actions")).size() > 0;
   }
   private EditorCell createCollection_5() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
     editorCell.setCellId("Collection_sjqidp_a1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_1());
-    return editorCell;
-  }
-  private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "actions:");
-    editorCell.setCellId("Constant_sjqidp_a0b1a");
-    Style style = new StyleImpl();
-    new actionStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createCollection_6() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_sjqidp_b1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
@@ -304,17 +296,17 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
     return editorCell;
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new State_EditorBuilder_a.actionsListHandler_sjqidp_b1b1a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new State_EditorBuilder_a.actionsListHandler_sjqidp_b0b1a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_actions");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class actionsListHandler_sjqidp_b1b1a extends RefNodeListHandler {
+  private static class actionsListHandler_sjqidp_b0b1a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public actionsListHandler_sjqidp_b1b1a(SNode ownerNode, EditorContext context) {
+    public actionsListHandler_sjqidp_b0b1a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -337,10 +329,10 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(actionsListHandler_sjqidp_b1b1a.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468603L, "actions")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(actionsListHandler_sjqidp_b0b1a.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468603L, "actions")));
       try {
         EditorCell emptyCell = null;
-        emptyCell = super.createEmptyCell();
+        emptyCell = createConstant_2();
         installElementCellActions(null, emptyCell, true);
         setCellContext(emptyCell);
         return emptyCell;
@@ -360,8 +352,14 @@ import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
         }
       }
     }
+    private EditorCell createConstant_2() {
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+      editorCell.setCellId("Constant_sjqidp_a1a1b0");
+      editorCell.setDefaultText("");
+      return editorCell;
+    }
   }
-  private EditorCell createCollection_7() {
+  private EditorCell createCollection_6() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
     editorCell.setCellId("Collection_sjqidp_c1a");
     Style style = new StyleImpl();
