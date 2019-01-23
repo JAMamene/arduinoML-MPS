@@ -84,8 +84,8 @@
       <node id="4335307747509044698" at="145,34,146,71" concept="1" />
       <node id="4335307747509044698" at="146,71,147,96" concept="1" />
       <node id="4335307747509044698" at="147,96,148,17" concept="1" />
-      <node id="4335307747509044739" at="148,17,149,200" concept="1" />
-      <node id="8967157236216152565" at="149,200,150,208" concept="1" />
+      <node id="4335307747509044739" at="148,17,149,199" concept="1" />
+      <node id="8967157236216152565" at="149,199,150,208" concept="1" />
       <node id="4335307747509044753" at="150,208,151,209" concept="1" />
       <node id="4335307747509044698" at="151,209,152,22" concept="6" />
       <node id="4335307747509044698" at="143,0,154,0" concept="8" trace="createDescriptorForState#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />

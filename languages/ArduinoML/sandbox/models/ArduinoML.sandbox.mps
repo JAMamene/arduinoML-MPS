@@ -89,7 +89,7 @@
     <node concept="1Qr9UR" id="7LLJvWdIwX4" role="1Qr9U7">
       <property role="TrG5h" value="on2" />
       <node concept="1Qr9Un" id="7LLJvWdIwXk" role="1Qr9PI">
-        <property role="1Qr9Ug" value="HIGH" />
+        <property role="1Qr9Ug" value="LOW" />
         <ref role="1Qr9PG" node="7LLJvWdIwWd" resolve="led1" />
       </node>
       <node concept="2zQn1e" id="7LLJvWdNf0f" role="1Qr9PW">
