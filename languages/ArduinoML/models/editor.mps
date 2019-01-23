@@ -571,6 +571,24 @@
     <ref role="1XX52x" to="a90u:7LLJvWdLn3_" resolve="Condition" />
     <node concept="3EZMnI" id="7LLJvWdLBIj" role="2wV5jI">
       <node concept="l2Vlx" id="7LLJvWdLBIk" role="2iSdaV" />
+      <node concept="3EZMnI" id="7LLJvWdLBIo" role="3EZMnx">
+        <node concept="1iCGBv" id="7LLJvWdLBIp" role="3EZMnx">
+          <ref role="1NtTu8" to="a90u:7LLJvWdLn3C" resolve="sensor" />
+          <node concept="1sVBvm" id="7LLJvWdLBIq" role="1sWHZn">
+            <node concept="3F0A7n" id="7LLJvWdLBIr" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+          <node concept="3Xmtl4" id="9LpcmoLvTx" role="3F10Kt">
+            <node concept="1wgc9g" id="9LpcmoLvT_" role="3XvnJa">
+              <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
+            </node>
+          </node>
+        </node>
+        <node concept="VPM3Z" id="7LLJvWdLBIz" role="3F10Kt" />
+        <node concept="l2Vlx" id="7LLJvWdLBI$" role="2iSdaV" />
+      </node>
       <node concept="3F0A7n" id="7LLJvWdLBIl" role="3EZMnx">
         <ref role="1NtTu8" to="a90u:7LLJvWdLn3A" resolve="value" />
         <node concept="1uO$qF" id="9LpcmoJyNw" role="3F10Kt">
@@ -629,28 +647,6 @@
             <ref role="1wgcnl" node="9LpcmoJXs$" resolve="low" />
           </node>
         </node>
-      </node>
-      <node concept="3EZMnI" id="7LLJvWdLBIm" role="3EZMnx">
-        <node concept="VPM3Z" id="7LLJvWdLBIn" role="3F10Kt" />
-        <node concept="3EZMnI" id="7LLJvWdLBIo" role="3EZMnx">
-          <node concept="1iCGBv" id="7LLJvWdLBIp" role="3EZMnx">
-            <ref role="1NtTu8" to="a90u:7LLJvWdLn3C" resolve="sensor" />
-            <node concept="1sVBvm" id="7LLJvWdLBIq" role="1sWHZn">
-              <node concept="3F0A7n" id="7LLJvWdLBIr" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-            <node concept="3Xmtl4" id="9LpcmoLvTx" role="3F10Kt">
-              <node concept="1wgc9g" id="9LpcmoLvT_" role="3XvnJa">
-                <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
-              </node>
-            </node>
-          </node>
-          <node concept="VPM3Z" id="7LLJvWdLBIz" role="3F10Kt" />
-          <node concept="l2Vlx" id="7LLJvWdLBI$" role="2iSdaV" />
-        </node>
-        <node concept="2iRkQZ" id="7LLJvWdLBI_" role="2iSdaV" />
       </node>
     </node>
   </node>
