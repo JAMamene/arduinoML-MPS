@@ -201,9 +201,11 @@
         </node>
       </node>
       <node concept="1Qr9Un" id="1QSDRM1b9_u" role="1Qr9PI">
+        <property role="1Qr9Ug" value="HIGH" />
         <ref role="1Qr9PG" node="1QSDRM1b9$b" resolve="led" />
       </node>
       <node concept="1Qr9Un" id="1QSDRM1b9_$" role="1Qr9PI">
+        <property role="1Qr9Ug" value="HIGH" />
         <ref role="1Qr9PG" node="1QSDRM1b9$t" resolve="buzzer" />
       </node>
     </node>
@@ -229,11 +231,11 @@
         </node>
       </node>
       <node concept="1Qr9Un" id="1QSDRM1b9$V" role="1Qr9PI">
-        <property role="1Qr9Ug" value="HIGH" />
+        <property role="1Qr9Ug" value="LOW" />
         <ref role="1Qr9PG" node="1QSDRM1b9$b" resolve="led" />
       </node>
       <node concept="1Qr9Un" id="1QSDRM1b9_1" role="1Qr9PI">
-        <property role="1Qr9Ug" value="HIGH" />
+        <property role="1Qr9Ug" value="LOW" />
         <ref role="1Qr9PG" node="1QSDRM1b9$t" resolve="buzzer" />
       </node>
     </node>
@@ -242,7 +244,7 @@
     <property role="TrG5h" value="scenario2" />
     <ref role="1Qr9U0" node="3KE6QPahS9$" resolve="off" />
     <node concept="1Qr9UR" id="1QSDRM1b9AY" role="1Qr9U7">
-      <property role="TrG5h" value="all-on" />
+      <property role="TrG5h" value="on" />
       <node concept="2zQn1e" id="1QSDRM1b9BM" role="1Qr9PW">
         <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
         <node concept="1LHcOq" id="1QSDRM1cF74" role="1LHcOd">
@@ -256,9 +258,11 @@
         </node>
       </node>
       <node concept="1Qr9Un" id="1QSDRM1b9BV" role="1Qr9PI">
+        <property role="1Qr9Ug" value="HIGH" />
         <ref role="1Qr9PG" node="1QSDRM1b9$b" resolve="led" />
       </node>
       <node concept="1Qr9Un" id="1QSDRM1b9C1" role="1Qr9PI">
+        <property role="1Qr9Ug" value="HIGH" />
         <ref role="1Qr9PG" node="1QSDRM1b9$t" resolve="buzzer" />
       </node>
     </node>
@@ -342,7 +346,7 @@
     <property role="TrG5h" value="scenario4" />
     <ref role="1Qr9U0" node="3KE6QPahS9$" resolve="off" />
     <node concept="1Qr9UR" id="1QSDRM1b9Dj" role="1Qr9U7">
-      <property role="TrG5h" value="led-on" />
+      <property role="TrG5h" value="led_on" />
       <node concept="2zQn1e" id="1QSDRM1b9Dt" role="1Qr9PW">
         <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
         <node concept="1LHcOq" id="1QSDRM1b9Dy" role="1LHcOd">
@@ -359,9 +363,9 @@
       </node>
     </node>
     <node concept="1Qr9UR" id="1QSDRM1b9Da" role="1Qr9U7">
-      <property role="TrG5h" value="buzzer-on" />
+      <property role="TrG5h" value="buzzer_on" />
       <node concept="2zQn1e" id="1QSDRM1b9Dh" role="1Qr9PW">
-        <ref role="1Qr9PF" node="1QSDRM1b9Dj" resolve="buzze_off" />
+        <ref role="1Qr9PF" node="1QSDRM1b9Dj" resolve="led_on" />
         <node concept="1LHcOq" id="1QSDRM1b9DB" role="1LHcOd">
           <property role="1LHcOp" value="HIGH" />
           <ref role="1LHcOn" node="1QSDRM1b9$E" resolve="button" />
