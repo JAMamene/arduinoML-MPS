@@ -47,7 +47,7 @@ public class State_Constraints extends BaseConstraintsDescriptor {
         }
       }
     });
-    return cpt.value < 1;
+    return cpt.value < 2;
   }
   private static SNodePointer canBeParentBreakingPoint = new SNodePointer("r:1d73b26c-71d2-455e-a1cb-6f6d8cce5cfa(ArduinoML.constraints)", "2839351917973108161");
 }

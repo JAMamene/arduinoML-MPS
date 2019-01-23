@@ -34,6 +34,7 @@ public class State_TextGen extends TextGenDescriptorBase {
     ctx.getBuffer().area().increaseIndent();
     if ((SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")) != null)) {
       tgs.indent();
+      tgs.append("delay(100);");
       tgs.append("timer.run();");
       tgs.newLine();
     }
