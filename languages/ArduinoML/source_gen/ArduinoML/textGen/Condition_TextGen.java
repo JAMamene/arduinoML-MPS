@@ -18,6 +18,5 @@ public class Condition_TextGen extends TextGenDescriptorBase {
     tgs.append(Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e8L, "sensor"))));
     tgs.append(") == ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e6L, "value")));
-    tgs.append(")");
   }
 }

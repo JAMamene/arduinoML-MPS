@@ -683,9 +683,6 @@
               </node>
             </node>
           </node>
-          <node concept="la8eA" id="7LLJvWdLpRU" role="lcghm">
-            <property role="lacIc" value=")" />
-          </node>
         </node>
       </node>
     </node>
