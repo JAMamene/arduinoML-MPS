@@ -17,6 +17,5 @@ public class Condition_TextGen extends TextGenDescriptorBase {
     tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e8L, "sensor")), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
     tgs.append(") == ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e6L, "value")));
-    tgs.append(")");
   }
 }
