@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-4na2b1e3ykbyl4tpv4j2sjpgcneyoov">
-  <files names="ConstraintsAspectDescriptor.java:State_Constraints.java" />
+<product version="3" modelHash="-65kkzwcfn1j579yuvf9pwar1up77an7">
+  <files names="Brick_Constraints.java:ConstraintsAspectDescriptor.java:State_Constraints.java" />
 </product>
 

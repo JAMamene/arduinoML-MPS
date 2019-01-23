@@ -3,47 +3,50 @@
 SimpleTimer timer;
 int timerId = 0;
 
-int led = 10;
-int buzzer = 12;
-int button = 9;
+int b_led = 10;
+int b_buzzer = 12;
+int b_button = 9;
 
-void state_led-on() {
+void s_buzze_off() {
   timer.deleteTimer(timerId);
     while (1) {
-delay(100);    digitalWrite(10, HIGH);
-digitalWrite(12, LOW);
-    if (digitalRead(9) == HIGH)) {
-      state_off();
+    delay(100);
+    digitalWrite(b_led, HIGH);
+digitalWrite(b_buzzer, LOW);
+    if (digitalRead(b_button) == HIGH)) {
+      s_off();
     }
   }
 }
 
-void state_buzzer-on() {
+void s_buzzer_on() {
   timer.deleteTimer(timerId);
     while (1) {
-delay(100);    digitalWrite(12, HIGH);
-    if (digitalRead(9) == HIGH)) {
-      state_led-on();
+    delay(100);
+    digitalWrite(b_buzzer, HIGH);
+    if (digitalRead(b_button) == HIGH)) {
+      s_buzze_off();
     }
   }
 }
 
-void state_off() {
+void s_off() {
   timer.deleteTimer(timerId);
     while (1) {
-delay(100);    digitalWrite(10, LOW);
-    if (digitalRead(9) == HIGH)) {
-      state_buzzer-on();
+    delay(100);
+    digitalWrite(b_led, LOW);
+    if (digitalRead(b_button) == HIGH)) {
+      s_buzzer_on();
     }
   }
 }
 
 void setup() {
-  pinMode(led, OUTPUT);
-  pinMode(buzzer, OUTPUT);
-  pinMode(button, INPUT);
+  pinMode(b_led, OUTPUT);
+  pinMode(b_buzzer, OUTPUT);
+  pinMode(b_button, INPUT);
 }
 
 void loop() {
-  state_off();
+  s_off();
 }
