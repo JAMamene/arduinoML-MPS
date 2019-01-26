@@ -3,36 +3,50 @@
 SimpleTimer timer;
 int timerId = 0;
 
-int led = 10;
-int button = 9;
+int b_led = 10;
+int b_buzzer = 12;
+int b_button = 9;
 
-void state_off() {
+void s_led_on() {
   timer.deleteTimer(timerId);
     while (1) {
     delay(100);
-    digitalWrite(10, LOW);
-    if (digitalRead(9) == HIGH) {
-      state_on();
+    digitalWrite(b_led, HIGH);
+    digitalWrite(b_buzzer, LOW);
+    if (digitalRead(b_button) == HIGH) {
+      s_off();
     }
   }
 }
 
-void state_on() {
+void s_buzzer_on() {
   timer.deleteTimer(timerId);
     while (1) {
     delay(100);
-    digitalWrite(10, HIGH);
-    if (digitalRead(9) == HIGH) {
-      state_off();
+    digitalWrite(b_buzzer, HIGH);
+    if (digitalRead(b_button) == HIGH) {
+      s_led_on();
+    }
+  }
+}
+
+void s_off() {
+  timer.deleteTimer(timerId);
+    while (1) {
+    delay(100);
+    digitalWrite(b_led, LOW);
+    if (digitalRead(b_button) == HIGH) {
+      s_buzzer_on();
     }
   }
 }
 
 void setup() {
-  pinMode(led, OUTPUT);
-  pinMode(button, INPUT);
+  pinMode(b_led, OUTPUT);
+  pinMode(b_buzzer, OUTPUT);
+  pinMode(b_button, INPUT);
 }
 
 void loop() {
-  state_off();
+  s_off();
 }

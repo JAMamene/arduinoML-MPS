@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-giprcr8ltwk0x5cp41gxoivkinwd9n">
-  <files names="TypesystemDescriptor.java" />
+<product version="3" modelHash="aitbqdqcfdiifmfnj8sy47q85i5p4xh">
+  <files names="TypesystemDescriptor.java:check_App_NonTypesystemRule.java:check_State_NonTypesystemRule.java:check_TimedTransition_NonTypesystemRule.java" />
 </product>
 

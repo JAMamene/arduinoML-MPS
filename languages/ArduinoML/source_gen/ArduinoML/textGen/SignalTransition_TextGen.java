@@ -5,9 +5,9 @@ package ArduinoML.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import ArduinoML.behavior.State__BehaviorDescriptor;
 
@@ -15,27 +15,35 @@ public class SignalTransition_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.indent();
-    tgs.append("if (");
-    {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions"));
-      final SNode lastItem = Sequence.fromIterable(collection).last();
-      for (SNode item : collection) {
-        tgs.appendNode(item);
-        if (item != lastItem) {
-          tgs.append(" && ");
+    if (SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions")).size() > 0) {
+      tgs.indent();
+      tgs.append("if (");
+      {
+        Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions"));
+        final SNode lastItem = Sequence.fromIterable(collection).last();
+        for (SNode item : collection) {
+          tgs.appendNode(item);
+          if (item != lastItem) {
+            tgs.append(" && ");
+          }
         }
       }
+      tgs.append(") {");
+      tgs.newLine();
+      ctx.getBuffer().area().increaseIndent();
+      tgs.indent();
+      tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
+      tgs.append("();");
+      tgs.newLine();
+      ctx.getBuffer().area().decreaseIndent();
+      tgs.indent();
+      tgs.append("}");
     }
-    tgs.append(") {");
-    tgs.newLine();
-    ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
-    tgs.append("();");
-    tgs.newLine();
-    ctx.getBuffer().area().decreaseIndent();
-    tgs.indent();
-    tgs.append("}");
+    if (SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions")).size() == 0) {
+      tgs.indent();
+      tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
+      tgs.append("();");
+      tgs.newLine();
+    }
   }
 }

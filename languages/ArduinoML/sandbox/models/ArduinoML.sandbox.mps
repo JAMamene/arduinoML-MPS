@@ -93,14 +93,14 @@
         <ref role="1Qr9PG" node="7LLJvWdIwWd" resolve="led1" />
       </node>
       <node concept="2zQn1e" id="7LLJvWdNf0f" role="1Qr9PW">
-        <ref role="1Qr9PF" node="7LLJvWdIwX4" resolve="on2" />
+        <ref role="1Qr9PF" node="7LLJvWdIwWh" resolve="off2" />
         <node concept="1LHcOq" id="7LLJvWdNf0h" role="1LHcOd">
           <property role="1LHcOp" value="HIGH" />
           <ref role="1LHcOn" node="7LLJvWdIwVS" resolve="button1" />
         </node>
       </node>
       <node concept="2zQn1e" id="7LLJvWdNf0j" role="1Qr9PW">
-        <ref role="1Qr9PF" node="7LLJvWdIwX4" resolve="on2" />
+        <ref role="1Qr9PF" node="7LLJvWdIwWh" resolve="off2" />
         <node concept="1LHcOq" id="7LLJvWdNf0n" role="1LHcOd">
           <property role="1LHcOp" value="HIGH" />
           <ref role="1LHcOn" node="7LLJvWdIwVY" resolve="button2" />
@@ -125,14 +125,14 @@
         <ref role="1Qr9PG" node="7LLJvWdIwWd" resolve="led1" />
       </node>
       <node concept="2zQn1e" id="7LLJvWdNf03" role="1Qr9PW">
-        <ref role="1Qr9PF" node="7LLJvWdIwWh" resolve="off2" />
+        <ref role="1Qr9PF" node="7LLJvWdIwX4" resolve="on2" />
         <node concept="1LHcOq" id="7LLJvWdNf05" role="1LHcOd">
           <property role="1LHcOp" value="LOW" />
           <ref role="1LHcOn" node="7LLJvWdIwVS" resolve="button1" />
         </node>
       </node>
       <node concept="2zQn1e" id="7LLJvWdNf07" role="1Qr9PW">
-        <ref role="1Qr9PF" node="7LLJvWdIwWh" resolve="off2" />
+        <ref role="1Qr9PF" node="7LLJvWdIwX4" resolve="on2" />
         <node concept="1LHcOq" id="7LLJvWdNf0b" role="1LHcOd">
           <property role="1LHcOp" value="LOW" />
           <ref role="1LHcOn" node="7LLJvWdIwVY" resolve="button2" />
@@ -340,11 +340,11 @@
   </node>
   <node concept="1Qr9UU" id="1QSDRM1b9CW">
     <property role="TrG5h" value="scenario4" />
-    <ref role="1Qr9U0" node="3KE6QPahS9$" resolve="off" />
+    <ref role="1Qr9U0" node="1QSDRM1b9CY" resolve="off" />
     <node concept="1Qr9UR" id="1QSDRM1b9Dj" role="1Qr9U7">
       <property role="TrG5h" value="led_on" />
       <node concept="2zQn1e" id="1QSDRM1b9Dt" role="1Qr9PW">
-        <ref role="1Qr9PF" node="3KE6QPahS9$" resolve="off" />
+        <ref role="1Qr9PF" node="1QSDRM1b9CY" resolve="off" />
         <node concept="1LHcOq" id="1QSDRM1b9Dy" role="1LHcOd">
           <property role="1LHcOp" value="HIGH" />
           <ref role="1LHcOn" node="1QSDRM1b9$E" resolve="button" />
