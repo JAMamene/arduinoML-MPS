@@ -7,25 +7,25 @@ int b_led = 10;
 int b_buzzer = 12;
 int b_button = 9;
 
-void s_led-on() {
+void s_led_on() {
   timer.deleteTimer(timerId);
     while (1) {
     delay(100);
     digitalWrite(b_led, HIGH);
-digitalWrite(b_buzzer, LOW);
+    digitalWrite(b_buzzer, LOW);
     if (digitalRead(b_button) == HIGH) {
       s_off();
     }
   }
 }
 
-void s_buzzer-on() {
+void s_buzzer_on() {
   timer.deleteTimer(timerId);
     while (1) {
     delay(100);
     digitalWrite(b_buzzer, HIGH);
     if (digitalRead(b_button) == HIGH) {
-      s_led-on();
+      s_led_on();
     }
   }
 }
@@ -36,7 +36,7 @@ void s_off() {
     delay(100);
     digitalWrite(b_led, LOW);
     if (digitalRead(b_button) == HIGH) {
-      s_buzzer-on();
+      s_buzzer_on();
     }
   }
 }

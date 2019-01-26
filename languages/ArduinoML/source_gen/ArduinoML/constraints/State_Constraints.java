@@ -4,11 +4,6 @@ package ArduinoML.constraints;
 
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.smodel.runtime.ConstraintFunction;
-import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeParent;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import java.util.Map;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.runtime.PropertyConstraintsDescriptor;
@@ -17,34 +12,12 @@ import jetbrains.mps.smodel.runtime.base.BasePropertyConstraintsDescriptor;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
-import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.smodel.SNodePointer;
 
 public class State_Constraints extends BaseConstraintsDescriptor {
   public State_Constraints() {
     super(MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, "ArduinoML.structure.State"));
   }
 
-  @Override
-  protected ConstraintFunction<ConstraintContext_CanBeParent, Boolean> calculateCanBeParentConstraint() {
-    return new ConstraintFunction<ConstraintContext_CanBeParent, Boolean>() {
-      @NotNull
-      public Boolean invoke(@NotNull ConstraintContext_CanBeParent context, @Nullable CheckingNodeContext checkingNodeContext) {
-        boolean result = staticCanBeAParent(context.getNode(), context.getChildNode(), context.getChildConcept(), context.getLink());
-
-        if (!(result) && checkingNodeContext != null) {
-          checkingNodeContext.setBreakingNode(canBeParentBreakingPoint);
-        }
-
-        return result;
-      }
-    };
-  }
   @Override
   protected Map<SProperty, PropertyConstraintsDescriptor> getSpecifiedProperties() {
     Map<SProperty, PropertyConstraintsDescriptor> properties = new HashMap<SProperty, PropertyConstraintsDescriptor>();
@@ -61,16 +34,4 @@ public class State_Constraints extends BaseConstraintsDescriptor {
     });
     return properties;
   }
-  private static boolean staticCanBeAParent(SNode node, SNode childNode, SAbstractConcept childConcept, SContainmentLink link) {
-    final Wrappers._int cpt = new Wrappers._int(0);
-    ListSequence.fromList(SLinkOperations.getChildren(node, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions"))).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        if (SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions")).size() == 0) {
-          cpt.value++;
-        }
-      }
-    });
-    return cpt.value < 2;
-  }
-  private static SNodePointer canBeParentBreakingPoint = new SNodePointer("r:1d73b26c-71d2-455e-a1cb-6f6d8cce5cfa(ArduinoML.constraints)", "2839351917973108161");
 }

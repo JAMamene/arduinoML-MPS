@@ -281,7 +281,7 @@
     <node concept="1Qr9UR" id="1QSDRM1b9_E" role="1Qr9U7">
       <property role="TrG5h" value="off" />
       <node concept="2zQn1e" id="1QSDRM1b9Ax" role="1Qr9PW">
-        <ref role="1Qr9PF" node="1QSDRM1b9AY" resolve="on" />
+        <ref role="1Qr9PF" node="1QSDRM1b9AY" resolve="all_on" />
         <node concept="1LHcOq" id="1QSDRM1cF6W" role="1LHcOd">
           <property role="1LHcOp" value="HIGH" />
           <ref role="1LHcOn" node="1QSDRM1b9_T" resolve="button2" />

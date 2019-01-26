@@ -35,6 +35,7 @@ public class check_App_NonTypesystemRule extends AbstractNonTypesystemRule_Runti
       SetSequence.fromSet(stateSet).addElement(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(app, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next")));
     }
     while (SetSequence.fromSet(stateSet).count() != prevSize) {
+      prevSize = SetSequence.fromSet(stateSet).count();
       SetSequence.fromSet(stateSet).visitAll(new IVisitor<SNode>() {
         public void visit(SNode it) {
           ListSequence.fromList(SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions"))).visitAll(new IVisitor<SNode>() {
@@ -47,7 +48,6 @@ public class check_App_NonTypesystemRule extends AbstractNonTypesystemRule_Runti
           }
         }
       });
-      prevSize = SetSequence.fromSet(stateSet).count();
     }
     if (SetSequence.fromSet(stateSet).count() != size) {
       {
