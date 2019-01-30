@@ -289,11 +289,11 @@
           <node concept="3F1sOY" id="7LLJvWdO2yT" role="3EZMnx">
             <property role="1$x2rV" value=" " />
             <property role="1O74Pk" value="true" />
-            <ref role="1NtTu8" to="a90u:7LLJvWdJc7P" resolve="timedTransition" />
+            <ref role="1NtTu8" to="a90u:4BNFDI8oPu1" resolve="timedTransition" />
             <node concept="3F0ifn" id="2tBpSqv9nFv" role="2ruayu" />
           </node>
           <node concept="3F2HdR" id="7LLJvWdO2yZ" role="3EZMnx">
-            <ref role="1NtTu8" to="a90u:3KE6QPahCoh" resolve="signalTransitions" />
+            <ref role="1NtTu8" to="a90u:4BNFDI8oPu2" resolve="signalTransitions" />
             <node concept="2iRkQZ" id="7LLJvWdO2z2" role="2czzBx" />
             <node concept="VPM3Z" id="7LLJvWdO2z3" role="3F10Kt" />
             <node concept="3F0ifn" id="2tBpSqv8ES4" role="2czzBI" />
@@ -439,7 +439,7 @@
       <node concept="3EZMnI" id="5cuNfeiBeBK" role="3EZMnx">
         <node concept="VPM3Z" id="5cuNfeiBeBM" role="3F10Kt" />
         <node concept="3F0ifn" id="5cuNfeiBeBO" role="3EZMnx">
-          <property role="3F0ifm" value="initial state:" />
+          <property role="3F0ifm" value="initial mode:" />
           <node concept="3Xmtl4" id="9LpcmoKzV5" role="3F10Kt">
             <node concept="1wgc9g" id="9LpcmoKzV9" role="3XvnJa">
               <ref role="1wgcnl" node="9LpcmoKzUO" resolve="state" />
@@ -491,7 +491,7 @@
       <node concept="3EZMnI" id="5cuNfeiBeEA" role="3EZMnx">
         <node concept="VPM3Z" id="5cuNfeiBeEC" role="3F10Kt" />
         <node concept="3F0ifn" id="5cuNfeiBeEE" role="3EZMnx">
-          <property role="3F0ifm" value="states:" />
+          <property role="3F0ifm" value="modes:" />
           <node concept="3Xmtl4" id="9LpcmoKzW0" role="3F10Kt">
             <node concept="1wgc9g" id="9LpcmoKzW1" role="3XvnJa">
               <ref role="1wgcnl" node="9LpcmoKzUO" resolve="state" />
@@ -504,7 +504,7 @@
             <property role="VOm3f" value="true" />
           </node>
           <node concept="3F2HdR" id="5cuNfeiBeF_" role="3EZMnx">
-            <ref role="1NtTu8" to="a90u:3KE6QPahCnE" resolve="states" />
+            <ref role="1NtTu8" to="a90u:4BNFDI8oSsM" resolve="modes" />
             <node concept="pj6Ft" id="57XgZ9MYjxa" role="3F10Kt">
               <property role="VOm3f" value="true" />
             </node>

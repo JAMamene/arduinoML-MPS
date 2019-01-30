@@ -136,7 +136,7 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new State_EditorBuilder_a.timedTransitionSingleRoleHandler_sjqidp_a3a0(myNode, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition"), getEditorContext());
+    SingleRoleCellProvider provider = new State_EditorBuilder_a.timedTransitionSingleRoleHandler_sjqidp_a3a0(myNode, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition"), getEditorContext());
     return provider.createCell();
   }
   private static class timedTransitionSingleRoleHandler_sjqidp_a3a0 extends SingleRoleCellProvider {
@@ -156,8 +156,8 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition"), child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition"), child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition"), child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition"), child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -169,13 +169,13 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition"));
+        editorCell.setSRole(MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition"));
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition")));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_timedTransition");
@@ -214,7 +214,7 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions");
+      return MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions");
     }
     public SAbstractConcept getChildSConcept() {
       return MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, "ArduinoML.structure.SignalTransition");
@@ -227,7 +227,7 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(signalTransitionsListHandler_sjqidp_b3a0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(signalTransitionsListHandler_sjqidp_b3a0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions")));
       try {
         EditorCell emptyCell = null;
         emptyCell = createConstant_1();
@@ -311,7 +311,7 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468603L, "actions");
+      return MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions");
     }
     public SAbstractConcept getChildSConcept() {
       return MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, "ArduinoML.structure.Action");
@@ -324,7 +324,7 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(actionsListHandler_sjqidp_b0b1a.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468603L, "actions")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(actionsListHandler_sjqidp_b0b1a.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions")));
       try {
         EditorCell emptyCell = null;
         emptyCell = createConstant_2();

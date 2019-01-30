@@ -14,6 +14,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
   private ConceptPresentation props_Condition;
+  private ConceptPresentation props_Mode;
+  private ConceptPresentation props_Reachable;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_SignalTransition;
   private ConceptPresentation props_State;
@@ -59,6 +61,19 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Condition = cpb.create();
         }
         return props_Condition;
+      case LanguageConceptSwitch.Mode:
+        if (props_Mode == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Mode = cpb.create();
+        }
+        return props_Mode;
+      case LanguageConceptSwitch.Reachable:
+        if (props_Reachable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Reachable = cpb.create();
+        }
+        return props_Reachable;
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

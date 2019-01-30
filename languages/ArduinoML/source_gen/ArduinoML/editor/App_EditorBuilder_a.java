@@ -99,7 +99,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "initial state:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "initial mode:");
     editorCell.setCellId("Constant_g38wqt_a0a");
     Style style = new StyleImpl();
     new stateStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
@@ -325,7 +325,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "states:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "modes:");
     editorCell.setCellId("Constant_g38wqt_a4a");
     Style style = new StyleImpl();
     new stateStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
@@ -344,9 +344,9 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new App_EditorBuilder_a.statesListHandler_g38wqt_a1e0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new App_EditorBuilder_a.modesListHandler_g38wqt_a1e0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_states");
+    editorCell.setCellId("refNodeList_modes");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -354,11 +354,11 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class statesListHandler_g38wqt_a1e0 extends RefNodeListHandler {
+  private static class modesListHandler_g38wqt_a1e0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public statesListHandler_g38wqt_a1e0(SNode ownerNode, EditorContext context) {
+    public modesListHandler_g38wqt_a1e0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -368,10 +368,10 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685eaL, "states");
+      return MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x49f3ae9b88638732L, "modes");
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, "ArduinoML.structure.State");
+      return MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, "ArduinoML.structure.Mode");
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -381,7 +381,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(statesListHandler_g38wqt_a1e0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685eaL, "states")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(modesListHandler_g38wqt_a1e0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x49f3ae9b88638732L, "modes")));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();

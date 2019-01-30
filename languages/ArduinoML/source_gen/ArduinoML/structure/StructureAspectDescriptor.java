@@ -21,6 +21,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
   /*package*/ final ConceptDescriptor myConceptCondition = createDescriptorForCondition();
+  /*package*/ final ConceptDescriptor myConceptMode = createDescriptorForMode();
+  /*package*/ final ConceptDescriptor myConceptReachable = createDescriptorForReachable();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptSignalTransition = createDescriptorForSignalTransition();
   /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
@@ -35,7 +37,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptApp, myConceptBrick, myConceptCondition, myConceptSensor, myConceptSignalTransition, myConceptState, myConceptTimedTransition, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptApp, myConceptBrick, myConceptCondition, myConceptMode, myConceptReachable, myConceptSensor, myConceptSignalTransition, myConceptState, myConceptTimedTransition, myConceptTransition);
   }
 
   @Override
@@ -52,6 +54,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBrick;
       case LanguageConceptSwitch.Condition:
         return myConceptCondition;
+      case LanguageConceptSwitch.Mode:
+        return myConceptMode;
+      case LanguageConceptSwitch.Reachable:
+        return myConceptReachable;
       case LanguageConceptSwitch.Sensor:
         return myConceptSensor;
       case LanguageConceptSwitch.SignalTransition:
@@ -99,9 +105,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044695");
     b.version(2);
-    b.associate("initial", 0x3c2a1b6d4a4685edL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).origin("4335307747509044717").done();
+    b.associate("initial", 0x3c2a1b6d4a4685edL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L).optional(false).origin("4335307747509044717").done();
     b.aggregate("bricks", 0x3c2a1b6d4a4685e8L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L).optional(false).ordered(true).multiple(true).origin("4335307747509044712").done();
-    b.aggregate("states", 0x3c2a1b6d4a4685eaL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).ordered(true).multiple(true).origin("4335307747509044714").done();
+    b.aggregate("modes", 0x49f3ae9b88638732L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L).optional(false).ordered(true).multiple(true).origin("5328794767140816690").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBrick() {
@@ -120,6 +126,27 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("value", 0x7c71bdff0dc570e6L).type(MetaIdFactory.dataTypeId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f5L)).origin("8967157236216721638").done();
     b.associate("sensor", 0x7c71bdff0dc570e8L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L).optional(false).origin("8967157236216721640").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForMode() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Mode", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Reachable", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L);
+    b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/5328794767140804440");
+    b.version(2);
+    b.associate("initial", 0x49f3ae9b8863577eL).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).origin("5328794767140804478").done();
+    b.aggregate("states", 0x49f3ae9b88671f25L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).ordered(true).multiple(true).origin("5328794767141052197").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForReachable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Reachable", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L);
+    b.class_(false, true, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/5328794767141430992");
+    b.version(2);
+    b.aggregate("actions", 0x3c2a1b6d4a468603L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL).optional(true).ordered(true).multiple(true).origin("4335307747509044739").done();
+    b.aggregate("timedTransition", 0x49f3ae9b88635781L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42d08L).optional(true).ordered(true).multiple(false).origin("5328794767140804481").done();
+    b.aggregate("signalTransitions", 0x49f3ae9b88635782L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L).optional(true).ordered(true).multiple(true).origin("5328794767140804482").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSensor() {
@@ -143,12 +170,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForState() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "State", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL);
     b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.super_("ArduinoML.structure.Reachable", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044698");
     b.version(2);
-    b.aggregate("actions", 0x3c2a1b6d4a468603L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL).optional(true).ordered(true).multiple(true).origin("4335307747509044739").done();
-    b.aggregate("timedTransition", 0x7c71bdff0dbcc1f5L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42d08L).optional(true).ordered(true).multiple(false).origin("8967157236216152565").done();
-    b.aggregate("signalTransitions", 0x3c2a1b6d4a468611L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L).optional(true).ordered(true).multiple(true).origin("4335307747509044753").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimedTransition() {
@@ -166,7 +190,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, true, false);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044741");
     b.version(2);
-    b.associate("next", 0x3c2a1b6d4a468606L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL).optional(false).origin("4335307747509044742").done();
+    b.associate("next", 0x3c2a1b6d4a468606L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L).optional(false).origin("4335307747509044742").done();
     return b.create();
   }
 }

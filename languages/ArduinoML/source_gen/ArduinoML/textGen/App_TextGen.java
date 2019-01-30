@@ -13,7 +13,7 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import ArduinoML.behavior.Brick__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import ArduinoML.behavior.State__BehaviorDescriptor;
+import ArduinoML.behavior.Mode__BehaviorDescriptor;
 
 public class App_TextGen extends TextGenDescriptorBase {
   @Override
@@ -44,7 +44,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
 
     {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685eaL, "states"));
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x49f3ae9b88638732L, "modes"));
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);
@@ -83,7 +83,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial"))));
+    tgs.append(Mode__BehaviorDescriptor.getEditorName_id4BNFDI8r4Up.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial"))));
     tgs.append("();");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();

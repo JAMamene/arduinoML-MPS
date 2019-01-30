@@ -12,7 +12,7 @@
   </dependency>
   <dependency className="ArduinoML.textGen.App_TextGen">
     <classNode dependClassName="ArduinoML.behavior.Brick__BehaviorDescriptor" />
-    <classNode dependClassName="ArduinoML.behavior.State__BehaviorDescriptor" />
+    <classNode dependClassName="ArduinoML.behavior.Mode__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
@@ -47,7 +47,7 @@
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="ArduinoML.textGen.SignalTransition_TextGen">
-    <classNode dependClassName="ArduinoML.behavior.State__BehaviorDescriptor" />
+    <classNode dependClassName="ArduinoML.behavior.Reachable__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
@@ -91,7 +91,7 @@
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenAspectBase" />
   </dependency>
   <dependency className="ArduinoML.textGen.TimedTransition_TextGen">
-    <classNode dependClassName="ArduinoML.behavior.State__BehaviorDescriptor" />
+    <classNode dependClassName="ArduinoML.behavior.Reachable__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />

@@ -23,7 +23,7 @@ public class check_State_NonTypesystemRule extends AbstractNonTypesystemRule_Run
   public void applyRule(final SNode state, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     final Wrappers._int cpt = new Wrappers._int(0);
     final Wrappers._T<SNode> toReportNode = new Wrappers._T<SNode>();
-    ListSequence.fromList(SLinkOperations.getChildren(state, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions"))).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(state, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         if (SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions")).size() == 0) {
           toReportNode.value = it;
@@ -38,13 +38,13 @@ public class check_State_NonTypesystemRule extends AbstractNonTypesystemRule_Run
       }
     }
     if (cpt.value == 1) {
-      if (SLinkOperations.getChildren(state, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions")).size() > 1) {
+      if (SLinkOperations.getChildren(state, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions")).size() > 1) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
           IErrorReporter _reporter_2309309498 = typeCheckingContext.reportWarning(toReportNode.value, "This transition may override other ones", "r:638203af-c0a7-4b61-9329-109568c09222(ArduinoML.typesystem)", "5990859263325532662", null, errorTarget);
         }
       }
-      if (SLinkOperations.getTarget(state, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")) != null) {
+      if (SLinkOperations.getTarget(state, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition")) != null) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
           IErrorReporter _reporter_2309309498 = typeCheckingContext.reportWarning(toReportNode.value, "This transition will override timed transition", "r:638203af-c0a7-4b61-9329-109568c09222(ArduinoML.typesystem)", "5990859263325548484", null, errorTarget);

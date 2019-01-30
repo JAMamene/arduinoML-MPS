@@ -9,7 +9,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
-import ArduinoML.behavior.State__BehaviorDescriptor;
+import ArduinoML.behavior.Reachable__BehaviorDescriptor;
 
 public class SignalTransition_TextGen extends TextGenDescriptorBase {
   @Override
@@ -32,7 +32,7 @@ public class SignalTransition_TextGen extends TextGenDescriptorBase {
       tgs.newLine();
       ctx.getBuffer().area().increaseIndent();
       tgs.indent();
-      tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
+      tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
       tgs.append("();");
       tgs.newLine();
       ctx.getBuffer().area().decreaseIndent();
@@ -41,7 +41,7 @@ public class SignalTransition_TextGen extends TextGenDescriptorBase {
     }
     if (SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x763d572dd5e42763L, 0x7c71bdff0dc570f2L, "conditions")).size() == 0) {
       tgs.indent();
-      tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
+      tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
       tgs.append("();");
       tgs.newLine();
     }

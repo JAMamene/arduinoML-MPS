@@ -14,6 +14,8 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myState__BehaviorDescriptor = new State__BehaviorDescriptor();
   private final BHDescriptor myBrick__BehaviorDescriptor = new Brick__BehaviorDescriptor();
+  private final BHDescriptor myMode__BehaviorDescriptor = new Mode__BehaviorDescriptor();
+  private final BHDescriptor myReachable__BehaviorDescriptor = new Reachable__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -25,10 +27,14 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myBrick__BehaviorDescriptor;
       case 1:
+        return myMode__BehaviorDescriptor;
+      case 2:
+        return myReachable__BehaviorDescriptor;
+      case 3:
         return myState__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL)).seal();
 }

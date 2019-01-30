@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="ArduinoML.typesystem.TypesystemDescriptor">
-    <classNode dependClassName="ArduinoML.typesystem.check_App_NonTypesystemRule" />
+    <classNode dependClassName="ArduinoML.typesystem.check_Mode_NonTypesystemRule" />
     <classNode dependClassName="ArduinoML.typesystem.check_State_NonTypesystemRule" />
     <classNode dependClassName="ArduinoML.typesystem.check_TimedTransition_NonTypesystemRule" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.BaseHelginsDescriptor" />
   </dependency>
-  <dependency className="ArduinoML.typesystem.check_App_NonTypesystemRule">
+  <dependency className="ArduinoML.typesystem.check_Mode_NonTypesystemRule">
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashSet" />
     <classNode dependClassName="java.util.Set" />

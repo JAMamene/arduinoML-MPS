@@ -24,8 +24,8 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.append("timer.deleteTimer(timerId);");
     tgs.newLine();
     tgs.indent();
-    if ((SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")) != null)) {
-      tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")));
+    if ((SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition")) != null)) {
+      tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition")));
       tgs.newLine();
     }
     tgs.append("while (1) {");
@@ -34,13 +34,13 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("delay(100);");
     tgs.newLine();
-    if ((SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x7c71bdff0dbcc1f5L, "timedTransition")) != null)) {
+    if ((SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition")) != null)) {
       tgs.indent();
       tgs.append("timer.run();");
       tgs.newLine();
     }
     {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468603L, "actions"));
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"));
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);
@@ -51,7 +51,7 @@ public class State_TextGen extends TextGenDescriptorBase {
     }
     tgs.newLine();
     {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, 0x3c2a1b6d4a468611L, "signalTransitions"));
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions"));
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);

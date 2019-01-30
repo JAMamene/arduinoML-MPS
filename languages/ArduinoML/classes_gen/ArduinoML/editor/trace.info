@@ -28,7 +28,12 @@
       <unit at="24,0,88,0" name="ArduinoML.editor.Condition_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="16,0,62,0" name="ArduinoML.editor.EditorAspectDescriptorImpl" />
+      <unit at="16,0,64,0" name="ArduinoML.editor.EditorAspectDescriptorImpl" />
+    </file>
+    <file name="Mode_SubstituteMenu.java">
+      <unit at="47,0,66,0" name="ArduinoML.editor.Mode_SubstituteMenu$SMP_ReferenceScope_js8wpm_a" />
+      <unit at="66,0,87,0" name="ArduinoML.editor.Mode_SubstituteMenu$SMP_Subconcepts_js8wpm_b" />
+      <unit at="24,0,88,0" name="ArduinoML.editor.Mode_SubstituteMenu" />
     </file>
   </root>
   <root nodeRef="r:b957b98b-2de0-45fc-b887-40d47ab97414(ArduinoML.editor)/176032660278204177">
@@ -1830,8 +1835,8 @@
       <node id="5989449900958214644" at="96,40,97,49" concept="1" />
       <node id="5989449900958214662" at="97,49,98,48" concept="1" />
       <node id="5989449900957982967" at="98,48,99,22" concept="6" />
-      <node id="5989449900958214644" at="101,41,102,107" concept="5" />
-      <node id="5989449900958214644" at="102,107,103,48" concept="1" />
+      <node id="5989449900958214644" at="101,41,102,106" concept="5" />
+      <node id="5989449900958214644" at="102,106,103,48" concept="1" />
       <node id="5989449900958214644" at="103,48,104,34" concept="5" />
       <node id="176032660278361797" at="104,34,105,80" concept="1" />
       <node id="5989449900958214644" at="105,80,106,40" concept="1" />
@@ -1957,8 +1962,8 @@
       <node id="5989449900958214826" at="322,40,323,49" concept="1" />
       <node id="5989449900958214873" at="323,49,324,51" concept="1" />
       <node id="5989449900957982967" at="324,51,325,22" concept="6" />
-      <node id="5989449900958214826" at="327,41,328,100" concept="5" />
-      <node id="5989449900958214826" at="328,100,329,48" concept="1" />
+      <node id="5989449900958214826" at="327,41,328,99" concept="5" />
+      <node id="5989449900958214826" at="328,99,329,48" concept="1" />
       <node id="5989449900958214826" at="329,48,330,34" concept="5" />
       <node id="176032660278361856" at="330,34,331,80" concept="1" />
       <node id="5989449900958214826" at="331,80,332,40" concept="1" />
@@ -1972,25 +1977,25 @@
       <node id="5989449900957982967" at="341,58,342,40" concept="1" />
       <node id="5989449900958214885" at="342,40,343,52" concept="1" />
       <node id="5989449900957982967" at="343,52,344,22" concept="6" />
-      <node id="5989449900957982967" at="346,44,347,120" concept="5" />
-      <node id="5989449900957982967" at="347,120,348,91" concept="5" />
-      <node id="5989449900957982967" at="348,91,349,47" concept="1" />
-      <node id="5989449900957982967" at="349,47,350,34" concept="5" />
+      <node id="5989449900957982967" at="346,44,347,119" concept="5" />
+      <node id="5989449900957982967" at="347,119,348,91" concept="5" />
+      <node id="5989449900957982967" at="348,91,349,46" concept="1" />
+      <node id="5989449900957982967" at="349,46,350,34" concept="5" />
       <node id="5907952994770040906" at="350,34,351,68" concept="1" />
       <node id="5907952994770040908" at="351,68,352,60" concept="1" />
       <node id="5989449900957982967" at="352,60,353,40" concept="1" />
       <node id="5989449900957982967" at="353,40,354,51" concept="1" />
       <node id="5989449900957982967" at="354,51,355,22" concept="6" />
-      <node id="5989449900957982967" at="361,82,362,28" concept="9" />
+      <node id="5989449900957982967" at="361,81,362,28" concept="9" />
       <node id="5989449900957982967" at="362,28,363,25" concept="1" />
       <node id="5989449900957982967" at="367,28,368,20" concept="6" />
-      <node id="5989449900957982967" at="370,40,371,145" concept="6" />
-      <node id="5989449900957982967" at="373,48,374,135" concept="6" />
+      <node id="5989449900957982967" at="370,40,371,144" concept="6" />
+      <node id="5989449900957982967" at="373,48,374,134" concept="6" />
       <node id="5989449900957982967" at="377,57,378,83" concept="5" />
       <node id="5989449900957982967" at="378,83,379,65" concept="1" />
       <node id="5989449900957982967" at="379,65,380,25" concept="6" />
       <node id="5989449900957982967" at="382,41,383,41" concept="1" />
-      <node id="5989449900957982967" at="383,41,384,255" concept="1" />
+      <node id="5989449900957982967" at="383,41,384,253" concept="1" />
       <node id="5989449900957982967" at="385,11,386,36" concept="5" />
       <node id="5989449900957982967" at="386,36,387,44" concept="1" />
       <node id="5989449900957982967" at="387,44,388,57" concept="1" />
@@ -2022,7 +2027,7 @@
       <node id="5989449900957982967" at="263,0,267,0" concept="0" trace="bricksListHandler_g38wqt_a1b2a#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
       <node id="5989449900957982967" at="268,0,272,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="5989449900957982967" at="299,134,303,9" concept="3" />
-      <node id="5989449900957982967" at="361,0,365,0" concept="0" trace="statesListHandler_g38wqt_a1e0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="5989449900957982967" at="361,0,365,0" concept="0" trace="modesListHandler_g38wqt_a1e0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
       <node id="5989449900957982967" at="366,0,370,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="5989449900957982967" at="397,134,401,9" concept="3" />
       <node id="5989449900957982967" at="66,0,71,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -2043,7 +2048,7 @@
       <node id="5989449900957982967" at="243,0,252,0" concept="4" trace="createCollection_4#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="5989449900957982967" at="286,256,295,7" concept="10" />
       <node id="5989449900958214826" at="327,0,336,0" concept="4" trace="createConstant_4#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5989449900957982967" at="384,255,393,7" concept="10" />
+      <node id="5989449900957982967" at="384,253,393,7" concept="10" />
       <node id="5989449900957982967" at="91,0,101,0" concept="4" trace="createCollection_1#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="5989449900958214711" at="219,0,229,0" concept="4" trace="createConstant_2#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="5989449900957982967" at="229,0,239,0" concept="4" trace="createCollection_3#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
@@ -2077,8 +2082,8 @@
       <scope id="5989449900957982967" at="293,17,294,42" />
       <scope id="5989449900957982967" at="304,122,305,146" />
       <scope id="5989449900957982967" at="367,28,368,20" />
-      <scope id="5989449900957982967" at="370,40,371,145" />
-      <scope id="5989449900957982967" at="373,48,374,135" />
+      <scope id="5989449900957982967" at="370,40,371,144" />
+      <scope id="5989449900957982967" at="373,48,374,134" />
       <scope id="5989449900957982967" at="391,17,392,42" />
       <scope id="5989449900957982967" at="402,122,403,146" />
       <scope id="5989449900957982967" at="61,83,63,18" />
@@ -2094,7 +2099,7 @@
       </scope>
       <scope id="5989449900957982967" at="263,83,265,25" />
       <scope id="5989449900957982967" at="300,34,302,146" />
-      <scope id="5989449900957982967" at="361,82,363,25" />
+      <scope id="5989449900957982967" at="361,81,363,25" />
       <scope id="5989449900957982967" at="398,34,400,146" />
       <scope id="5989449900957982967" at="72,0,75,0" />
       <scope id="5989449900957982967" at="115,0,118,0" />
@@ -2271,7 +2276,7 @@
       <unit id="5989449900957982967" at="112,42,131,5" name="ArduinoML.editor.App_EditorBuilder_a$1" />
       <unit id="5989449900958214664" at="153,0,202,0" name="ArduinoML.editor.App_EditorBuilder_a$Inline_Builder0" />
       <unit id="5989449900957982967" at="259,0,310,0" name="ArduinoML.editor.App_EditorBuilder_a$bricksListHandler_g38wqt_a1b2a" />
-      <unit id="5989449900957982967" at="357,0,408,0" name="ArduinoML.editor.App_EditorBuilder_a$statesListHandler_g38wqt_a1e0" />
+      <unit id="5989449900957982967" at="357,0,408,0" name="ArduinoML.editor.App_EditorBuilder_a$modesListHandler_g38wqt_a1e0" />
       <unit id="5989449900957982967" at="57,0,409,0" name="ArduinoML.editor.App_EditorBuilder_a" />
     </file>
   </root>
