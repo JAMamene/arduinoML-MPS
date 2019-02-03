@@ -5,23 +5,30 @@ package ArduinoML.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
-import ArduinoML.behavior.State__BehaviorDescriptor;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import ArduinoML.behavior.Reachable__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
+import ArduinoML.behavior.State__BehaviorDescriptor;
 
 public class State_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("void ");
-    tgs.append(State__BehaviorDescriptor.getEditorName_id2tBpSqvfN3o.invoke(ctx.getPrimaryInput()));
+    tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(ctx.getPrimaryInput()));
     tgs.append("() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     tgs.append("timer.deleteTimer(timerId);");
+    tgs.newLine();
+    tgs.indent();
+    tgs.append("Seiral.println(\"state ");
+    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+    tgs.append("\");");
     tgs.newLine();
     tgs.indent();
     if ((SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635781L, "timedTransition")) != null)) {
@@ -60,6 +67,10 @@ public class State_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    tgs.newLine();
+    tgs.indent();
+    tgs.append(State__BehaviorDescriptor.getParentMode_id5v95mrb6yAW.invoke(ctx.getPrimaryInput()));
+    tgs.append("();");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.indent();

@@ -3,50 +3,101 @@
 SimpleTimer timer;
 int timerId = 0;
 
-int b_led = 10;
-int b_buzzer = 12;
-int b_button = 9;
+int b_button = 12;
+int b_led = 9;
 
-void s_led_on() {
-  timer.deleteTimer(timerId);
-    while (1) {
-    delay(100);
-    digitalWrite(b_led, HIGH);
-    digitalWrite(b_buzzer, LOW);
-    if (digitalRead(b_button) == HIGH) {
-      s_off();
+void m_night() {
+  digitalWrite(b_led, LOW);
+  Serial.println("led LOW);
+  
+    if (digitalRead(b_button) == LOW) {
+      m_init_initial_state();
     }
+}
+
+void m_night_initial_state() {
+    s_init_off()
+}
+
+void s_night_on() {
+  timer.deleteTimer(timerId);
+  Seiral.println("state on");
+  while (1) {
+    delay(100);
+
+    if (digitalRead(b_button) == LOW) {
+      s_init_off();
+    }
+    m_night();
   }
 }
 
-void s_buzzer_on() {
+void s_night_off() {
   timer.deleteTimer(timerId);
-    while (1) {
+  Seiral.println("state off");
+  while (1) {
     delay(100);
-    digitalWrite(b_buzzer, HIGH);
+
     if (digitalRead(b_button) == HIGH) {
-      s_led_on();
+      s_init_on();
     }
+    m_night();
   }
 }
 
-void s_off() {
-  timer.deleteTimer(timerId);
-    while (1) {
-    delay(100);
-    digitalWrite(b_led, LOW);
+void m_init() {
+  digitalWrite(b_led, HIGH);
+  Serial.println("led HIGH);
+  digitalWrite(b_led, LOW);
+    Serial.println("led LOW);
+
     if (digitalRead(b_button) == HIGH) {
-      s_buzzer_on();
+      m_night_initial_state();
     }
+}
+
+void m_init_initial_state() {
+  digitalWrite(b_led, LOW);
+  Serial.println("led LOW);
+  s_init_on()
+}
+
+void s_init_on() {
+  timer.deleteTimer(timerId);
+  Seiral.println("state on");
+  while (1) {
+    delay(100);
+digitalWrite(b_led, HIGH);
+    Serial.println("led HIGH);
+
+    if (digitalRead(b_button) == LOW) {
+      s_init_off();
+    }
+    m_init();
+  }
+}
+
+void s_init_off() {
+  timer.deleteTimer(timerId);
+  Seiral.println("state off");
+  while (1) {
+    delay(100);
+digitalWrite(b_led, LOW);
+    Serial.println("led LOW);
+
+    if (digitalRead(b_button) == HIGH) {
+      s_init_on();
+    }
+    m_init();
   }
 }
 
 void setup() {
-  pinMode(b_led, OUTPUT);
-  pinMode(b_buzzer, OUTPUT);
+Seiral.begin(9600);
   pinMode(b_button, INPUT);
+  pinMode(b_led, OUTPUT);
 }
 
 void loop() {
-  s_off();
+  m_init_initial_state();
 }

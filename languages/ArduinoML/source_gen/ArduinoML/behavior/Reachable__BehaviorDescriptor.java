@@ -24,16 +24,13 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, "ArduinoML.structure.Reachable");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
-  public static final SMethod<String> getEditorName_id4BNFDI8rF5p = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BNFDI8rF5p").registry(REGISTRY).build();
+  public static final SMethod<String> getEditorName_id4BNFDI8rF5p = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BNFDI8rF5p").registry(REGISTRY).build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getEditorName_id4BNFDI8rF5p);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static String getEditorName_id4BNFDI8rF5p(@NotNull SNode __thisNode__) {
-    return "";
-  }
 
   /*package*/ Reachable__BehaviorDescriptor() {
     super(REGISTRY);
@@ -51,8 +48,6 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
-      case 0:
-        return (T) ((String) getEditorName_id4BNFDI8rF5p(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

@@ -9,6 +9,8 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import ArduinoML.behavior.Mode__BehaviorDescriptor;
 import ArduinoML.behavior.Reachable__BehaviorDescriptor;
 
 public class SignalTransition_TextGen extends TextGenDescriptorBase {
@@ -32,9 +34,17 @@ public class SignalTransition_TextGen extends TextGenDescriptorBase {
       tgs.newLine();
       ctx.getBuffer().area().increaseIndent();
       tgs.indent();
-      tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next"))));
-      tgs.append("();");
-      tgs.newLine();
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next")), MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, "ArduinoML.structure.Mode"))) {
+        tgs.append(Mode__BehaviorDescriptor.getInitialState_id5v95mrb9jiN.invoke(((SNode) SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next")))));
+        tgs.append("();");
+        tgs.newLine();
+      }
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next")), MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, "ArduinoML.structure.State"))) {
+        tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(((SNode) SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a468605L, 0x3c2a1b6d4a468606L, "next")))));
+        tgs.append("();");
+        tgs.newLine();
+      }
+
       ctx.getBuffer().area().decreaseIndent();
       tgs.indent();
       tgs.append("}");

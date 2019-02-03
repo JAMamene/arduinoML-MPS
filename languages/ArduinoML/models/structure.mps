@@ -216,8 +216,8 @@
   </node>
   <node concept="1TIwiD" id="4BNFDI8rerg">
     <property role="EcuMT" value="5328794767141430992" />
-    <property role="R5$K7" value="true" />
     <property role="TrG5h" value="Reachable" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3KE6QPahCo3" role="1TKVEi">
       <property role="IQ2ns" value="4335307747509044739" />

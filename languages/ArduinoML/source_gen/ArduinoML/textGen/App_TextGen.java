@@ -57,6 +57,9 @@ public class App_TextGen extends TextGenDescriptorBase {
 
     tgs.append("void setup() {");
     tgs.newLine();
+    tgs.indent();
+    tgs.append("Seiral.begin(9600);");
+    tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685e8L, "bricks"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
@@ -81,9 +84,10 @@ public class App_TextGen extends TextGenDescriptorBase {
 
     tgs.append("void loop() {");
     tgs.newLine();
+    tgs.indent();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    tgs.append(Mode__BehaviorDescriptor.getEditorName_id4BNFDI8r4Up.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial"))));
+    tgs.append(Mode__BehaviorDescriptor.getInitialState_id5v95mrb9jiN.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial"))));
     tgs.append("();");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
