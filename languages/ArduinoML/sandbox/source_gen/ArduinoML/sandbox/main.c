@@ -6,61 +6,59 @@ int stateTimer = 0;
 int modeTimer = 1;
 
 int b_button = 9;
+int b_button2 = 12;
 int b_led = 10;
-int b_buzzer = 11;
 
-void m_init() {
+void m_default() {
     digitalWrite(b_led, LOW);
-  digitalWrite(b_buzzer, LOW);
 }
 
-void m_init_initial_state() {
+void m_default_initial_state() {
   timer.deleteTimer(stateTimer);
   timer.deleteTimer(modeTimer);
-    s_init_off();
+    s_default_off();
 }
 
-void s_init_off() {
+void s_default_off() {
   timer.deleteTimer(stateTimer);
   Serial.println("state off");
   while (1) {
     delay(100);
     digitalWrite(b_led, LOW);
 
-    digitalWrite(b_buzzer, LOW);
-
-    Serial.println("led 0 buzzer 0 "");
-    if (digitalRead(b_button) == HIGH) {
-      s_init_on();
+    Serial.println("led 0 "");
+    if (digitalRead(b_button2) == HIGH && digitalRead(b_button) == HIGH) {
+      s_default_on();
     }
-    m_init();
+    m_default();
   }
 }
 
-void s_init_on() {
+void s_default_on() {
   timer.deleteTimer(stateTimer);
   Serial.println("state on");
   while (1) {
     delay(100);
     digitalWrite(b_led, HIGH);
 
-    digitalWrite(b_buzzer, HIGH);
-
-    Serial.println("led 1 buzzer 1 "");
+    Serial.println("led 1 "");
+    if (digitalRead(b_button2) == LOW) {
+      s_default_off();
+    }
     if (digitalRead(b_button) == LOW) {
       s_night_off();
     }
-    m_init();
+    m_default();
   }
 }
 
 void setup() {
   Serial.begin(9600);
   pinMode(b_button, INPUT);
+  pinMode(b_button2, INPUT);
   pinMode(b_led, OUTPUT);
-  pinMode(b_buzzer, OUTPUT);
 }
 
 void loop() {
-  s_init_off();
+  Serial.println("{ALL_BRICKS: ["button", "button2", "led"], ALL_MODES: {"default" : ["off","on"]}, ANALOG_SENSORS: {},DEFAULT_STATE : "default", DEFAULT_MODE: "off"}");  s_default_off();
 }
