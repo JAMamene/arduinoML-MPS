@@ -729,6 +729,14 @@
       <node concept="3F0A7n" id="6IgltWB6l7B" role="3EZMnx">
         <ref role="1NtTu8" to="a90u:3KE6QPahCnL" resolve="pin" />
       </node>
+      <node concept="3F0ifn" id="6IgltWBqUKH" role="3EZMnx">
+        <property role="3F0ifm" value=" " />
+      </node>
+      <node concept="3F0A7n" id="6IgltWBqUXT" role="3EZMnx">
+        <property role="1O74Pk" value="true" />
+        <property role="1$x2rV" value="f" />
+        <ref role="1NtTu8" to="a90u:6IgltWBqUK8" resolve="watch" />
+      </node>
       <node concept="l2Vlx" id="6IgltWB6l7b" role="2iSdaV" />
     </node>
   </node>
@@ -768,15 +776,18 @@
         </node>
       </node>
       <node concept="l2Vlx" id="5cuNfei$njN" role="2iSdaV" />
+      <node concept="3F0ifn" id="6IgltWBqUYv" role="3EZMnx">
+        <property role="3F0ifm" value=" " />
+      </node>
+      <node concept="3F0A7n" id="6IgltWBqUYX" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:6IgltWBqUK8" resolve="watch" />
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="6IgltWB7Kff">
     <ref role="1XX52x" to="a90u:6IgltWB6QAK" resolve="AnalogCondition" />
     <node concept="3EZMnI" id="6IgltWB7Kfh" role="2wV5jI">
       <node concept="l2Vlx" id="6IgltWB7Kfi" role="2iSdaV" />
-      <node concept="3F0ifn" id="6IgltWB7Kfk" role="3EZMnx">
-        <property role="3F0ifm" value="sensor" />
-      </node>
       <node concept="1iCGBv" id="6IgltWB7Kfl" role="3EZMnx">
         <ref role="1NtTu8" to="a90u:7LLJvWdLn3C" resolve="sensor" />
         <node concept="1sVBvm" id="6IgltWB7Kfo" role="1sWHZn">
