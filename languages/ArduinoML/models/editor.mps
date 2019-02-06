@@ -330,44 +330,6 @@
       </node>
     </node>
   </node>
-  <node concept="24kQdi" id="5cuNfei$njI">
-    <ref role="1XX52x" to="a90u:3KE6QPahCnN" resolve="Sensor" />
-    <node concept="3EZMnI" id="5cuNfei$njK" role="2wV5jI">
-      <node concept="3F0ifn" id="5cuNfei$njR" role="3EZMnx">
-        <property role="3F0ifm" value="sensor:" />
-        <node concept="3Xmtl4" id="9LpcmoKOsR" role="3F10Kt">
-          <node concept="1wgc9g" id="9LpcmoKOsV" role="3XvnJa">
-            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0A7n" id="5cuNfei$nkl" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <node concept="3Xmtl4" id="9LpcmoKOuH" role="3F10Kt">
-          <node concept="1wgc9g" id="9LpcmoKOuL" role="3XvnJa">
-            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="5cuNfei$nkx" role="3EZMnx">
-        <property role="3F0ifm" value="," />
-        <node concept="3Xmtl4" id="9LpcmoKOvA" role="3F10Kt">
-          <node concept="1wgc9g" id="9LpcmoKOvE" role="3XvnJa">
-            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0A7n" id="5cuNfei$nk5" role="3EZMnx">
-        <ref role="1NtTu8" to="a90u:3KE6QPahCnL" resolve="pin" />
-        <node concept="3Xmtl4" id="9LpcmoKOwv" role="3F10Kt">
-          <node concept="1wgc9g" id="9LpcmoKOwz" role="3XvnJa">
-            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="5cuNfei$njN" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="5cuNfei$nkC">
     <ref role="1XX52x" to="a90u:7oXlMRlT2tz" resolve="SignalTransition" />
     <node concept="3EZMnI" id="7LLJvWdMpMo" role="2wV5jI">
@@ -571,7 +533,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="7LLJvWdLBIh">
-    <ref role="1XX52x" to="a90u:7LLJvWdLn3_" resolve="Condition" />
+    <ref role="1XX52x" to="a90u:6IgltWB6QAN" resolve="LogicalCondition" />
     <node concept="3EZMnI" id="7LLJvWdLBIj" role="2wV5jI">
       <node concept="l2Vlx" id="7LLJvWdLBIk" role="2iSdaV" />
       <node concept="3EZMnI" id="7LLJvWdLBIo" role="3EZMnx">
@@ -592,64 +554,11 @@
         <node concept="VPM3Z" id="7LLJvWdLBIz" role="3F10Kt" />
         <node concept="l2Vlx" id="7LLJvWdLBI$" role="2iSdaV" />
       </node>
-      <node concept="3F0A7n" id="7LLJvWdLBIl" role="3EZMnx">
-        <ref role="1NtTu8" to="a90u:7LLJvWdLn3A" resolve="value" />
-        <node concept="1uO$qF" id="9LpcmoJyNw" role="3F10Kt">
-          <node concept="3nzxsE" id="9LpcmoJyNx" role="1uO$qD">
-            <node concept="3clFbS" id="9LpcmoJyNy" role="2VODD2">
-              <node concept="3clFbF" id="9LpcmoJyV2" role="3cqZAp">
-                <node concept="3clFbC" id="9LpcmoJCxK" role="3clFbG">
-                  <node concept="2OqwBi" id="9LpcmoJGhW" role="3uHU7w">
-                    <node concept="3HcIyF" id="9LpcmoJDtZ" role="2Oq$k0">
-                      <ref role="3HcIyG" to="a90u:3KE6QPahCnP" resolve="SIGNAL" />
-                      <node concept="3HdYuL" id="9LpcmoJE8q" role="3Hdvt7">
-                        <ref role="3HdYuM" to="a90u:3KE6QPahCnR" />
-                      </node>
-                    </node>
-                    <node concept="305NjN" id="9LpcmoJGJc" role="2OqNvi" />
-                  </node>
-                  <node concept="2OqwBi" id="9LpcmoJ$pB" role="3uHU7B">
-                    <node concept="pncrf" id="9LpcmoJ$9s" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="9LpcmoJ$DN" role="2OqNvi">
-                      <ref role="3TsBF5" to="a90u:7LLJvWdLn3A" resolve="value" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1wgc9g" id="9LpcmoJYeT" role="3XvnJa">
-            <ref role="1wgcnl" node="9LpcmoJXsk" resolve="high" />
-          </node>
-        </node>
-        <node concept="1uO$qF" id="9LpcmoJXWs" role="3F10Kt">
-          <node concept="3nzxsE" id="9LpcmoJXWu" role="1uO$qD">
-            <node concept="3clFbS" id="9LpcmoJXWw" role="2VODD2">
-              <node concept="3clFbF" id="9LpcmoJYwO" role="3cqZAp">
-                <node concept="3clFbC" id="9LpcmoK0CH" role="3clFbG">
-                  <node concept="2OqwBi" id="9LpcmoK26G" role="3uHU7w">
-                    <node concept="3HcIyF" id="9LpcmoK0Y4" role="2Oq$k0">
-                      <ref role="3HcIyG" to="a90u:3KE6QPahCnP" resolve="SIGNAL" />
-                      <node concept="3HdYuL" id="9LpcmoK1Cv" role="3Hdvt7">
-                        <ref role="3HdYuM" to="a90u:3KE6QPahCnQ" />
-                      </node>
-                    </node>
-                    <node concept="305NjN" id="9LpcmoK2zW" role="2OqNvi" />
-                  </node>
-                  <node concept="2OqwBi" id="9LpcmoJYL0" role="3uHU7B">
-                    <node concept="pncrf" id="9LpcmoJYwN" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="9LpcmoJZgm" role="2OqNvi">
-                      <ref role="3TsBF5" to="a90u:7LLJvWdLn3A" resolve="value" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1wgc9g" id="9LpcmoJYwF" role="3XvnJa">
-            <ref role="1wgcnl" node="9LpcmoJXs$" resolve="low" />
-          </node>
-        </node>
+      <node concept="3F0ifn" id="6IgltWB7fOs" role="3EZMnx">
+        <property role="3F0ifm" value="is" />
+      </node>
+      <node concept="3F0A7n" id="6IgltWB7fO6" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:6IgltWB6Zri" resolve="value" />
       </node>
     </node>
   </node>
@@ -799,6 +708,88 @@
           <node concept="2iRfu4" id="5v95mraWRQi" role="2iSdaV" />
         </node>
         <node concept="2iRkQZ" id="5v95mraWRKa" role="2iSdaV" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="6IgltWB6l6W">
+    <ref role="1XX52x" to="a90u:6IgltWB6l6V" resolve="AnalogSensor" />
+    <node concept="3EZMnI" id="6IgltWB6l78" role="2wV5jI">
+      <node concept="3F0ifn" id="6IgltWB6l7f" role="3EZMnx">
+        <property role="3F0ifm" value="analog-sensor" />
+      </node>
+      <node concept="3F0ifn" id="6IgltWB6l7l" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="6IgltWB6l7t" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="6IgltWB6l7T" role="3EZMnx">
+        <property role="3F0ifm" value=", " />
+      </node>
+      <node concept="3F0A7n" id="6IgltWB6l7B" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:3KE6QPahCnL" resolve="pin" />
+      </node>
+      <node concept="l2Vlx" id="6IgltWB6l7b" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="5cuNfei$njI">
+    <ref role="1XX52x" to="a90u:6IgltWB6l5m" resolve="LogicalSensor" />
+    <node concept="3EZMnI" id="5cuNfei$njK" role="2wV5jI">
+      <node concept="3F0ifn" id="5cuNfei$njR" role="3EZMnx">
+        <property role="3F0ifm" value="log-sensor:" />
+        <node concept="3Xmtl4" id="9LpcmoKOsR" role="3F10Kt">
+          <node concept="1wgc9g" id="9LpcmoKOsV" role="3XvnJa">
+            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5cuNfei$nkl" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="3Xmtl4" id="9LpcmoKOuH" role="3F10Kt">
+          <node concept="1wgc9g" id="9LpcmoKOuL" role="3XvnJa">
+            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="5cuNfei$nkx" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+        <node concept="3Xmtl4" id="9LpcmoKOvA" role="3F10Kt">
+          <node concept="1wgc9g" id="9LpcmoKOvE" role="3XvnJa">
+            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5cuNfei$nk5" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:3KE6QPahCnL" resolve="pin" />
+        <node concept="3Xmtl4" id="9LpcmoKOwv" role="3F10Kt">
+          <node concept="1wgc9g" id="9LpcmoKOwz" role="3XvnJa">
+            <ref role="1wgcnl" node="9LpcmoKOs$" resolve="sensor" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="5cuNfei$njN" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6IgltWB7Kff">
+    <ref role="1XX52x" to="a90u:6IgltWB6QAK" resolve="AnalogCondition" />
+    <node concept="3EZMnI" id="6IgltWB7Kfh" role="2wV5jI">
+      <node concept="l2Vlx" id="6IgltWB7Kfi" role="2iSdaV" />
+      <node concept="3F0ifn" id="6IgltWB7Kfk" role="3EZMnx">
+        <property role="3F0ifm" value="sensor" />
+      </node>
+      <node concept="1iCGBv" id="6IgltWB7Kfl" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:7LLJvWdLn3C" resolve="sensor" />
+        <node concept="1sVBvm" id="6IgltWB7Kfo" role="1sWHZn">
+          <node concept="3F0A7n" id="6IgltWB7Kfq" role="2wV5jI">
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0A7n" id="6IgltWB7Kou" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:6IgltWB7Kgi" resolve="cond" />
+      </node>
+      <node concept="3F0A7n" id="6IgltWB7Kfy" role="3EZMnx">
+        <ref role="1NtTu8" to="a90u:6IgltWB6Zrk" resolve="value" />
       </node>
     </node>
   </node>

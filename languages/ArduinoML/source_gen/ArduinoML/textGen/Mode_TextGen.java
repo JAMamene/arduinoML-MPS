@@ -97,7 +97,7 @@ public class Mode_TextGen extends TextGenDescriptorBase {
     }
     tgs.indent();
     tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b8863577eL, "initial"))));
-    tgs.append("()");
+    tgs.append("();");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");

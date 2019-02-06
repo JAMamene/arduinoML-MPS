@@ -18,9 +18,13 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActuator = createDescriptorForActuator();
+  /*package*/ final ConceptDescriptor myConceptAnalogCondition = createDescriptorForAnalogCondition();
+  /*package*/ final ConceptDescriptor myConceptAnalogSensor = createDescriptorForAnalogSensor();
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
   /*package*/ final ConceptDescriptor myConceptCondition = createDescriptorForCondition();
+  /*package*/ final ConceptDescriptor myConceptLogicalCondition = createDescriptorForLogicalCondition();
+  /*package*/ final ConceptDescriptor myConceptLogicalSensor = createDescriptorForLogicalSensor();
   /*package*/ final ConceptDescriptor myConceptMode = createDescriptorForMode();
   /*package*/ final ConceptDescriptor myConceptReachable = createDescriptorForReachable();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
@@ -37,7 +41,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptApp, myConceptBrick, myConceptCondition, myConceptMode, myConceptReachable, myConceptSensor, myConceptSignalTransition, myConceptState, myConceptTimedTransition, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnalogCondition, myConceptAnalogSensor, myConceptApp, myConceptBrick, myConceptCondition, myConceptLogicalCondition, myConceptLogicalSensor, myConceptMode, myConceptReachable, myConceptSensor, myConceptSignalTransition, myConceptState, myConceptTimedTransition, myConceptTransition);
   }
 
   @Override
@@ -48,12 +52,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAction;
       case LanguageConceptSwitch.Actuator:
         return myConceptActuator;
+      case LanguageConceptSwitch.AnalogCondition:
+        return myConceptAnalogCondition;
+      case LanguageConceptSwitch.AnalogSensor:
+        return myConceptAnalogSensor;
       case LanguageConceptSwitch.App:
         return myConceptApp;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
       case LanguageConceptSwitch.Condition:
         return myConceptCondition;
+      case LanguageConceptSwitch.LogicalCondition:
+        return myConceptLogicalCondition;
+      case LanguageConceptSwitch.LogicalSensor:
+        return myConceptLogicalSensor;
       case LanguageConceptSwitch.Mode:
         return myConceptMode;
       case LanguageConceptSwitch.Reachable:
@@ -99,6 +111,24 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForAnalogCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "AnalogCondition", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271b69b0L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Condition", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L);
+    b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/7750789375626799536");
+    b.version(2);
+    b.property("value", 0x6b9055df271bf6d4L).type(PrimitiveTypeId.INTEGER).origin("7750789375626835668").done();
+    b.property("cond", 0x6b9055df271f0412L).type(PrimitiveTypeId.STRING).origin("7750789375627035666").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAnalogSensor() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "AnalogSensor", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Sensor", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L);
+    b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/7750789375626662331");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForApp() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "App", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L);
     b.class_(false, false, true);
@@ -121,11 +151,27 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForCondition() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Condition", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/8967157236216721637");
     b.version(2);
-    b.property("value", 0x7c71bdff0dc570e6L).type(MetaIdFactory.dataTypeId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f5L)).origin("8967157236216721638").done();
     b.associate("sensor", 0x7c71bdff0dc570e8L).target(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L).optional(false).origin("8967157236216721640").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForLogicalCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "LogicalCondition", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271b69b3L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Condition", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L);
+    b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/7750789375626799539");
+    b.version(2);
+    b.property("value", 0x6b9055df271bf6d2L).type(MetaIdFactory.dataTypeId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f5L)).origin("7750789375626835666").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForLogicalSensor() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "LogicalSensor", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Sensor", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L);
+    b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/7750789375626662230");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMode() {
@@ -151,7 +197,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForSensor() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Sensor", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.super_("ArduinoML.structure.Brick", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044723");
     b.version(2);

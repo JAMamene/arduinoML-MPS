@@ -11,9 +11,13 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_Actuator;
+  private ConceptPresentation props_AnalogCondition;
+  private ConceptPresentation props_AnalogSensor;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
   private ConceptPresentation props_Condition;
+  private ConceptPresentation props_LogicalCondition;
+  private ConceptPresentation props_LogicalSensor;
   private ConceptPresentation props_Mode;
   private ConceptPresentation props_Reachable;
   private ConceptPresentation props_Sensor;
@@ -41,6 +45,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Actuator = cpb.create();
         }
         return props_Actuator;
+      case LanguageConceptSwitch.AnalogCondition:
+        if (props_AnalogCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e8L, "sensor", "", "");
+          props_AnalogCondition = cpb.create();
+        }
+        return props_AnalogCondition;
+      case LanguageConceptSwitch.AnalogSensor:
+        if (props_AnalogSensor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AnalogSensor = cpb.create();
+        }
+        return props_AnalogSensor;
       case LanguageConceptSwitch.App:
         if (props_App == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -57,10 +75,23 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Condition:
         if (props_Condition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e8L, "sensor", "", "");
           props_Condition = cpb.create();
         }
         return props_Condition;
+      case LanguageConceptSwitch.LogicalCondition:
+        if (props_LogicalCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x7c71bdff0dc570e5L, 0x7c71bdff0dc570e8L, "sensor", "", "");
+          props_LogicalCondition = cpb.create();
+        }
+        return props_LogicalCondition;
+      case LanguageConceptSwitch.LogicalSensor:
+        if (props_LogicalSensor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_LogicalSensor = cpb.create();
+        }
+        return props_LogicalSensor;
       case LanguageConceptSwitch.Mode:
         if (props_Mode == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -77,7 +108,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
           props_Sensor = cpb.create();
         }
         return props_Sensor;

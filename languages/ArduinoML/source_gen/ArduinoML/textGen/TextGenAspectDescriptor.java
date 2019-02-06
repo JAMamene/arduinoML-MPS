@@ -24,12 +24,14 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
     switch (myIndex.index(concept)) {
       case LanguageConceptSwitch.Action:
         return new Action_TextGen();
+      case LanguageConceptSwitch.AnalogCondition:
+        return new AnalogCondition_TextGen();
       case LanguageConceptSwitch.App:
         return new App_TextGen();
       case LanguageConceptSwitch.Brick:
         return new Brick_TextGen();
-      case LanguageConceptSwitch.Condition:
-        return new Condition_TextGen();
+      case LanguageConceptSwitch.LogicalCondition:
+        return new LogicalCondition_TextGen();
       case LanguageConceptSwitch.Mode:
         return new Mode_TextGen();
       case LanguageConceptSwitch.SignalTransition:

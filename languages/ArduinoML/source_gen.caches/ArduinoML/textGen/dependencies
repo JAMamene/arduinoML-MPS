@@ -10,6 +10,16 @@
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
+  <dependency className="ArduinoML.textGen.AnalogCondition_TextGen">
+    <classNode dependClassName="ArduinoML.behavior.Brick__BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
   <dependency className="ArduinoML.textGen.App_TextGen">
     <classNode dependClassName="ArduinoML.behavior.Brick__BehaviorDescriptor" />
     <classNode dependClassName="ArduinoML.behavior.Reachable__BehaviorDescriptor" />
@@ -36,7 +46,7 @@
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
-  <dependency className="ArduinoML.textGen.Condition_TextGen">
+  <dependency className="ArduinoML.textGen.LogicalCondition_TextGen">
     <classNode dependClassName="ArduinoML.behavior.Brick__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
@@ -92,9 +102,10 @@
   <dependency className="ArduinoML.textGen.TextGenAspectDescriptor">
     <classNode dependClassName="ArduinoML.structure.LanguageConceptSwitch" />
     <classNode dependClassName="ArduinoML.textGen.Action_TextGen" />
+    <classNode dependClassName="ArduinoML.textGen.AnalogCondition_TextGen" />
     <classNode dependClassName="ArduinoML.textGen.App_TextGen" />
     <classNode dependClassName="ArduinoML.textGen.Brick_TextGen" />
-    <classNode dependClassName="ArduinoML.textGen.Condition_TextGen" />
+    <classNode dependClassName="ArduinoML.textGen.LogicalCondition_TextGen" />
     <classNode dependClassName="ArduinoML.textGen.Mode_TextGen" />
     <classNode dependClassName="ArduinoML.textGen.SignalTransition_TextGen" />
     <classNode dependClassName="ArduinoML.textGen.State_TextGen" />

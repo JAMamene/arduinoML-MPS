@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-ep5iod2pb7a47v9baaqy5l8qzp9bq12">
-  <files names="Action_TextGen.java:App_TextGen.java:Brick_TextGen.java:Condition_TextGen.java:Mode_TextGen.java:SignalTransition_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java:TimedTransition_TextGen.java" />
+<product version="3" modelHash="-ccjnuugrvho6qj44a3c2fc1my4t292e">
+  <files names="Action_TextGen.java:AnalogCondition_TextGen.java:App_TextGen.java:Brick_TextGen.java:LogicalCondition_TextGen.java:Mode_TextGen.java:SignalTransition_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java:TimedTransition_TextGen.java" />
 </product>
 

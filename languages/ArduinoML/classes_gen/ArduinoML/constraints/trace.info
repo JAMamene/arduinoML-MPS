@@ -8,7 +8,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,31,0" name="ArduinoML.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,37,0" name="ArduinoML.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:1d73b26c-71d2-455e-a1cb-6f6d8cce5cfa(ArduinoML.constraints)/2839351917973108160">
@@ -73,6 +73,118 @@
       <scope id="2839351917975168058" at="21,0,37,0" />
       <unit id="2839351917975168059" at="24,137,34,5" name="ArduinoML.constraints.Brick_Constraints$1" />
       <unit id="2839351917975168058" at="16,0,38,0" name="ArduinoML.constraints.Brick_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:1d73b26c-71d2-455e-a1cb-6f6d8cce5cfa(ArduinoML.constraints)/7750789375627494394">
+    <file name="AnalogCondition_Constraints.java">
+      <node id="7750789375627494394" at="17,40,18,143" concept="5" />
+      <node id="7750789375627494394" at="22,84,23,119" concept="3" />
+      <node id="7750789375627503686" at="26,40,27,20" concept="4" />
+      <node id="7750789375627503686" at="30,70,31,37" concept="3" />
+      <node id="7750789375627504818" at="31,37,32,86" concept="4" />
+      <node id="7750789375627654013" at="37,40,38,20" concept="4" />
+      <node id="7750789375627654013" at="41,70,42,38" concept="3" />
+      <node id="7750789375627714823" at="42,38,43,70" concept="4" />
+      <node id="7750789375627494394" at="45,7,46,22" concept="4" />
+      <node id="7750789375627494394" at="17,0,20,0" concept="0" trace="AnalogCondition_Constraints#()V" />
+      <node id="7750789375627503686" at="25,0,29,0" concept="2" trace="hasOwnValidator#()Z" />
+      <node id="7750789375627654013" at="36,0,40,0" concept="2" trace="hasOwnValidator#()Z" />
+      <node id="7750789375627503686" at="29,0,34,0" concept="2" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="7750789375627654013" at="40,0,45,0" concept="2" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="7750789375627503686" at="23,119,34,7" concept="1" />
+      <node id="7750789375627654013" at="34,7,45,7" concept="1" />
+      <node id="7750789375627494394" at="21,0,48,0" concept="2" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <scope id="7750789375627494394" at="17,40,18,143" />
+      <scope id="7750789375627503686" at="26,40,27,20" />
+      <scope id="7750789375627654013" at="37,40,38,20" />
+      <scope id="7750789375627503686" at="30,70,32,86">
+        <var name="propertyName" id="7750789375627503686" />
+      </scope>
+      <scope id="7750789375627654013" at="41,70,43,70">
+        <var name="propertyName" id="7750789375627654013" />
+      </scope>
+      <scope id="7750789375627494394" at="17,0,20,0" />
+      <scope id="7750789375627503686" at="25,0,29,0" />
+      <scope id="7750789375627654013" at="36,0,40,0" />
+      <scope id="7750789375627503686" at="29,0,34,0">
+        <var name="node" id="7750789375627503686" />
+        <var name="propertyValue" id="7750789375627503686" />
+      </scope>
+      <scope id="7750789375627654013" at="40,0,45,0">
+        <var name="node" id="7750789375627654013" />
+        <var name="propertyValue" id="7750789375627654013" />
+      </scope>
+      <scope id="7750789375627494394" at="22,84,46,22">
+        <var name="properties" id="7750789375627494394" />
+      </scope>
+      <scope id="7750789375627494394" at="21,0,48,0" />
+      <unit id="7750789375627503686" at="24,147,34,5" name="ArduinoML.constraints.AnalogCondition_Constraints$1" />
+      <unit id="7750789375627654013" at="35,148,45,5" name="ArduinoML.constraints.AnalogCondition_Constraints$2" />
+      <unit id="7750789375627494394" at="16,0,49,0" name="ArduinoML.constraints.AnalogCondition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:1d73b26c-71d2-455e-a1cb-6f6d8cce5cfa(ArduinoML.constraints)/7750789375629188745">
+    <file name="AnalogSensor_Constraints.java">
+      <node id="7750789375629188745" at="17,37,18,140" concept="5" />
+      <node id="7750789375629188745" at="22,84,23,119" concept="3" />
+      <node id="7750789375629188746" at="26,40,27,20" concept="4" />
+      <node id="7750789375629188746" at="30,70,31,36" concept="3" />
+      <node id="7750789375629189218" at="31,36,32,124" concept="4" />
+      <node id="7750789375629188745" at="34,7,35,22" concept="4" />
+      <node id="7750789375629188745" at="17,0,20,0" concept="0" trace="AnalogSensor_Constraints#()V" />
+      <node id="7750789375629188746" at="25,0,29,0" concept="2" trace="hasOwnValidator#()Z" />
+      <node id="7750789375629188746" at="29,0,34,0" concept="2" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="7750789375629188746" at="23,119,34,7" concept="1" />
+      <node id="7750789375629188745" at="21,0,37,0" concept="2" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <scope id="7750789375629188745" at="17,37,18,140" />
+      <scope id="7750789375629188746" at="26,40,27,20" />
+      <scope id="7750789375629188746" at="30,70,32,124">
+        <var name="propertyName" id="7750789375629188746" />
+      </scope>
+      <scope id="7750789375629188745" at="17,0,20,0" />
+      <scope id="7750789375629188746" at="25,0,29,0" />
+      <scope id="7750789375629188746" at="29,0,34,0">
+        <var name="node" id="7750789375629188746" />
+        <var name="propertyValue" id="7750789375629188746" />
+      </scope>
+      <scope id="7750789375629188745" at="22,84,35,22">
+        <var name="properties" id="7750789375629188745" />
+      </scope>
+      <scope id="7750789375629188745" at="21,0,37,0" />
+      <unit id="7750789375629188746" at="24,146,34,5" name="ArduinoML.constraints.AnalogSensor_Constraints$1" />
+      <unit id="7750789375629188745" at="16,0,38,0" name="ArduinoML.constraints.AnalogSensor_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:1d73b26c-71d2-455e-a1cb-6f6d8cce5cfa(ArduinoML.constraints)/7750789375629203920">
+    <file name="LogicalSensor_Constraints.java">
+      <node id="7750789375629203920" at="17,38,18,141" concept="5" />
+      <node id="7750789375629203920" at="22,84,23,119" concept="3" />
+      <node id="7750789375629203921" at="26,40,27,20" concept="4" />
+      <node id="7750789375629203921" at="30,70,31,36" concept="3" />
+      <node id="7750789375629204393" at="31,36,32,125" concept="4" />
+      <node id="7750789375629203920" at="34,7,35,22" concept="4" />
+      <node id="7750789375629203920" at="17,0,20,0" concept="0" trace="LogicalSensor_Constraints#()V" />
+      <node id="7750789375629203921" at="25,0,29,0" concept="2" trace="hasOwnValidator#()Z" />
+      <node id="7750789375629203921" at="29,0,34,0" concept="2" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="7750789375629203921" at="23,119,34,7" concept="1" />
+      <node id="7750789375629203920" at="21,0,37,0" concept="2" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <scope id="7750789375629203920" at="17,38,18,141" />
+      <scope id="7750789375629203921" at="26,40,27,20" />
+      <scope id="7750789375629203921" at="30,70,32,125">
+        <var name="propertyName" id="7750789375629203921" />
+      </scope>
+      <scope id="7750789375629203920" at="17,0,20,0" />
+      <scope id="7750789375629203921" at="25,0,29,0" />
+      <scope id="7750789375629203921" at="29,0,34,0">
+        <var name="node" id="7750789375629203921" />
+        <var name="propertyValue" id="7750789375629203921" />
+      </scope>
+      <scope id="7750789375629203920" at="22,84,35,22">
+        <var name="properties" id="7750789375629203920" />
+      </scope>
+      <scope id="7750789375629203920" at="21,0,37,0" />
+      <unit id="7750789375629203921" at="24,146,34,5" name="ArduinoML.constraints.LogicalSensor_Constraints$1" />
+      <unit id="7750789375629203920" at="16,0,38,0" name="ArduinoML.constraints.LogicalSensor_Constraints" />
     </file>
   </root>
 </debug-info>

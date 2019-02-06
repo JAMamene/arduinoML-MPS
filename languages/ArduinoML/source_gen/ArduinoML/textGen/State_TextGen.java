@@ -26,7 +26,7 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.append("timer.deleteTimer(stateTimer);");
     tgs.newLine();
     tgs.indent();
-    tgs.append("Seiral.println(\"state ");
+    tgs.append("Serial.println(\"state ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
     tgs.append("\");");
     tgs.newLine();
@@ -63,6 +63,7 @@ public class State_TextGen extends TextGenDescriptorBase {
       tgs.append(Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput()));
       tgs.append("\");");
       tgs.newLine();
+
     }
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions"));
