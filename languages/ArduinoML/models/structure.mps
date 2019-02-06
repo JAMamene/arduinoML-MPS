@@ -100,17 +100,17 @@
       <property role="TrG5h" value="pin" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="duUnFczZv9" role="1TKVEl">
+      <property role="IQ2nx" value="242888143551854537" />
+      <property role="TrG5h" value="watch" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3KE6QPahCnN">
     <property role="EcuMT" value="4335307747509044723" />
     <property role="TrG5h" value="Sensor" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3KE6QPahCnx" resolve="Brick" />
-    <node concept="1TJgyi" id="6IgltWBqUK8" role="1TKVEl">
-      <property role="IQ2nx" value="7750789375632059400" />
-      <property role="TrG5h" value="watch" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
   </node>
   <node concept="1TIwiD" id="3KE6QPahCnO">
     <property role="EcuMT" value="4335307747509044724" />

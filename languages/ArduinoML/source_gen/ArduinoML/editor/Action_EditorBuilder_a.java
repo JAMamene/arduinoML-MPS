@@ -39,7 +39,6 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteEasily;
 import jetbrains.mps.nodeEditor.cellMenu.SPropertySubstituteInfo;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
-import ArduinoML.editor.Styles_StyleSheet.actionStyleClass;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSPropertyOrNode;
 import ArduinoML.editor.Styles_StyleSheet.highStyleClass;
 import ArduinoML.editor.Styles_StyleSheet.lowStyleClass;
@@ -173,9 +172,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "->");
     editorCell.setCellId("Constant_8bscln_b0");
-    Style style = new StyleImpl();
-    new actionStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }

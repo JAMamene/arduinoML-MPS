@@ -59,10 +59,13 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     if (SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions")).size() > 0) {
       tgs.indent();
-      tgs.append("Serial.println(\"");
-      tgs.append(Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput()));
-      tgs.append("\");");
-      tgs.newLine();
+      String serial = Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput());
+      if (!((serial == null || serial.length() == 0))) {
+        tgs.append("Serial.println(\"");
+        tgs.append(serial);
+        tgs.append(");");
+        tgs.newLine();
+      }
 
     }
     {

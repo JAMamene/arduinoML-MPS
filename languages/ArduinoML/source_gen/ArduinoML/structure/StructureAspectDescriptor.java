@@ -147,6 +147,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044705");
     b.version(2);
     b.property("pin", 0x3c2a1b6d4a4685f1L).type(PrimitiveTypeId.INTEGER).origin("4335307747509044721").done();
+    b.property("watch", 0x35ee97acc8ff7c9L).type(PrimitiveTypeId.BOOLEAN).origin("242888143551854537").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCondition() {
@@ -201,7 +202,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ArduinoML.structure.Brick", 0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L);
     b.origin("r:248d02e4-0fe5-41e2-9652-fc52d3b7237a(ArduinoML.structure)/4335307747509044723");
     b.version(2);
-    b.property("watch", 0x6b9055df276bac08L).type(PrimitiveTypeId.BOOLEAN).origin("7750789375632059400").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSignalTransition() {
