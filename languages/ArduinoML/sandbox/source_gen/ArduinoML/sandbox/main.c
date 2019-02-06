@@ -26,7 +26,7 @@ void s_default_off() {
     delay(100);
     digitalWrite(b_led, LOW);
 
-    Serial.println("led 0 "");
+    Serial.println("led 0 ");
     if (digitalRead(b_button2) == HIGH && digitalRead(b_button) == HIGH) {
       s_default_on();
     }
@@ -41,7 +41,7 @@ void s_default_on() {
     delay(100);
     digitalWrite(b_led, HIGH);
 
-    Serial.println("led 1 "");
+    Serial.println("led 1 ");
     if (digitalRead(b_button2) == LOW) {
       s_default_off();
     }
@@ -60,5 +60,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("{ALL_BRICKS: ["button", "button2", "led"], ALL_MODES: {"default" : ["off","on"]}, ANALOG_SENSORS: {},DEFAULT_STATE : "default", DEFAULT_MODE: "off"}");  s_default_off();
+  Serial.println("{ALL_BRICKS: ["button", "button2", "led"], ALL_MODES: {"default" : ["off","on"]}, ANALOG_SENSORS: {},DEFAULT_STATE : "default", DEFAULT_MODE: "off"}");
+  s_default_off();
 }

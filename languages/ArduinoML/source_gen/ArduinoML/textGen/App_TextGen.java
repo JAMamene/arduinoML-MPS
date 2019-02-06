@@ -95,6 +95,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("Serial.println(\"");
     tgs.append(App__BehaviorDescriptor.initMonitor_id6IgltWBu7X1.invoke(ctx.getPrimaryInput()));
     tgs.append("\");");
+    tgs.newLine();
     tgs.indent();
     tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b8863577eL, "initial"))));
     tgs.append("();");

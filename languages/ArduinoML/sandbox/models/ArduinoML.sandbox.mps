@@ -41,6 +41,9 @@
         <reference id="4335307747509044737" name="actuator" index="1Qr9PG" />
       </concept>
       <concept id="4335307747509044724" name="ArduinoML.structure.Actuator" flags="ng" index="1Qr9Up" />
+      <concept id="4335307747509044723" name="ArduinoML.structure.Sensor" flags="ng" index="1Qr9Uu">
+        <property id="7750789375632059400" name="watch" index="1cYZBn" />
+      </concept>
       <concept id="4335307747509044698" name="ArduinoML.structure.State" flags="ng" index="1Qr9UR" />
       <concept id="4335307747509044695" name="ArduinoML.structure.App" flags="ng" index="1Qr9UU">
         <reference id="4335307747509044717" name="initial" index="1Qr9U0" />
@@ -202,6 +205,7 @@
     <node concept="1cygi9" id="6IgltWBmzpP" role="1Qr9U5">
       <property role="TrG5h" value="button" />
       <property role="1Qr9Us" value="9" />
+      <property role="1cYZBn" value="true" />
     </node>
     <node concept="1cygi9" id="6IgltWBmzq4" role="1Qr9U5">
       <property role="TrG5h" value="button2" />
