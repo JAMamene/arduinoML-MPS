@@ -25,14 +25,18 @@ public final class Mode__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, "ArduinoML.structure.Mode");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
-  public static final SMethod<String> getEditorName_id4BNFDI8r4Up = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BNFDI8r4Up").registry(REGISTRY).build();
+  public static final SMethod<String> getInitialState_id5v95mrb9jiN = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getInitialState").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5v95mrb9jiN").registry(REGISTRY).build();
+  public static final SMethod<String> getEditorName_id4BNFDI8rF5p = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BNFDI8rF5p").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getEditorName_id4BNFDI8r4Up);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getInitialState_id5v95mrb9jiN, getEditorName_id4BNFDI8rF5p);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static String getEditorName_id4BNFDI8r4Up(@NotNull SNode __thisNode__) {
+  /*package*/ static String getInitialState_id5v95mrb9jiN(@NotNull SNode __thisNode__) {
+    return Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(__thisNode__) + "_initial_state";
+  }
+  /*package*/ static String getEditorName_id4BNFDI8rF5p(@NotNull SNode __thisNode__) {
     return new String("m_") + SPropertyOperations.getString(__thisNode__, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
   }
 
@@ -53,7 +57,9 @@ public final class Mode__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((String) getEditorName_id4BNFDI8r4Up(node));
+        return (T) ((String) getInitialState_id5v95mrb9jiN(node));
+      case 1:
+        return (T) ((String) getEditorName_id4BNFDI8rF5p(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

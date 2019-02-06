@@ -17,6 +17,7 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -25,15 +26,19 @@ public final class State__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL, "ArduinoML.structure.State");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
-  public static final SMethod<String> getEditorName_id2tBpSqvfN3o = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2tBpSqvfN3o").registry(REGISTRY).build();
+  public static final SMethod<String> getEditorName_id4BNFDI8rF5p = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BNFDI8rF5p").registry(REGISTRY).build();
+  public static final SMethod<String> getParentMode_id5v95mrb6yAW = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getParentMode").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5v95mrb6yAW").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getEditorName_id2tBpSqvfN3o);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getEditorName_id4BNFDI8rF5p, getParentMode_id5v95mrb6yAW);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static String getEditorName_id2tBpSqvfN3o(@NotNull SNode __thisNode__) {
-    return new String("s_") + SPropertyOperations.getString(__thisNode__, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+  /*package*/ static String getEditorName_id4BNFDI8rF5p(@NotNull SNode __thisNode__) {
+    return new String("s_") + SPropertyOperations.getString(((SNode) SNodeOperations.getParent(__thisNode__)), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + new String("_") + SPropertyOperations.getString(__thisNode__, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+  }
+  /*package*/ static String getParentMode_id5v95mrb6yAW(@NotNull SNode __thisNode__) {
+    return Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(((SNode) SNodeOperations.getParent(__thisNode__)));
   }
 
   /*package*/ State__BehaviorDescriptor() {
@@ -53,7 +58,9 @@ public final class State__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((String) getEditorName_id2tBpSqvfN3o(node));
+        return (T) ((String) getEditorName_id4BNFDI8rF5p(node));
+      case 1:
+        return (T) ((String) getParentMode_id5v95mrb6yAW(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
