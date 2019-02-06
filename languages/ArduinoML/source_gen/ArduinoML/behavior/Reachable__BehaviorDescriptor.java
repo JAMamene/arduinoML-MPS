@@ -16,6 +16,11 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -24,13 +29,23 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, "ArduinoML.structure.Reachable");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
+  public static final SMethod<String> serialPrint_id6IgltWAZkFK = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("serialPrint").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6IgltWAZkFK").registry(REGISTRY).build();
   public static final SMethod<String> getEditorName_id4BNFDI8rF5p = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getEditorName").modifiers(SModifiersImpl.create(12, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BNFDI8rF5p").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getEditorName_id4BNFDI8rF5p);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(serialPrint_id6IgltWAZkFK, getEditorName_id4BNFDI8rF5p);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
+  /*package*/ static String serialPrint_id6IgltWAZkFK(@NotNull SNode __thisNode__) {
+    final Wrappers._T<String> tmp = new Wrappers._T<String>("");
+    ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        tmp.value += SPropertyOperations.getString(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " " + ((SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a4685fdL, "value")) == "LOW" ? 0 : 1)) + " ";
+      }
+    });
+    return tmp.value;
+  }
 
   /*package*/ Reachable__BehaviorDescriptor() {
     super(REGISTRY);
@@ -48,6 +63,8 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
+      case 0:
+        return (T) ((String) serialPrint_id6IgltWAZkFK(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

@@ -1,14 +1,16 @@
 #include <SimpleTimer.h>
 
 SimpleTimer timer;
-int timerId = 0;
+int stateTimer = 0;
+
+int modeTimer = 1;
 
 int b_button = 12;
 int b_led = 9;
 
 void m_night() {
+    digitalWrite(b_led, LOW);
   digitalWrite(b_led, LOW);
-  Serial.println("led LOW);
   
     if (digitalRead(b_button) == LOW) {
       m_init_initial_state();
@@ -16,11 +18,13 @@ void m_night() {
 }
 
 void m_night_initial_state() {
+  timer.deleteTimer(stateTimer);
+  timer.deleteTimer(modeTimer);
     s_init_off()
 }
 
 void s_night_on() {
-  timer.deleteTimer(timerId);
+  timer.deleteTimer(stateTimer);
   Seiral.println("state on");
   while (1) {
     delay(100);
@@ -33,7 +37,7 @@ void s_night_on() {
 }
 
 void s_night_off() {
-  timer.deleteTimer(timerId);
+  timer.deleteTimer(stateTimer);
   Seiral.println("state off");
   while (1) {
     delay(100);
@@ -46,10 +50,8 @@ void s_night_off() {
 }
 
 void m_init() {
-  digitalWrite(b_led, HIGH);
-  Serial.println("led HIGH);
-  digitalWrite(b_led, LOW);
-    Serial.println("led LOW);
+    digitalWrite(b_led, HIGH);
+      digitalWrite(b_led, LOW);
 
     if (digitalRead(b_button) == HIGH) {
       m_night_initial_state();
@@ -57,19 +59,20 @@ void m_init() {
 }
 
 void m_init_initial_state() {
-  digitalWrite(b_led, LOW);
-  Serial.println("led LOW);
+  timer.deleteTimer(stateTimer);
+  timer.deleteTimer(modeTimer);
+    digitalWrite(b_led, LOW);
   s_init_on()
 }
 
 void s_init_on() {
-  timer.deleteTimer(timerId);
+  timer.deleteTimer(stateTimer);
   Seiral.println("state on");
   while (1) {
     delay(100);
-digitalWrite(b_led, HIGH);
-    Serial.println("led HIGH);
+    digitalWrite(b_led, HIGH);
 
+    Serial.println("led 1 ");
     if (digitalRead(b_button) == LOW) {
       s_init_off();
     }
@@ -78,13 +81,15 @@ digitalWrite(b_led, HIGH);
 }
 
 void s_init_off() {
-  timer.deleteTimer(timerId);
+  timer.deleteTimer(stateTimer);
   Seiral.println("state off");
   while (1) {
     delay(100);
-digitalWrite(b_led, LOW);
-    Serial.println("led LOW);
+    digitalWrite(b_led, LOW);
 
+    digitalWrite(b_led, LOW);
+
+    Serial.println("led 0 led 0 ");
     if (digitalRead(b_button) == HIGH) {
       s_init_on();
     }
@@ -93,11 +98,11 @@ digitalWrite(b_led, LOW);
 }
 
 void setup() {
-Seiral.begin(9600);
+  Seiral.begin(9600);
   pinMode(b_button, INPUT);
   pinMode(b_led, OUTPUT);
 }
 
 void loop() {
-  m_init_initial_state();
+  s_init_on();
 }

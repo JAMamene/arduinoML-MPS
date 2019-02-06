@@ -79,6 +79,12 @@ public class Mode_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
+    tgs.append("timer.deleteTimer(stateTimer);");
+    tgs.newLine();
+    tgs.indent();
+    tgs.append("timer.deleteTimer(modeTimer);");
+    tgs.newLine();
+    tgs.indent();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"));
       final SNode lastItem = Sequence.fromIterable(collection).last();
