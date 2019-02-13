@@ -7,9 +7,10 @@ import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import ArduinoML.behavior.Reachable__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import ArduinoML.behavior.State__BehaviorDescriptor;
 
@@ -26,7 +27,9 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.append("timer.deleteTimer(stateTimer);");
     tgs.newLine();
     tgs.indent();
-    tgs.append("Serial.println(\"state ");
+    tgs.append("Serial.println(\"mode ");
+    tgs.append(SPropertyOperations.getString(((SNode) SNodeOperations.getParent(ctx.getPrimaryInput())), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+    tgs.append(" ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
     tgs.append("\");");
     tgs.newLine();

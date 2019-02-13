@@ -126,6 +126,7 @@
       <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
         <reference id="1154546997487" name="concept" index="3gnhBz" />
       </concept>
+      <concept id="1139613262185" name="jetbrains.mps.lang.smodel.structure.Node_GetParentOperation" flags="nn" index="1mfA1w" />
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
@@ -550,7 +551,28 @@
             <node concept="1bpajm" id="5v95mraVr1c" role="3cqZAp" />
             <node concept="lc7rE" id="5v95mraVriJ" role="3cqZAp">
               <node concept="la8eA" id="5v95mraVrrA" role="lcghm">
-                <property role="lacIc" value="Serial.println(&quot;state " />
+                <property role="lacIc" value="Serial.println(&quot;mode " />
+              </node>
+              <node concept="l9hG8" id="TNboOewNFx" role="lcghm">
+                <node concept="2OqwBi" id="TNboOewPAw" role="lb14g">
+                  <node concept="1eOMI4" id="TNboOewOSl" role="2Oq$k0">
+                    <node concept="10QFUN" id="TNboOewOSi" role="1eOMHV">
+                      <node concept="3Tqbb2" id="TNboOewOT1" role="10QFUM">
+                        <ref role="ehGHo" to="a90u:4BNFDI8oPto" resolve="Mode" />
+                      </node>
+                      <node concept="2OqwBi" id="TNboOewP8U" role="10QFUP">
+                        <node concept="117lpO" id="TNboOewOWe" role="2Oq$k0" />
+                        <node concept="1mfA1w" id="TNboOewPr_" role="2OqNvi" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3TrcHB" id="TNboOewPNy" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
+                </node>
+              </node>
+              <node concept="la8eA" id="TNboOewPZc" role="lcghm">
+                <property role="lacIc" value=" " />
               </node>
               <node concept="l9hG8" id="5v95mraVrsX" role="lcghm">
                 <node concept="2OqwBi" id="5v95mraVrBv" role="lb14g">
@@ -1219,24 +1241,6 @@
         <node concept="1bpajm" id="6StJjgxJ_KZ" role="3cqZAp" />
         <node concept="3izx1p" id="6StJjgxJ_L0" role="3cqZAp">
           <node concept="3clFbS" id="6StJjgxJ_L1" role="3izTki">
-            <node concept="1bpajm" id="TNboOeuEh7" role="3cqZAp" />
-            <node concept="lc7rE" id="TNboOeuEvi" role="3cqZAp">
-              <node concept="la8eA" id="TNboOeuEAt" role="lcghm">
-                <property role="lacIc" value="Serial.println(&quot;mode " />
-              </node>
-              <node concept="l9hG8" id="TNboOeuEEO" role="lcghm">
-                <node concept="2OqwBi" id="TNboOeuEOK" role="lb14g">
-                  <node concept="117lpO" id="TNboOeuEFH" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="TNboOeuEZs" role="2OqNvi">
-                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                  </node>
-                </node>
-              </node>
-              <node concept="la8eA" id="TNboOeuF4M" role="lcghm">
-                <property role="lacIc" value="&quot;); " />
-              </node>
-              <node concept="l8MVK" id="TNboOevms8" role="lcghm" />
-            </node>
             <node concept="1bpajm" id="6IgltWAX79i" role="3cqZAp" />
             <node concept="lc7rE" id="6IgltWAX8yu" role="3cqZAp">
               <node concept="la8eA" id="6IgltWAX8yv" role="lcghm">
