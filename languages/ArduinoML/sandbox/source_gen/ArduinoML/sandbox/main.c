@@ -13,6 +13,7 @@ void m_default() {
   }
 
 void m_default_initial_state() {
+  Serial.println("mode default"); 
   timer.deleteTimer(stateTimer);
   timer.deleteTimer(modeTimer);
     s_default_off();

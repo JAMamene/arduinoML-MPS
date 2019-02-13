@@ -5,13 +5,15 @@ int stateTimer = 0;
 
 int modeTimer = 1;
 
-int b_l = 10;
-int b_b = 9;
+int b_buzzer = 12;
+int b_led = 11;
+int b_button = 9;
 
 void m_default() {
   }
 
 void m_default_initial_state() {
+  Serial.println("mode default"); 
   timer.deleteTimer(stateTimer);
   timer.deleteTimer(modeTimer);
     s_default_off();
@@ -22,25 +24,42 @@ void s_default_off() {
   Serial.println("state off");
   while (1) {
     delay(100);
-    digitalWrite(b_l, LOW);
+    digitalWrite(b_led, LOW);
 
-    Serial.println(String("l 0") + String("b") + String(digitalRead(b_b)));
-    if (digitalRead(b_b) == HIGH) {
-      s_default_on();
+    Serial.println(String(" led 0 ") + String(" button ") + String(digitalRead(b_button)));
+    if (digitalRead(b_button) == HIGH) {
+      s_default_buzzer_on();
     }
     m_default();
   }
 }
 
-void s_default_on() {
+void s_default_buzzer_on() {
   timer.deleteTimer(stateTimer);
-  Serial.println("state on");
+  Serial.println("state buzzer_on");
   while (1) {
     delay(100);
-    digitalWrite(b_l, HIGH);
+    digitalWrite(b_buzzer, HIGH);
 
-    Serial.println(String("l 1") + String("b") + String(digitalRead(b_b)));
-    if (digitalRead(b_b) == HIGH) {
+    Serial.println(String(" buzzer 1 ") + String(" button ") + String(digitalRead(b_button)));
+    if (digitalRead(b_button) == HIGH) {
+      s_default_led_on();
+    }
+    m_default();
+  }
+}
+
+void s_default_led_on() {
+  timer.deleteTimer(stateTimer);
+  Serial.println("state led_on");
+  while (1) {
+    delay(100);
+    digitalWrite(b_buzzer, LOW);
+
+    digitalWrite(b_led, HIGH);
+
+    Serial.println(String(" buzzer 0 ") + String(" led 1 ") + String(" button ") + String(digitalRead(b_button)));
+    if (digitalRead(b_button) == HIGH) {
       s_default_off();
     }
     m_default();
@@ -49,11 +68,12 @@ void s_default_on() {
 
 void setup() {
   Serial.begin(9600);
-  pinMode(b_l, OUTPUT);
-  pinMode(b_b, INPUT);
+  pinMode(b_buzzer, OUTPUT);
+  pinMode(b_led, OUTPUT);
+  pinMode(b_button, INPUT);
 }
 
 void loop() {
-  Serial.println("{\"ALL_BRICKS\": [\"l\", \"b\"], \"ALL_MODES\": {\"default\" : [\"off\",\"on\"]}, \"ANALOG_SENSORS\": {},\"DEFAULT_STATE\" : \"default\", \"DEFAULT_MODE\": \"off\"}");
+  Serial.println("{\"ALL_BRICKS\": [\"buzzer\", \"led\", \"button\"], \"ALL_MODES\": {\"default\" : [\"off\",\"buzzer_on\",\"led_on\"]}, \"ANALOG_SENSORS\": {},\"DEFAULT_STATE\" : \"off\", \"DEFAULT_MODE\": \"default\"}");
   s_default_off();
 }
