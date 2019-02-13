@@ -10479,7 +10479,7 @@
             <node concept="liA8E" id="Z$" role="2OqNvi">
               <ref role="37wK5l" to="kpbf:~TextGenSupport.append(java.lang.CharSequence):jetbrains.mps.text.TextArea" resolve="append" />
               <node concept="Xl_RD" id="ZC" role="37wK5m">
-                <property role="Xl_RC" value="&quot;);" />
+                <property role="Xl_RC" value=" &quot; + String(millis()));" />
                 <node concept="cd27G" id="ZE" role="lGtFl">
                   <node concept="3u3nmq" id="ZF" role="cd27D">
                     <property role="3u3nmv" value="6325610682853999074" />

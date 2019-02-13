@@ -13,7 +13,6 @@ void m_default() {
   }
 
 void m_default_initial_state() {
-  Serial.println("mode default"); 
   timer.deleteTimer(stateTimer);
   timer.deleteTimer(modeTimer);
     s_default_off();
@@ -21,12 +20,12 @@ void m_default_initial_state() {
 
 void s_default_off() {
   timer.deleteTimer(stateTimer);
-  Serial.println("state off");
+  Serial.println("mode default off " + String(millis()));
   while (1) {
     delay(100);
     digitalWrite(b_led, LOW);
 
-    Serial.println(String(" led 0 ") + String(" button ") + String(digitalRead(b_button)));
+    Serial.println(String(" led 0 ") + String(" ") + String(millis()) + String(" ") + String(millis()) + String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
     if (digitalRead(b_button) == HIGH) {
       s_default_buzzer_on();
     }
@@ -36,12 +35,12 @@ void s_default_off() {
 
 void s_default_buzzer_on() {
   timer.deleteTimer(stateTimer);
-  Serial.println("state buzzer_on");
+  Serial.println("mode default buzzer_on " + String(millis()));
   while (1) {
     delay(100);
     digitalWrite(b_buzzer, HIGH);
 
-    Serial.println(String(" buzzer 1 ") + String(" button ") + String(digitalRead(b_button)));
+    Serial.println(String(" buzzer 1 ") + String(" ") + String(millis()) + String(" ") + String(millis()) + String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
     if (digitalRead(b_button) == HIGH) {
       s_default_led_on();
     }
@@ -51,14 +50,14 @@ void s_default_buzzer_on() {
 
 void s_default_led_on() {
   timer.deleteTimer(stateTimer);
-  Serial.println("state led_on");
+  Serial.println("mode default led_on " + String(millis()));
   while (1) {
     delay(100);
     digitalWrite(b_buzzer, LOW);
 
     digitalWrite(b_led, HIGH);
 
-    Serial.println(String(" buzzer 0 ") + String(" led 1 ") + String(" button ") + String(digitalRead(b_button)));
+    Serial.println(String(" buzzer 0 ") + String(" led 1 ") + String(" ") + String(millis()) + String(" ") + String(millis()) + String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
     if (digitalRead(b_button) == HIGH) {
       s_default_off();
     }
