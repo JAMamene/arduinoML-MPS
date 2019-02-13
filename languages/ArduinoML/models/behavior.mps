@@ -703,7 +703,7 @@
                                               </node>
                                             </node>
                                             <node concept="Xl_RD" id="3tbkZ_91JZr" role="3uHU7w">
-                                              <property role="Xl_RC" value="\&quot;) + String(digitalRead(" />
+                                              <property role="Xl_RC" value=" \&quot;) + String(digitalRead(" />
                                             </node>
                                           </node>
                                           <node concept="2OqwBi" id="3tbkZ_91QXb" role="3uHU7w">
