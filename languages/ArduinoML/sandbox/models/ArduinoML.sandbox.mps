@@ -204,14 +204,17 @@
     <node concept="1cygi9" id="duUnFc$EQl" role="1Qr9U5">
       <property role="TrG5h" value="button" />
       <property role="1Qr9Us" value="9" />
+      <property role="3fOhUN" value="true" />
     </node>
     <node concept="1cygi9" id="6IgltWBmzq4" role="1Qr9U5">
       <property role="TrG5h" value="button2" />
       <property role="1Qr9Us" value="12" />
+      <property role="3fOhUN" value="true" />
     </node>
     <node concept="1Qr9Up" id="6IgltWBmzpQ" role="1Qr9U5">
       <property role="TrG5h" value="led" />
       <property role="1Qr9Us" value="10" />
+      <property role="3fOhUN" value="true" />
     </node>
     <node concept="31$fB3" id="6IgltWBmzeT" role="31$2AD">
       <property role="TrG5h" value="default" />
@@ -249,6 +252,214 @@
           <ref role="1Qr9PF" node="6IgltWBmzeU" resolve="off" />
           <node concept="1cyNLG" id="duUnFc$EQQ" role="1LHcOd">
             <ref role="1LHcOn" node="duUnFc$EQl" resolve="button" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1Qr9UU" id="TNboOeolql">
+    <property role="TrG5h" value="scenarioExt" />
+    <ref role="1Qr9U0" node="TNboOeolqn" resolve="m1" />
+    <node concept="1Qr9Up" id="TNboOep2Qb" role="1Qr9U5">
+      <property role="TrG5h" value="led1" />
+      <property role="1Qr9Us" value="9" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="1cygi9" id="TNboOep2Q5" role="1Qr9U5">
+      <property role="TrG5h" value="b1" />
+      <property role="1Qr9Us" value="10" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="1cygh$" id="TNboOep3F8" role="1Qr9U5">
+      <property role="TrG5h" value="s1" />
+      <property role="1Qr9Us" value="1" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="31$fB3" id="TNboOeolqn" role="31$2AD">
+      <property role="TrG5h" value="m1" />
+      <ref role="31$fB_" node="TNboOep2Qn" resolve="off" />
+      <node concept="2zQn1e" id="TNboOep3Fd" role="31$f$p">
+        <ref role="1Qr9PF" node="TNboOeolqx" resolve="m2" />
+        <node concept="1cyNLJ" id="TNboOep3Ff" role="1LHcOd">
+          <property role="1czP7d" value="&gt;" />
+          <property role="1cyUcb" value="256" />
+          <ref role="1LHcOn" node="TNboOep3F8" resolve="s1" />
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOeolqo" role="31_b6Y">
+        <property role="TrG5h" value="on" />
+        <node concept="1Qr9Un" id="TNboOep3EK" role="1Qr9PI">
+          <property role="1Qr9Ug" value="HIGH" />
+          <ref role="1Qr9PG" node="TNboOep2Qb" resolve="led1" />
+        </node>
+        <node concept="2zQn1e" id="TNboOep2Ql" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOep2Qn" resolve="off" />
+          <node concept="1cyNLG" id="TNboOep3EG" role="1LHcOd">
+            <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOep2Qn" role="31_b6Y">
+        <property role="TrG5h" value="off" />
+        <node concept="1Qr9Un" id="TNboOep3F1" role="1Qr9PI">
+          <ref role="1Qr9PG" node="TNboOep2Qb" resolve="led1" />
+        </node>
+        <node concept="2zQn1e" id="TNboOep3EP" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOeolqo" resolve="on" />
+          <node concept="1cyNLG" id="TNboOep3ER" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="31$fB3" id="TNboOeolqx" role="31$2AD">
+      <property role="TrG5h" value="m2" />
+      <ref role="31$fB_" node="TNboOeolqy" resolve="off2" />
+      <node concept="2zQn1e" id="TNboOep3FG" role="31$f$p">
+        <ref role="1Qr9PF" node="TNboOeolqn" resolve="m1" />
+        <node concept="1cyNLJ" id="TNboOep3FK" role="1LHcOd">
+          <property role="1czP7d" value="&lt;=" />
+          <property role="1cyUcb" value="312" />
+          <ref role="1LHcOn" node="TNboOep3F8" resolve="s1" />
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOeolqy" role="31_b6Y">
+        <property role="TrG5h" value="off2" />
+        <node concept="2zQn1e" id="TNboOep3Fj" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOep3Fl" resolve="on2" />
+          <node concept="1cyNLG" id="TNboOep3Fp" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
+          </node>
+        </node>
+        <node concept="1Qr9Un" id="TNboOep3Fr" role="1Qr9PI">
+          <ref role="1Qr9PG" node="TNboOep2Qb" resolve="led1" />
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOep3Fl" role="31_b6Y">
+        <property role="TrG5h" value="on2" />
+        <node concept="1Qr9Un" id="TNboOep3FD" role="1Qr9PI">
+          <property role="1Qr9Ug" value="HIGH" />
+          <ref role="1Qr9PG" node="TNboOep2Qb" resolve="led1" />
+        </node>
+        <node concept="2zQn1e" id="TNboOep3Ft" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOeolqy" resolve="off2" />
+          <node concept="1cyNLG" id="TNboOep3Fv" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1Qr9UU" id="TNboOerrs6">
+    <property role="TrG5h" value="scenario3" />
+    <ref role="1Qr9U0" node="TNboOerrs8" resolve="default" />
+    <node concept="1Qr9Up" id="TNboOerrsa" role="1Qr9U5">
+      <property role="TrG5h" value="l" />
+      <property role="1Qr9Us" value="10" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="1cygi9" id="TNboOerrsg" role="1Qr9U5">
+      <property role="TrG5h" value="b" />
+      <property role="1Qr9Us" value="9" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="31$fB3" id="TNboOerrs8" role="31$2AD">
+      <property role="TrG5h" value="default" />
+      <ref role="31$fB_" node="TNboOerrs9" resolve="off" />
+      <node concept="1Qr9UR" id="TNboOerrs9" role="31_b6Y">
+        <property role="TrG5h" value="off" />
+        <node concept="1Qr9Un" id="TNboOerrsD" role="1Qr9PI">
+          <ref role="1Qr9PG" node="TNboOerrsa" resolve="l" />
+        </node>
+        <node concept="2zQn1e" id="TNboOerrsk" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOerrsm" resolve="on" />
+          <node concept="1cyNLG" id="TNboOerrsq" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOerrsg" resolve="b" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOerrsm" role="31_b6Y">
+        <property role="TrG5h" value="on" />
+        <node concept="1Qr9Un" id="TNboOerrs$" role="1Qr9PI">
+          <property role="1Qr9Ug" value="HIGH" />
+          <ref role="1Qr9PG" node="TNboOerrsa" resolve="l" />
+        </node>
+        <node concept="2zQn1e" id="TNboOerrsu" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOerrs9" resolve="off" />
+          <node concept="1cyNLG" id="TNboOerrsw" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOerrsg" resolve="b" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1Qr9UU" id="TNboOesbhr">
+    <property role="TrG5h" value="scenario4" />
+    <ref role="1Qr9U0" node="TNboOesbht" resolve="default" />
+    <node concept="1Qr9Up" id="TNboOesbhv" role="1Qr9U5">
+      <property role="TrG5h" value="buzzer" />
+      <property role="1Qr9Us" value="12" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="1Qr9Up" id="TNboOesbhN" role="1Qr9U5">
+      <property role="TrG5h" value="led" />
+      <property role="1Qr9Us" value="11" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="1cygi9" id="TNboOesbh_" role="1Qr9U5">
+      <property role="TrG5h" value="button" />
+      <property role="1Qr9Us" value="9" />
+      <property role="3fOhUN" value="true" />
+    </node>
+    <node concept="31$fB3" id="TNboOesbht" role="31$2AD">
+      <property role="TrG5h" value="default" />
+      <ref role="31$fB_" node="TNboOesbhu" resolve="off" />
+      <node concept="1Qr9UR" id="TNboOesbhu" role="31_b6Y">
+        <property role="TrG5h" value="off" />
+        <node concept="1Qr9Un" id="TNboOesbia" role="1Qr9PI">
+          <ref role="1Qr9PG" node="TNboOesbhN" resolve="led" />
+        </node>
+        <node concept="2zQn1e" id="TNboOesbhS" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOesbhU" resolve="buzzer_on" />
+          <node concept="1cyNLG" id="TNboOesbi3" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOesbh_" resolve="button" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOesbhU" role="31_b6Y">
+        <property role="TrG5h" value="buzzer_on" />
+        <node concept="1Qr9Un" id="TNboOesbiC" role="1Qr9PI">
+          <property role="1Qr9Ug" value="HIGH" />
+          <ref role="1Qr9PG" node="TNboOesbhv" resolve="buzzer" />
+        </node>
+        <node concept="2zQn1e" id="TNboOesbiy" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOesbhY" resolve="led_on" />
+          <node concept="1cyNLG" id="TNboOesbi$" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOesbh_" resolve="button" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="TNboOesbhY" role="31_b6Y">
+        <property role="TrG5h" value="led_on" />
+        <node concept="1Qr9Un" id="TNboOesbiW" role="1Qr9PI">
+          <ref role="1Qr9PG" node="TNboOesbhv" resolve="buzzer" />
+        </node>
+        <node concept="1Qr9Un" id="TNboOesbj2" role="1Qr9PI">
+          <property role="1Qr9Ug" value="HIGH" />
+          <ref role="1Qr9PG" node="TNboOesbhN" resolve="led" />
+        </node>
+        <node concept="2zQn1e" id="TNboOesbiO" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOesbhu" resolve="off" />
+          <node concept="1cyNLG" id="TNboOesbiS" role="1LHcOd">
+            <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOesbh_" resolve="button" />
           </node>
         </node>
       </node>

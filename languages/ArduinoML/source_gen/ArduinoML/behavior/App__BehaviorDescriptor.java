@@ -44,7 +44,7 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
     // {ALL_BRICKS: ["buzzer", "led", "button", "analog"], 
     // ALL_MODES: {"default": ["on", "off", "s3"],}, 
     // ANALOG_SENSORS: {"analog": "0 10"},DEFAULT_STATE: "off",DEFAULT_MODE: "default"} 
-    String json = "{ALL_BRICKS: ";
+    String json = "{\\\"ALL_BRICKS\\\": ";
     final Wrappers._T<String> bricks = new Wrappers._T<String>("");
     final Wrappers._T<String> analogSensors = new Wrappers._T<String>("");
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685e8L, "bricks"))).visitAll(new IVisitor<SNode>() {
@@ -60,39 +60,39 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
                 if (!("".equals(analogSensors.value))) {
                   analogSensors.value += ",";
                 }
-                bricks.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "'";
-                analogSensors.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "' : '0 1024'";
+                bricks.value += "\\\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\"";
+                analogSensors.value += "\\\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\" : \\\"0 1024\\\"";
               }
               break;
             default:
-              bricks.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "'";
+              bricks.value += "\\\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\"";
           }
 
         }
       }
     });
-    json += "[" + bricks.value + "], ALL_MODES: ";
+    json += "[" + bricks.value + "], \\\"ALL_MODES\\\": ";
     final Wrappers._T<String> modes = new Wrappers._T<String>("");
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x49f3ae9b88638732L, "modes"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         if (!("".equals(modes.value))) {
           modes.value += ",";
         }
-        modes.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "' : ";
+        modes.value += "\\\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\" : ";
         final Wrappers._T<String> states = new Wrappers._T<String>("");
         ListSequence.fromList(SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b88671f25L, "states"))).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
             if (!("".equals(states.value))) {
               states.value += ",";
             }
-            states.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "'";
+            states.value += "\\\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\"";
           }
         });
         modes.value += "[" + states.value + "]";
       }
     });
-    json += "{" + modes.value + "}, ANALOG_SENSORS: {" + analogSensors.value + "}";
-    json += ",DEFAULT_STATE : '" + SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "', DEFAULT_MODE: '" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b8863577eL, "initial")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "'}";
+    json += "{" + modes.value + "}, \\\"ANALOG_SENSORS\\\": {" + analogSensors.value + "}";
+    json += ",\\\"DEFAULT_STATE\\\" : \\\"" + SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\", \\\"DEFAULT_MODE\\\": \\\"" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b8863577eL, "initial")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\\\"}";
 
     return json;
   }

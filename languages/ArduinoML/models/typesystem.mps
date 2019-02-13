@@ -115,6 +115,18 @@
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
+      <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
+        <reference id="1154546997487" name="concept" index="3gnhBz" />
+      </concept>
+      <concept id="6039268229364358244" name="jetbrains.mps.lang.smodel.structure.ExactConceptCase" flags="ng" index="1pnPoh">
+        <child id="6039268229364358388" name="body" index="1pnPq1" />
+        <child id="6039268229364358387" name="concept" index="1pnPq6" />
+      </concept>
+      <concept id="5944356402132808749" name="jetbrains.mps.lang.smodel.structure.ConceptSwitchStatement" flags="nn" index="1_3QMa">
+        <child id="5944356402132808753" name="case" index="1_3QMm" />
+        <child id="5944356402132808752" name="expression" index="1_3QMn" />
+      </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -655,6 +667,93 @@
     <node concept="1YaCAy" id="4BNFDI8pJlb" role="1YuTPh">
       <property role="TrG5h" value="mode" />
       <ref role="1YaFvo" to="a90u:4BNFDI8oPto" resolve="Mode" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="TNboOers92">
+    <property role="TrG5h" value="check_cond" />
+    <node concept="3clFbS" id="TNboOers93" role="18ibNy">
+      <node concept="1_3QMa" id="TNboOerucH" role="3cqZAp">
+        <node concept="1pnPoh" id="TNboOerucS" role="1_3QMm">
+          <node concept="3gn64h" id="TNboOerud1" role="1pnPq6">
+            <ref role="3gnhBz" to="a90u:6IgltWB6QAK" resolve="AnalogCondition" />
+          </node>
+          <node concept="3clFbS" id="TNboOerucW" role="1pnPq1">
+            <node concept="1_3QMa" id="TNboOeruH7" role="3cqZAp">
+              <node concept="2OqwBi" id="TNboOervxW" role="1_3QMn">
+                <node concept="2OqwBi" id="TNboOeruOf" role="2Oq$k0">
+                  <node concept="1YBJjd" id="TNboOeruHb" role="2Oq$k0">
+                    <ref role="1YBMHb" node="TNboOers95" resolve="condition" />
+                  </node>
+                  <node concept="3TrEf2" id="TNboOervcU" role="2OqNvi">
+                    <ref role="3Tt5mk" to="a90u:7LLJvWdLn3C" resolve="sensor" />
+                  </node>
+                </node>
+                <node concept="2yIwOk" id="TNboOerwfV" role="2OqNvi" />
+              </node>
+              <node concept="1pnPoh" id="TNboOerwgd" role="1_3QMm">
+                <node concept="3gn64h" id="TNboOerwgm" role="1pnPq6">
+                  <ref role="3gnhBz" to="a90u:6IgltWB6l5m" resolve="LogicalSensor" />
+                </node>
+                <node concept="3clFbS" id="TNboOerwgf" role="1pnPq1">
+                  <node concept="2MkqsV" id="TNboOerwgF" role="3cqZAp">
+                    <node concept="Xl_RD" id="TNboOerwgR" role="2MkJ7o">
+                      <property role="Xl_RC" value="Cannot use analog condition with logical sensor" />
+                    </node>
+                    <node concept="1YBJjd" id="TNboOerwh9" role="2OEOjV">
+                      <ref role="1YBMHb" node="TNboOers95" resolve="condition" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1pnPoh" id="TNboOerud9" role="1_3QMm">
+          <node concept="3gn64h" id="TNboOerudp" role="1pnPq6">
+            <ref role="3gnhBz" to="a90u:6IgltWB6QAN" resolve="LogicalCondition" />
+          </node>
+          <node concept="3clFbS" id="TNboOerudd" role="1pnPq1">
+            <node concept="1_3QMa" id="TNboOerwhv" role="3cqZAp">
+              <node concept="2OqwBi" id="TNboOerwhw" role="1_3QMn">
+                <node concept="2OqwBi" id="TNboOerwhx" role="2Oq$k0">
+                  <node concept="1YBJjd" id="TNboOerwhy" role="2Oq$k0">
+                    <ref role="1YBMHb" node="TNboOers95" resolve="condition" />
+                  </node>
+                  <node concept="3TrEf2" id="TNboOerwhz" role="2OqNvi">
+                    <ref role="3Tt5mk" to="a90u:7LLJvWdLn3C" resolve="sensor" />
+                  </node>
+                </node>
+                <node concept="2yIwOk" id="TNboOerwh$" role="2OqNvi" />
+              </node>
+              <node concept="1pnPoh" id="TNboOerwh_" role="1_3QMm">
+                <node concept="3gn64h" id="TNboOerwkk" role="1pnPq6">
+                  <ref role="3gnhBz" to="a90u:6IgltWB6l6V" resolve="AnalogSensor" />
+                </node>
+                <node concept="3clFbS" id="TNboOerwhB" role="1pnPq1">
+                  <node concept="2MkqsV" id="TNboOerwhC" role="3cqZAp">
+                    <node concept="Xl_RD" id="TNboOerwhD" role="2MkJ7o">
+                      <property role="Xl_RC" value="Cannot use logical condition with analog sensor" />
+                    </node>
+                    <node concept="1YBJjd" id="TNboOerwhE" role="2OEOjV">
+                      <ref role="1YBMHb" node="TNboOers95" resolve="condition" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="TNboOerukr" role="1_3QMn">
+          <node concept="1YBJjd" id="TNboOerucL" role="2Oq$k0">
+            <ref role="1YBMHb" node="TNboOers95" resolve="condition" />
+          </node>
+          <node concept="2yIwOk" id="TNboOeruGP" role="2OqNvi" />
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="TNboOers95" role="1YuTPh">
+      <property role="TrG5h" value="condition" />
+      <ref role="1YaFvo" to="a90u:7LLJvWdLn3_" resolve="Condition" />
     </node>
   </node>
 </model>

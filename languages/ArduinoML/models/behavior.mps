@@ -799,7 +799,7 @@
             <property role="TrG5h" value="json" />
             <node concept="17QB3L" id="6IgltWBu7Zf" role="1tU5fm" />
             <node concept="Xl_RD" id="6IgltWBu7ZE" role="33vP2m">
-              <property role="Xl_RC" value="{ALL_BRICKS: " />
+              <property role="Xl_RC" value="{\\\&quot;ALL_BRICKS\\\&quot;: " />
             </node>
           </node>
         </node>
@@ -896,11 +896,11 @@
                               <node concept="d57v9" id="7VxZ0xPQMFn" role="3clFbG">
                                 <node concept="3cpWs3" id="7VxZ0xPQMFo" role="37vLTx">
                                   <node concept="Xl_RD" id="7VxZ0xPQMFp" role="3uHU7w">
-                                    <property role="Xl_RC" value="'" />
+                                    <property role="Xl_RC" value="\\\&quot;" />
                                   </node>
                                   <node concept="3cpWs3" id="7VxZ0xPQMFq" role="3uHU7B">
                                     <node concept="Xl_RD" id="7VxZ0xPQMFr" role="3uHU7B">
-                                      <property role="Xl_RC" value="'" />
+                                      <property role="Xl_RC" value="\\\&quot;" />
                                     </node>
                                     <node concept="2OqwBi" id="7VxZ0xPQMFs" role="3uHU7w">
                                       <node concept="37vLTw" id="7VxZ0xPQMFt" role="2Oq$k0">
@@ -922,7 +922,7 @@
                                 <node concept="3cpWs3" id="6IgltWBuy9a" role="37vLTx">
                                   <node concept="3cpWs3" id="6IgltWBuurb" role="3uHU7B">
                                     <node concept="Xl_RD" id="6IgltWButvD" role="3uHU7B">
-                                      <property role="Xl_RC" value="'" />
+                                      <property role="Xl_RC" value="\\\&quot;" />
                                     </node>
                                     <node concept="2OqwBi" id="6IgltWBuv6x" role="3uHU7w">
                                       <node concept="37vLTw" id="6IgltWBuuMZ" role="2Oq$k0">
@@ -934,7 +934,7 @@
                                     </node>
                                   </node>
                                   <node concept="Xl_RD" id="6IgltWBuy9s" role="3uHU7w">
-                                    <property role="Xl_RC" value="' : '0 1024'" />
+                                    <property role="Xl_RC" value="\\\&quot; : \\\&quot;0 1024\\\&quot;" />
                                   </node>
                                 </node>
                                 <node concept="37vLTw" id="6IgltWBurDX" role="37vLTJ">
@@ -949,11 +949,11 @@
                             <node concept="d57v9" id="6IgltWBuzHv" role="3clFbG">
                               <node concept="3cpWs3" id="6IgltWBuFhA" role="37vLTx">
                                 <node concept="Xl_RD" id="6IgltWBuFwc" role="3uHU7w">
-                                  <property role="Xl_RC" value="'" />
+                                  <property role="Xl_RC" value="\\\&quot;" />
                                 </node>
                                 <node concept="3cpWs3" id="6IgltWBu$TV" role="3uHU7B">
                                   <node concept="Xl_RD" id="6IgltWBuzVy" role="3uHU7B">
-                                    <property role="Xl_RC" value="'" />
+                                    <property role="Xl_RC" value="\\\&quot;" />
                                   </node>
                                   <node concept="2OqwBi" id="6IgltWBu_tY" role="3uHU7w">
                                     <node concept="37vLTw" id="6IgltWBu_86" role="2Oq$k0">
@@ -996,7 +996,7 @@
           <node concept="d57v9" id="6IgltWBuLsP" role="3clFbG">
             <node concept="3cpWs3" id="6IgltWBuM3K" role="37vLTx">
               <node concept="Xl_RD" id="6IgltWBuMij" role="3uHU7w">
-                <property role="Xl_RC" value="], ALL_MODES: " />
+                <property role="Xl_RC" value="], \\\&quot;ALL_MODES\\\&quot;: " />
               </node>
               <node concept="3cpWs3" id="6IgltWBvs2G" role="3uHU7B">
                 <node concept="37vLTw" id="6IgltWBvsn7" role="3uHU7w">
@@ -1059,11 +1059,11 @@
                     <node concept="d57v9" id="6IgltWBv4UL" role="3clFbG">
                       <node concept="3cpWs3" id="6IgltWBvaDy" role="37vLTx">
                         <node concept="Xl_RD" id="6IgltWBvaDO" role="3uHU7w">
-                          <property role="Xl_RC" value="' : " />
+                          <property role="Xl_RC" value="\\\&quot; : " />
                         </node>
                         <node concept="3cpWs3" id="6IgltWBv6kr" role="3uHU7B">
                           <node concept="Xl_RD" id="6IgltWBv5ch" role="3uHU7B">
-                            <property role="Xl_RC" value="'" />
+                            <property role="Xl_RC" value="\\\&quot;" />
                           </node>
                           <node concept="2OqwBi" id="6IgltWBv70x" role="3uHU7w">
                             <node concept="37vLTw" id="6IgltWBv6A0" role="2Oq$k0">
@@ -1133,11 +1133,11 @@
                               <node concept="d57v9" id="6IgltWBvK3_" role="3clFbG">
                                 <node concept="3cpWs3" id="6IgltWBvY9i" role="37vLTx">
                                   <node concept="Xl_RD" id="6IgltWBvY9$" role="3uHU7w">
-                                    <property role="Xl_RC" value="'" />
+                                    <property role="Xl_RC" value="\\\&quot;" />
                                   </node>
                                   <node concept="3cpWs3" id="6IgltWBvS5n" role="3uHU7B">
                                     <node concept="Xl_RD" id="6IgltWBvOdv" role="3uHU7B">
-                                      <property role="Xl_RC" value="'" />
+                                      <property role="Xl_RC" value="\\\&quot;" />
                                     </node>
                                     <node concept="2OqwBi" id="6IgltWBvSVD" role="3uHU7w">
                                       <node concept="37vLTw" id="6IgltWBvSs2" role="2Oq$k0">
@@ -1212,7 +1212,7 @@
                     </node>
                   </node>
                   <node concept="Xl_RD" id="6IgltWBwdC_" role="3uHU7w">
-                    <property role="Xl_RC" value="}, ANALOG_SENSORS: {" />
+                    <property role="Xl_RC" value="}, \\\&quot;ANALOG_SENSORS\\\&quot;: {" />
                   </node>
                 </node>
                 <node concept="37vLTw" id="6IgltWBweX_" role="3uHU7w">
@@ -1226,13 +1226,13 @@
           <node concept="d57v9" id="6IgltWBwh4D" role="3clFbG">
             <node concept="3cpWs3" id="6IgltWBws8R" role="37vLTx">
               <node concept="Xl_RD" id="6IgltWBws9_" role="3uHU7w">
-                <property role="Xl_RC" value="'}" />
+                <property role="Xl_RC" value="\\\&quot;}" />
               </node>
               <node concept="3cpWs3" id="6IgltWBwnoh" role="3uHU7B">
                 <node concept="3cpWs3" id="6IgltWBwl1K" role="3uHU7B">
                   <node concept="3cpWs3" id="6IgltWBwitT" role="3uHU7B">
                     <node concept="Xl_RD" id="6IgltWBwh51" role="3uHU7B">
-                      <property role="Xl_RC" value=",DEFAULT_STATE : '" />
+                      <property role="Xl_RC" value=",\\\&quot;DEFAULT_STATE\\\&quot; : \\\&quot;" />
                     </node>
                     <node concept="2OqwBi" id="6IgltWBwj$Z" role="3uHU7w">
                       <node concept="2OqwBi" id="6IgltWBwiFa" role="2Oq$k0">
@@ -1247,7 +1247,7 @@
                     </node>
                   </node>
                   <node concept="Xl_RD" id="6IgltWBwl28" role="3uHU7w">
-                    <property role="Xl_RC" value="', DEFAULT_MODE: '" />
+                    <property role="Xl_RC" value="\\\&quot;, \\\&quot;DEFAULT_MODE\\\&quot;: \\\&quot;" />
                   </node>
                 </node>
                 <node concept="2OqwBi" id="6IgltWBwq77" role="3uHU7w">
