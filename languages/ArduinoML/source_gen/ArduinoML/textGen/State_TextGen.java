@@ -61,7 +61,7 @@ public class State_TextGen extends TextGenDescriptorBase {
       tgs.indent();
       String serial = Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput());
       if (!((serial == null || serial.length() == 0))) {
-        tgs.append("Serial.println(\"");
+        tgs.append("Serial.println(");
         tgs.append(serial);
         tgs.append(");");
         tgs.newLine();

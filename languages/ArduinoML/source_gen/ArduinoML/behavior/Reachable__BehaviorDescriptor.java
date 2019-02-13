@@ -22,6 +22,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -46,41 +47,52 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         if (SPropertyOperations.getBoolean(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
-          tmp.value += SPropertyOperations.getString(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " " + ((SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a4685fdL, "value")) == "LOW" ? 0 : 1)) + " ";
+          if (!("".equals(tmp.value))) {
+            tmp.value += " + ";
+          }
+          tmp.value += "String(\"";
+          tmp.value += SPropertyOperations.getString(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " " + ((SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a4685fdL, "value")) == "LOW" ? 0 : 1)) + "\")";
         }
       }
     });
-    if (tmp.value != "") {
-      tmp.value += "\"";
-    }
     SNode app = (__thisNode__ instanceof SNode ? ((SNode) SNodeOperations.getParent(SNodeOperations.getParent(__thisNode__))) : ((SNode) SNodeOperations.getParent(__thisNode__)));
     ListSequence.fromList(SLinkOperations.getChildren(app, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685e8L, "bricks"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        SAbstractConcept cncpt = SNodeOperations.getConcept(it);
-        switch (conceptIndex.index(cncpt)) {
-          case 0:
-            if (true) {
-              SNode sensor = ((SNode) it);
-              if (SPropertyOperations.getBoolean(sensor, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
-                if (tmp.value != "") {
-                  tmp.value += " + \"";
-                }
-                tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \" + analogRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + ")";
+        if (SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
+          SAbstractConcept cncpt = SNodeOperations.getConcept(it);
+          switch (conceptIndex.index(cncpt)) {
+            case 0:
+              if (true) {
               }
-            }
-            break;
-          case 1:
-            if (true) {
-              SNode sensor = ((SNode) it);
-              if (SPropertyOperations.getBoolean(sensor, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
-                if (tmp.value != "") {
-                  tmp.value += " + \"";
+              break;
+            default:
+              boolean noneMatched = true;
+              if (noneMatched && SConceptOperations.isSubConceptOf(cncpt, MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L, "ArduinoML.structure.Sensor"))) {
+                noneMatched = false;
+                if (!("".equals(tmp.value))) {
+                  tmp.value += " + ";
                 }
-                tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\" + digitalRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + ")";
+                SAbstractConcept cncpt1 = SNodeOperations.getConcept(it);
+                switch (conceptIndex1.index(cncpt1)) {
+                  case 0:
+                    if (true) {
+                      SNode sensor = ((SNode) it);
+                      tmp.value += "String(\"";
+                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \") + String(analogRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "))";
+                    }
+                    break;
+                  case 1:
+                    if (true) {
+                      SNode sensor = ((SNode) it);
+                      tmp.value += "String(\"";
+                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\") + String(digitalRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "))";
+                    }
+                    break;
+                  default:
+                }
               }
-            }
-            break;
-          default:
+          }
+
         }
       }
     });
@@ -133,5 +145,6 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f4L)).seal();
+  private static final ConceptSwitchIndex conceptIndex1 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
 }

@@ -25,11 +25,16 @@ public class Brick_TextGen extends TextGenDescriptorBase {
     switch (conceptIndex.index(cncpt)) {
       case 0:
         if (true) {
-          tgs.append("A");
           tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
         }
         break;
       case 1:
+        if (true) {
+          tgs.append("A");
+          tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
+        }
+        break;
+      case 2:
         if (true) {
           tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
         }
@@ -38,5 +43,5 @@ public class Brick_TextGen extends TextGenDescriptorBase {
     }
     tgs.append(";");
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f4L), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
 }
