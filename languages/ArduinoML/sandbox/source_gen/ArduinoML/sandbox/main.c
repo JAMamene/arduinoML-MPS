@@ -58,6 +58,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("{ALL_BRICKS: ["button", "button2", "led"], ALL_MODES: {"default" : ["off","on"]}, ANALOG_SENSORS: {},DEFAULT_STATE : "default", DEFAULT_MODE: "off"}");
+  Serial.println("{ALL_BRICKS: [], ALL_MODES: {"default" : ["off","on"]}, ANALOG_SENSORS: {},DEFAULT_STATE : "default", DEFAULT_MODE: "off"}");
   s_default_off();
 }

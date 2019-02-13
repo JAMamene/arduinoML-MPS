@@ -138,6 +138,7 @@
     <node concept="1Qr9Up" id="4BNFDI8tr4B" role="1Qr9U5">
       <property role="TrG5h" value="led" />
       <property role="1Qr9Us" value="9" />
+      <property role="3fOhUN" value="true" />
     </node>
   </node>
   <node concept="1Qr9UU" id="6IgltWBmzeN">
@@ -188,7 +189,7 @@
           <ref role="1Qr9PG" node="6IgltWBmzff" resolve="buzzer" />
         </node>
         <node concept="2zQn1e" id="6IgltWBmzfq" role="31$f$p">
-          <ref role="1Qr9PF" node="5v95mraWu2i" resolve="off" />
+          <ref role="1Qr9PF" node="6IgltWBmzeQ" resolve="off" />
           <node concept="1cyNLG" id="6IgltWBmzfu" role="1LHcOd">
             <ref role="1LHcOn" node="6IgltWBmzeV" resolve="button" />
           </node>

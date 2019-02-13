@@ -20,8 +20,8 @@ import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -49,21 +49,25 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
     final Wrappers._T<String> analogSensors = new Wrappers._T<String>("");
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685e8L, "bricks"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        if (!("".equals(bricks.value))) {
-          bricks.value += ", ";
-        }
-        SAbstractConcept cncpt = SNodeOperations.getConcept(it);
-        switch (conceptIndex.index(cncpt)) {
-          case 0:
-            if (true) {
-              if (!("".equals(analogSensors.value))) {
-                analogSensors.value += ",";
+        if (SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
+          if (!("".equals(bricks.value))) {
+            bricks.value += ", ";
+          }
+          SAbstractConcept cncpt = SNodeOperations.getConcept(it);
+          switch (conceptIndex.index(cncpt)) {
+            case 0:
+              if (true) {
+                if (!("".equals(analogSensors.value))) {
+                  analogSensors.value += ",";
+                }
+                bricks.value += "\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\"";
+                analogSensors.value += "\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\" : \"0 1024\"";
               }
-              analogSensors.value += "\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\" : \"0 1024\"";
-            }
-            break;
-          default:
-            bricks.value += "\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\"";
+              break;
+            default:
+              bricks.value += "\"" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\"";
+          }
+
         }
       }
     });
