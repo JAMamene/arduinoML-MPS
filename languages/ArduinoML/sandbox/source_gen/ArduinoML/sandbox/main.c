@@ -7,7 +7,7 @@ int modeTimer = 1;
 
 int b_button = 9;
 int b_button2 = 12;
-int b_led = 10;
+int b_led = ;
 
 void m_default() {
     digitalWrite(b_led, LOW);
@@ -26,7 +26,8 @@ void s_default_off() {
     delay(100);
     digitalWrite(b_led, LOW);
 
-        if (digitalRead(b_button2) == HIGH && digitalRead(b_button) == HIGH) {
+    Serial.println("led 0 ");
+    if (digitalRead(b_button2) == HIGH && digitalRead(b_button) == HIGH) {
       s_default_on();
     }
     m_default();

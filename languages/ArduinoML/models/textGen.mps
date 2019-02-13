@@ -122,10 +122,22 @@
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
+      <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
+        <reference id="1154546997487" name="concept" index="3gnhBz" />
+      </concept>
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
+      <concept id="6039268229364358244" name="jetbrains.mps.lang.smodel.structure.ExactConceptCase" flags="ng" index="1pnPoh">
+        <child id="6039268229364358388" name="body" index="1pnPq1" />
+        <child id="6039268229364358387" name="concept" index="1pnPq6" />
+      </concept>
       <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
+      <concept id="5944356402132808749" name="jetbrains.mps.lang.smodel.structure.ConceptSwitchStatement" flags="nn" index="1_3QMa">
+        <child id="5944356402132808753" name="case" index="1_3QMm" />
+        <child id="5944356402132808752" name="expression" index="1_3QMn" />
+      </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -424,18 +436,59 @@
           <node concept="la8eA" id="684RFP5IWq6" role="lcghm">
             <property role="lacIc" value=" = " />
           </node>
-          <node concept="l9hG8" id="684RFP5IWvz" role="lcghm">
-            <node concept="2YIFZM" id="684RFP5IW$6" role="lb14g">
-              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-              <ref role="37wK5l" to="wyt6:~String.valueOf(int):java.lang.String" resolve="valueOf" />
-              <node concept="2OqwBi" id="684RFP5IXmi" role="37wK5m">
-                <node concept="117lpO" id="684RFP5IWCP" role="2Oq$k0" />
-                <node concept="3TrcHB" id="684RFP5IXzW" role="2OqNvi">
-                  <ref role="3TsBF5" to="a90u:3KE6QPahCnL" resolve="pin" />
+        </node>
+        <node concept="1_3QMa" id="7VxZ0xPS0fj" role="3cqZAp">
+          <node concept="2OqwBi" id="7VxZ0xPS15q" role="1_3QMn">
+            <node concept="117lpO" id="7VxZ0xPS0Ej" role="2Oq$k0" />
+            <node concept="2yIwOk" id="7VxZ0xPS1yP" role="2OqNvi" />
+          </node>
+          <node concept="1pnPoh" id="7VxZ0xPS1zy" role="1_3QMm">
+            <node concept="3gn64h" id="7VxZ0xPS1ZE" role="1pnPq6">
+              <ref role="3gnhBz" to="a90u:6IgltWB6l6V" resolve="AnalogSensor" />
+            </node>
+            <node concept="3clFbS" id="7VxZ0xPS1z$" role="1pnPq1">
+              <node concept="lc7rE" id="7VxZ0xPRZPl" role="3cqZAp">
+                <node concept="la8eA" id="7VxZ0xPS2DK" role="lcghm">
+                  <property role="lacIc" value="A" />
+                </node>
+                <node concept="l9hG8" id="684RFP5IWvz" role="lcghm">
+                  <node concept="2YIFZM" id="684RFP5IW$6" role="lb14g">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(int):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="684RFP5IXmi" role="37wK5m">
+                      <node concept="117lpO" id="684RFP5IWCP" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="684RFP5IXzW" role="2OqNvi">
+                        <ref role="3TsBF5" to="a90u:3KE6QPahCnL" resolve="pin" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
           </node>
+          <node concept="1pnPoh" id="7VxZ0xPS3bK" role="1_3QMm">
+            <node concept="3gn64h" id="7VxZ0xPS3Gd" role="1pnPq6">
+              <ref role="3gnhBz" to="a90u:6IgltWB6l5m" resolve="LogicalSensor" />
+            </node>
+            <node concept="3clFbS" id="7VxZ0xPS3bO" role="1pnPq1">
+              <node concept="lc7rE" id="7VxZ0xPS3Gv" role="3cqZAp">
+                <node concept="l9hG8" id="7VxZ0xPS3Gw" role="lcghm">
+                  <node concept="2YIFZM" id="7VxZ0xPS3Gx" role="lb14g">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(int):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="7VxZ0xPS3Gy" role="37wK5m">
+                      <node concept="117lpO" id="7VxZ0xPS3Gz" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="7VxZ0xPS3G$" role="2OqNvi">
+                        <ref role="3TsBF5" to="a90u:3KE6QPahCnL" resolve="pin" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="7VxZ0xPRZ3j" role="3cqZAp">
           <node concept="la8eA" id="684RFP5IYKZ" role="lcghm">
             <property role="lacIc" value=";" />
           </node>

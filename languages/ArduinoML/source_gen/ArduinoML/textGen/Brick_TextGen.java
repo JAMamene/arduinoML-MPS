@@ -6,8 +6,13 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import ArduinoML.behavior.Brick__BehaviorDescriptor;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.ConceptSwitchIndex;
+import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class Brick_TextGen extends TextGenDescriptorBase {
   @Override
@@ -16,7 +21,22 @@ public class Brick_TextGen extends TextGenDescriptorBase {
     tgs.append("int ");
     tgs.append(Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(ctx.getPrimaryInput()));
     tgs.append(" = ");
-    tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
+    SAbstractConcept cncpt = SNodeOperations.getConcept(ctx.getPrimaryInput());
+    switch (conceptIndex.index(cncpt)) {
+      case 0:
+        if (true) {
+          tgs.append("A");
+          tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
+        }
+        break;
+      case 1:
+        if (true) {
+          tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin"))));
+        }
+        break;
+      default:
+    }
     tgs.append(";");
   }
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
 }
