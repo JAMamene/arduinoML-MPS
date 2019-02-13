@@ -730,6 +730,14 @@
         </node>
       </node>
     </node>
+    <node concept="14StLt" id="3tbkZ_97vzM" role="V601i">
+      <property role="TrG5h" value="analog_sensor" />
+      <node concept="VechU" id="3tbkZ_97v$t" role="3F10Kt">
+        <node concept="1iSF2X" id="3tbkZ_97v$w" role="VblUZ">
+          <property role="1iTho6" value="093884" />
+        </node>
+      </node>
+    </node>
     <node concept="14StLt" id="9LpcmoKzUO" role="V601i">
       <property role="TrG5h" value="mode" />
       <node concept="VechU" id="9LpcmoKzV0" role="3F10Kt">
@@ -888,21 +896,46 @@
     <node concept="3EZMnI" id="6IgltWB6l78" role="2wV5jI">
       <node concept="3F0ifn" id="6IgltWB6l7f" role="3EZMnx">
         <property role="3F0ifm" value="analog-sensor" />
+        <node concept="3Xmtl4" id="3tbkZ_97wdF" role="3F10Kt">
+          <node concept="1wgc9g" id="3tbkZ_97wdN" role="3XvnJa">
+            <ref role="1wgcnl" node="3tbkZ_97vzM" resolve="analog_sensor" />
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="6IgltWB6l7l" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
       <node concept="3F0A7n" id="6IgltWB6l7t" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="3Xmtl4" id="3tbkZ_97weC" role="3F10Kt">
+          <node concept="1wgc9g" id="3tbkZ_97weG" role="3XvnJa">
+            <ref role="1wgcnl" node="3tbkZ_97vzM" resolve="analog_sensor" />
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="6IgltWB6l7T" role="3EZMnx">
         <property role="3F0ifm" value=", " />
+        <node concept="3Xmtl4" id="3tbkZ_97wgj" role="3F10Kt">
+          <node concept="1wgc9g" id="3tbkZ_97wgn" role="3XvnJa">
+            <ref role="1wgcnl" node="3tbkZ_97vzM" resolve="analog_sensor" />
+          </node>
+        </node>
       </node>
       <node concept="3F0A7n" id="6IgltWB6l7B" role="3EZMnx">
         <ref role="1NtTu8" to="a90u:3KE6QPahCnL" resolve="pin" />
+        <node concept="3Xmtl4" id="3tbkZ_97whc" role="3F10Kt">
+          <node concept="1wgc9g" id="3tbkZ_97whg" role="3XvnJa">
+            <ref role="1wgcnl" node="3tbkZ_97vzM" resolve="analog_sensor" />
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="duUnFc$9dQ" role="3EZMnx">
         <property role="3F0ifm" value="," />
+        <node concept="3Xmtl4" id="3tbkZ_97wib" role="3F10Kt">
+          <node concept="1wgc9g" id="3tbkZ_97wif" role="3XvnJa">
+            <ref role="1wgcnl" node="3tbkZ_97vzM" resolve="analog_sensor" />
+          </node>
+        </node>
       </node>
       <node concept="3F0A7n" id="duUnFc$9dZ" role="3EZMnx">
         <ref role="1NtTu8" to="a90u:duUnFczZv9" resolve="watch" />
@@ -1039,6 +1072,11 @@
         <node concept="1sVBvm" id="6IgltWB7Kfo" role="1sWHZn">
           <node concept="3F0A7n" id="6IgltWB7Kfq" role="2wV5jI">
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+        <node concept="3Xmtl4" id="3tbkZ_989iS" role="3F10Kt">
+          <node concept="1wgc9g" id="3tbkZ_989iW" role="3XvnJa">
+            <ref role="1wgcnl" node="3tbkZ_97vzM" resolve="analog_sensor" />
           </node>
         </node>
       </node>
