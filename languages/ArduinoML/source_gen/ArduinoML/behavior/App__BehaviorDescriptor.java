@@ -61,7 +61,7 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
                   analogSensors.value += ",";
                 }
                 bricks.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "'";
-                analogSensors.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "' : \"0 1024\"";
+                analogSensors.value += "'" + SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "' : '0 1024'";
               }
               break;
             default:
