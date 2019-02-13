@@ -94,6 +94,7 @@
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
   <dependency className="ArduinoML.behavior.Reachable__BehaviorDescriptor">
+    <classNode dependClassName="ArduinoML.behavior.Brick__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />

@@ -65,7 +65,18 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
                 if (tmp.value != "") {
                   tmp.value += " + \"";
                 }
-                tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \" + analogRead(A" + SPropertyOperations.getInteger(sensor, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x3c2a1b6d4a4685f1L, "pin")) + ")";
+                tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \" + analogRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + ")";
+              }
+            }
+            break;
+          case 1:
+            if (true) {
+              SNode sensor = ((SNode) it);
+              if (SPropertyOperations.getBoolean(sensor, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
+                if (tmp.value != "") {
+                  tmp.value += " + \"";
+                }
+                tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "\" + digitalRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + ")";
               }
             }
             break;
@@ -122,5 +133,5 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
 }
