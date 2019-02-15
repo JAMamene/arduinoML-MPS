@@ -327,7 +327,7 @@
       <node concept="1Qr9UR" id="TNboOeolqy" role="31_b6Y">
         <property role="TrG5h" value="off2" />
         <node concept="2zQn1e" id="TNboOep3Fj" role="31$f$p">
-          <ref role="1Qr9PF" node="TNboOep3Fl" resolve="on2" />
+          <ref role="1Qr9PF" node="1MG$TEyEg7d" resolve="off_to_on" />
           <node concept="1cyNLG" id="TNboOep3Fp" role="1LHcOd">
             <property role="1cyUcd" value="HIGH" />
             <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
@@ -337,6 +337,15 @@
           <ref role="1Qr9PG" node="TNboOep2Qb" resolve="led1" />
         </node>
       </node>
+      <node concept="1Qr9UR" id="1MG$TEyEg7d" role="31_b6Y">
+        <property role="TrG5h" value="off_to_on" />
+        <node concept="2zQn1e" id="1MG$TEyEg7p" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOep3Fl" resolve="on2" />
+          <node concept="1cyNLG" id="1MG$TEyEg7r" role="1LHcOd">
+            <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
+          </node>
+        </node>
+      </node>
       <node concept="1Qr9UR" id="TNboOep3Fl" role="31_b6Y">
         <property role="TrG5h" value="on2" />
         <node concept="1Qr9Un" id="TNboOep3FD" role="1Qr9PI">
@@ -344,9 +353,18 @@
           <ref role="1Qr9PG" node="TNboOep2Qb" resolve="led1" />
         </node>
         <node concept="2zQn1e" id="TNboOep3Ft" role="31$f$p">
-          <ref role="1Qr9PF" node="TNboOeolqy" resolve="off2" />
+          <ref role="1Qr9PF" node="1MG$TEyEg7t" resolve="on_to_off" />
           <node concept="1cyNLG" id="TNboOep3Fv" role="1LHcOd">
             <property role="1cyUcd" value="HIGH" />
+            <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
+          </node>
+        </node>
+      </node>
+      <node concept="1Qr9UR" id="1MG$TEyEg7t" role="31_b6Y">
+        <property role="TrG5h" value="on_to_off" />
+        <node concept="2zQn1e" id="1MG$TEyEg7E" role="31$f$p">
+          <ref role="1Qr9PF" node="TNboOeolqy" resolve="off2" />
+          <node concept="1cyNLG" id="1MG$TEyEg7G" role="1LHcOd">
             <ref role="1LHcOn" node="TNboOep2Q5" resolve="b1" />
           </node>
         </node>

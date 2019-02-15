@@ -108,41 +108,6 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
               }
           }
         }
-        if (SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
-          SAbstractConcept cncpt2 = SNodeOperations.getConcept(it);
-          switch (conceptIndex3.index(cncpt2)) {
-            case 0:
-              if (true) {
-              }
-              break;
-            default:
-              boolean noneMatched1 = true;
-              if (noneMatched1 && SConceptOperations.isSubConceptOf(cncpt2, MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L, "ArduinoML.structure.Sensor"))) {
-                noneMatched1 = false;
-                if (!("".equals(tmp.value))) {
-                  tmp.value += " + ";
-                }
-                SAbstractConcept cncpt3 = SNodeOperations.getConcept(it);
-                switch (conceptIndex4.index(cncpt3)) {
-                  case 0:
-                    if (true) {
-                      SNode sensor = ((SNode) it);
-                      tmp.value += "String(\" ";
-                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \") + String(analogRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "))";
-                    }
-                    break;
-                  case 1:
-                    if (true) {
-                      SNode sensor = ((SNode) it);
-                      tmp.value += "String(\" ";
-                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \") + String(digitalRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "))";
-                    }
-                    break;
-                  default:
-                }
-              }
-          }
-        }
       }
     });
     tmp.value += " + String(\" \") + String(millis())";
@@ -198,6 +163,4 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
   private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685daL)).seal();
   private static final ConceptSwitchIndex conceptIndex1 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f4L)).seal();
   private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
-  private static final ConceptSwitchIndex conceptIndex3 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f4L)).seal();
-  private static final ConceptSwitchIndex conceptIndex4 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df271951bbL), MetaIdFactory.conceptId(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x6b9055df27195156L)).seal();
 }
