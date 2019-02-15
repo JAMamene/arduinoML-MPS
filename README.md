@@ -7,5 +7,5 @@
 
 ## Running the monitoring program
 
-The monitoring script only takes one argument, which is the current port the Aruidno serial is connected to.
+The monitoring script only takes one argument, which is the current port the Arduino serial is connected to.
 `python monitoring.py --port COM3`
