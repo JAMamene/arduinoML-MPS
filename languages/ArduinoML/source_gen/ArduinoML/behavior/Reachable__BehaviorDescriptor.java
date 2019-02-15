@@ -92,10 +92,10 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
                 }
               }
           }
-          tmp.value += " + String(\" \") + String(millis())";
         }
       }
     });
+    tmp.value += " + String(\" \") + String(millis())";
     return tmp.value;
   }
 
