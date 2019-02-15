@@ -9,9 +9,9 @@ import ArduinoML.behavior.Reachable__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import ArduinoML.behavior.Mode__BehaviorDescriptor;
 
 public class Mode_TextGen extends TextGenDescriptorBase {
@@ -26,8 +26,23 @@ public class Mode_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"))) {
-      tgs.appendNode(item);
+    {
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"));
+      final SNode lastItem = Sequence.fromIterable(collection).last();
+      for (SNode item : collection) {
+        tgs.appendNode(item);
+        if (item != lastItem) {
+          tgs.append("\n");
+        }
+      }
+    }
+    tgs.indent();
+    String serial = Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput());
+    if (!((serial == null || serial.length() == 0))) {
+      tgs.append("Serial.println(");
+      tgs.append(serial);
+      tgs.append(");");
+      tgs.newLine();
     }
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
@@ -42,17 +57,6 @@ public class Mode_TextGen extends TextGenDescriptorBase {
           tgs.append("timer.run();");
           tgs.newLine();
         }
-        {
-          Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"));
-          final SNode lastItem = Sequence.fromIterable(collection).last();
-          for (SNode item : collection) {
-            tgs.appendNode(item);
-            if (item != lastItem) {
-              tgs.append("\n");
-            }
-          }
-        }
-        tgs.newLine();
         {
           Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions"));
           final SNode lastItem = Sequence.fromIterable(collection).last();
@@ -84,17 +88,6 @@ public class Mode_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("timer.deleteTimer(modeTimer);");
     tgs.newLine();
-    tgs.indent();
-    {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"));
-      final SNode lastItem = Sequence.fromIterable(collection).last();
-      for (SNode item : collection) {
-        tgs.appendNode(item);
-        if (item != lastItem) {
-          tgs.append("\n");
-        }
-      }
-    }
     tgs.indent();
     tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b8863577eL, "initial"))));
     tgs.append("();");

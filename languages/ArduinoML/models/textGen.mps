@@ -998,9 +998,42 @@
     <ref role="WuzLi" to="a90u:7oXlMRlT2O8" resolve="TimedTransition" />
     <node concept="11bSqf" id="7oXlMRlVmbq" role="11c4hB">
       <node concept="3clFbS" id="7oXlMRlVmbr" role="2VODD2">
+        <node concept="1_3QMa" id="5VerTTTUwLI" role="3cqZAp">
+          <node concept="2OqwBi" id="5VerTTTUyxP" role="1_3QMn">
+            <node concept="2OqwBi" id="5VerTTTUxzk" role="2Oq$k0">
+              <node concept="117lpO" id="5VerTTTUxmx" role="2Oq$k0" />
+              <node concept="1mfA1w" id="5VerTTTUylO" role="2OqNvi" />
+            </node>
+            <node concept="2yIwOk" id="5VerTTTUz0B" role="2OqNvi" />
+          </node>
+          <node concept="1pnPoh" id="5VerTTTUz1i" role="1_3QMm">
+            <node concept="3gn64h" id="5VerTTTUzA6" role="1pnPq6">
+              <ref role="3gnhBz" to="a90u:4BNFDI8oPto" resolve="Mode" />
+            </node>
+            <node concept="3clFbS" id="5VerTTTUz1k" role="1pnPq1">
+              <node concept="lc7rE" id="5VerTTTU$y1" role="3cqZAp">
+                <node concept="la8eA" id="5VerTTTU$zy" role="lcghm">
+                  <property role="lacIc" value="modeTimer" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1pnPoh" id="5VerTTTU$40" role="1_3QMm">
+            <node concept="3gn64h" id="5VerTTTU$xJ" role="1pnPq6">
+              <ref role="3gnhBz" to="a90u:3KE6QPahCnq" resolve="State" />
+            </node>
+            <node concept="3clFbS" id="5VerTTTU$44" role="1pnPq1">
+              <node concept="lc7rE" id="5VerTTTU_sH" role="3cqZAp">
+                <node concept="la8eA" id="5VerTTTU_t3" role="lcghm">
+                  <property role="lacIc" value="stateTimer" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="lc7rE" id="7oXlMRlVmbI" role="3cqZAp">
           <node concept="la8eA" id="7oXlMRlVmbJ" role="lcghm">
-            <property role="lacIc" value="timerId = timer.setTimeout(" />
+            <property role="lacIc" value="= timer.setTimeout(" />
           </node>
           <node concept="l9hG8" id="7oXlMRlVmbK" role="lcghm">
             <node concept="2YIFZM" id="7oXlMRlVmbL" role="lb14g">
@@ -1101,11 +1134,52 @@
             <node concept="1bpajm" id="5v95mrb2kXH" role="3cqZAp" />
             <node concept="lc7rE" id="5v95mrb2lji" role="3cqZAp">
               <node concept="l9S2W" id="5v95mrb2lua" role="lcghm">
+                <property role="XA4eZ" value="true" />
+                <property role="lbP0B" value="\n" />
                 <node concept="2OqwBi" id="TNboOeomvA" role="lbANJ">
                   <node concept="117lpO" id="TNboOeomoT" role="2Oq$k0" />
                   <node concept="3Tsc0h" id="TNboOeomDI" role="2OqNvi">
                     <ref role="3TtcxE" to="a90u:3KE6QPahCo3" resolve="actions" />
                   </node>
+                </node>
+              </node>
+            </node>
+            <node concept="1bpajm" id="5VerTTTVnKG" role="3cqZAp" />
+            <node concept="3cpWs8" id="5VerTTTVnKH" role="3cqZAp">
+              <node concept="3cpWsn" id="5VerTTTVnKI" role="3cpWs9">
+                <property role="TrG5h" value="serial" />
+                <node concept="17QB3L" id="5VerTTTVnKJ" role="1tU5fm" />
+                <node concept="2OqwBi" id="5VerTTTVnKK" role="33vP2m">
+                  <node concept="117lpO" id="5VerTTTVnKL" role="2Oq$k0" />
+                  <node concept="2qgKlT" id="5VerTTTVnKM" role="2OqNvi">
+                    <ref role="37wK5l" to="tkpg:6IgltWAZkFK" resolve="serialPrint" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="5VerTTTVnKN" role="3cqZAp">
+              <node concept="3clFbS" id="5VerTTTVnKO" role="3clFbx">
+                <node concept="lc7rE" id="5VerTTTVnKP" role="3cqZAp">
+                  <node concept="la8eA" id="5VerTTTVnKQ" role="lcghm">
+                    <property role="lacIc" value="Serial.println(" />
+                  </node>
+                  <node concept="l9hG8" id="5VerTTTVnKR" role="lcghm">
+                    <node concept="37vLTw" id="5VerTTTVnKS" role="lb14g">
+                      <ref role="3cqZAo" node="5VerTTTVnKI" resolve="serial" />
+                    </node>
+                  </node>
+                  <node concept="la8eA" id="5VerTTTVnKT" role="lcghm">
+                    <property role="lacIc" value=");" />
+                  </node>
+                  <node concept="l8MVK" id="5VerTTTVnKU" role="lcghm" />
+                </node>
+              </node>
+              <node concept="3fqX7Q" id="5VerTTTVnKV" role="3clFbw">
+                <node concept="2OqwBi" id="5VerTTTVnKW" role="3fr31v">
+                  <node concept="37vLTw" id="5VerTTTVnKX" role="2Oq$k0">
+                    <ref role="3cqZAo" node="5VerTTTVnKI" resolve="serial" />
+                  </node>
+                  <node concept="17RlXB" id="5VerTTTVnKY" role="2OqNvi" />
                 </node>
               </node>
             </node>
@@ -1166,19 +1240,6 @@
                               </node>
                               <node concept="3x8VRR" id="5v95mraW2mS" role="2OqNvi" />
                             </node>
-                          </node>
-                          <node concept="lc7rE" id="5v95mraW2mT" role="3cqZAp">
-                            <node concept="l9S2W" id="5v95mraW2mU" role="lcghm">
-                              <property role="XA4eZ" value="true" />
-                              <property role="lbP0B" value="\n" />
-                              <node concept="2OqwBi" id="5v95mraW2mV" role="lbANJ">
-                                <node concept="117lpO" id="5v95mraW2mW" role="2Oq$k0" />
-                                <node concept="3Tsc0h" id="5v95mraW2mX" role="2OqNvi">
-                                  <ref role="3TtcxE" to="a90u:3KE6QPahCo3" resolve="actions" />
-                                </node>
-                              </node>
-                            </node>
-                            <node concept="l8MVK" id="5v95mraW2mY" role="lcghm" />
                           </node>
                           <node concept="lc7rE" id="5v95mraW2mZ" role="3cqZAp">
                             <node concept="l9S2W" id="5v95mraW2n0" role="lcghm">
@@ -1249,19 +1310,6 @@
                 <property role="lacIc" value="timer.deleteTimer(modeTimer);" />
               </node>
               <node concept="l8MVK" id="6IgltWAX8DI" role="lcghm" />
-            </node>
-            <node concept="1bpajm" id="6StJjgxL$pf" role="3cqZAp" />
-            <node concept="lc7rE" id="6StJjgxJCcD" role="3cqZAp">
-              <node concept="l9S2W" id="6StJjgxJChq" role="lcghm">
-                <property role="XA4eZ" value="true" />
-                <property role="lbP0B" value="\n" />
-                <node concept="2OqwBi" id="6StJjgxJCor" role="lbANJ">
-                  <node concept="117lpO" id="6StJjgxJChM" role="2Oq$k0" />
-                  <node concept="3Tsc0h" id="6StJjgxJEng" role="2OqNvi">
-                    <ref role="3TtcxE" to="a90u:3KE6QPahCo3" resolve="actions" />
-                  </node>
-                </node>
-              </node>
             </node>
             <node concept="1bpajm" id="6StJjgxL$B6" role="3cqZAp" />
             <node concept="lc7rE" id="6StJjgxJACM" role="3cqZAp">
