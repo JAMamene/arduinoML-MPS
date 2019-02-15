@@ -23,7 +23,7 @@
   <dependency className="ArduinoML.textGen.App_TextGen">
     <classNode dependClassName="ArduinoML.behavior.App__BehaviorDescriptor" />
     <classNode dependClassName="ArduinoML.behavior.Brick__BehaviorDescriptor" />
-    <classNode dependClassName="ArduinoML.behavior.Reachable__BehaviorDescriptor" />
+    <classNode dependClassName="ArduinoML.behavior.Mode__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />

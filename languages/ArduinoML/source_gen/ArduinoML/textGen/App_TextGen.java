@@ -14,7 +14,7 @@ import jetbrains.mps.internal.collections.runtime.IVisitor;
 import ArduinoML.behavior.Brick__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import ArduinoML.behavior.App__BehaviorDescriptor;
-import ArduinoML.behavior.Reachable__BehaviorDescriptor;
+import ArduinoML.behavior.Mode__BehaviorDescriptor;
 
 public class App_TextGen extends TextGenDescriptorBase {
   @Override
@@ -97,7 +97,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("\");");
     tgs.newLine();
     tgs.indent();
-    tgs.append(Reachable__BehaviorDescriptor.getEditorName_id4BNFDI8rF5p.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial")), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b88635758L, 0x49f3ae9b8863577eL, "initial"))));
+    tgs.append(Mode__BehaviorDescriptor.getInitialState_id5v95mrb9jiN.invoke(SLinkOperations.getTarget(ctx.getPrimaryInput(), MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685d7L, 0x3c2a1b6d4a4685edL, "initial"))));
     tgs.append("();");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();

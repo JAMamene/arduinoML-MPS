@@ -74,5 +74,5 @@ void setup() {
 
 void loop() {
   Serial.println("{\"ALL_BRICKS\": [\"buzzer\", \"led\", \"button\"], \"ALL_MODES\": {\"default\" : [\"off\",\"buzzer_on\",\"led_on\"]}, \"ANALOG_SENSORS\": {},\"DEFAULT_STATE\" : \"off\", \"DEFAULT_MODE\": \"default\"}");
-  s_default_off();
+  m_default_initial_state();
 }
