@@ -10,7 +10,11 @@ int b_led = 11;
 int b_button = 9;
 
 void m_default() {
-    Serial.println(String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
+    Serial.print(" button ");
+Serial.print(digitalRead(b_button));
+Serial.print(" ");
+Serial.println(millis());
+
 }
 
 void m_default_initial_state() {
@@ -21,12 +25,19 @@ void m_default_initial_state() {
 
 void s_default_off() {
   timer.deleteTimer(stateTimer);
-  Serial.println("mode default off " + String(millis()));
+  Serial.print("mode default"); 
+  Serial.print(" off ");
+  Serial.println(millis());
   while (1) {
     delay(100);
     digitalWrite(b_led, LOW);
 
-    Serial.println(String(" led 0 ") + String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
+    Serial.print(" led 0 ");
+Serial.print(" button ");
+Serial.print(digitalRead(b_button));
+Serial.print(" ");
+Serial.println(millis());
+
     if (digitalRead(b_button) == HIGH) {
       s_default_buzzer_on();
     }
@@ -36,12 +47,19 @@ void s_default_off() {
 
 void s_default_buzzer_on() {
   timer.deleteTimer(stateTimer);
-  Serial.println("mode default buzzer_on " + String(millis()));
+  Serial.print("mode default"); 
+  Serial.print(" buzzer_on ");
+  Serial.println(millis());
   while (1) {
     delay(100);
     digitalWrite(b_buzzer, HIGH);
 
-    Serial.println(String(" buzzer 1 ") + String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
+    Serial.print(" buzzer 1 ");
+Serial.print(" button ");
+Serial.print(digitalRead(b_button));
+Serial.print(" ");
+Serial.println(millis());
+
     if (digitalRead(b_button) == HIGH) {
       s_default_led_on();
     }
@@ -51,14 +69,22 @@ void s_default_buzzer_on() {
 
 void s_default_led_on() {
   timer.deleteTimer(stateTimer);
-  Serial.println("mode default led_on " + String(millis()));
+  Serial.print("mode default"); 
+  Serial.print(" led_on ");
+  Serial.println(millis());
   while (1) {
     delay(100);
     digitalWrite(b_buzzer, LOW);
 
     digitalWrite(b_led, HIGH);
 
-    Serial.println(String(" buzzer 0 ") + String(" led 1 ") + String(" button ") + String(digitalRead(b_button)) + String(" ") + String(millis()));
+    Serial.print(" buzzer 0 ");
+Serial.print(" led 1 ");
+Serial.print(" button ");
+Serial.print(digitalRead(b_button));
+Serial.print(" ");
+Serial.println(millis());
+
     if (digitalRead(b_button) == HIGH) {
       s_default_off();
     }

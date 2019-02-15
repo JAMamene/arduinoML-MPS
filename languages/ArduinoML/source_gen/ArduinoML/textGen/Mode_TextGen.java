@@ -37,13 +37,8 @@ public class Mode_TextGen extends TextGenDescriptorBase {
       }
     }
     tgs.indent();
-    String serial = Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput());
-    if (!((serial == null || serial.length() == 0))) {
-      tgs.append("Serial.println(");
-      tgs.append(serial);
-      tgs.append(");");
-      tgs.newLine();
-    }
+    tgs.append(Reachable__BehaviorDescriptor.serialPrint_id6IgltWAZkFK.invoke(ctx.getPrimaryInput()));
+    tgs.newLine();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x49f3ae9b88635782L, "signalTransitions"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();

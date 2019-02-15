@@ -353,11 +353,11 @@
       <node concept="3Tm1VV" id="6IgltWAZkFL" role="1B3o_S" />
       <node concept="17QB3L" id="6IgltWAZkFW" role="3clF45" />
       <node concept="3clFbS" id="6IgltWAZkFN" role="3clF47">
-        <node concept="3cpWs8" id="6IgltWAZkG0" role="3cqZAp">
-          <node concept="3cpWsn" id="6IgltWAZkG3" role="3cpWs9">
+        <node concept="3cpWs8" id="2dPLnUJOhw_" role="3cqZAp">
+          <node concept="3cpWsn" id="2dPLnUJOhwC" role="3cpWs9">
             <property role="TrG5h" value="tmp" />
-            <node concept="17QB3L" id="6IgltWAZkFZ" role="1tU5fm" />
-            <node concept="Xl_RD" id="6IgltWAZkGh" role="33vP2m" />
+            <node concept="17QB3L" id="2dPLnUJOhwz" role="1tU5fm" />
+            <node concept="Xl_RD" id="2dPLnUJOhYI" role="33vP2m" />
           </node>
         </node>
         <node concept="3clFbF" id="6IgltWAZo18" role="3cqZAp">
@@ -373,49 +373,24 @@
                 <node concept="3clFbS" id="6IgltWAZt2f" role="1bW5cS">
                   <node concept="3clFbJ" id="duUnFc_Kew" role="3cqZAp">
                     <node concept="3clFbS" id="duUnFc_Key" role="3clFbx">
-                      <node concept="3clFbJ" id="TNboOekaeu" role="3cqZAp">
-                        <node concept="3clFbS" id="TNboOekaew" role="3clFbx">
-                          <node concept="3clFbF" id="TNboOekfri" role="3cqZAp">
-                            <node concept="d57v9" id="TNboOekg8E" role="3clFbG">
-                              <node concept="Xl_RD" id="TNboOekgvS" role="37vLTx">
-                                <property role="Xl_RC" value=" + " />
-                              </node>
-                              <node concept="37vLTw" id="TNboOekfrg" role="37vLTJ">
-                                <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="3fqX7Q" id="TNboOekcvz" role="3clFbw">
-                          <node concept="2OqwBi" id="TNboOeke0Q" role="3fr31v">
-                            <node concept="Xl_RD" id="TNboOekcvB" role="2Oq$k0" />
-                            <node concept="liA8E" id="TNboOekeGZ" role="2OqNvi">
-                              <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                              <node concept="37vLTw" id="TNboOekf41" role="37wK5m">
-                                <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
                       <node concept="3clFbF" id="TNboOek4yR" role="3cqZAp">
                         <node concept="d57v9" id="TNboOek57I" role="3clFbG">
-                          <node concept="37vLTw" id="TNboOek4yP" role="37vLTJ">
-                            <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+                          <node concept="37vLTw" id="2dPLnUJT$l6" role="37vLTJ">
+                            <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
                           </node>
                           <node concept="Xl_RD" id="TNboOek5Zm" role="37vLTx">
-                            <property role="Xl_RC" value="String(\&quot; " />
+                            <property role="Xl_RC" value="Serial.print(\&quot; " />
                           </node>
                         </node>
                       </node>
                       <node concept="3clFbF" id="6IgltWAZt91" role="3cqZAp">
                         <node concept="d57v9" id="6IgltWAZupC" role="3clFbG">
-                          <node concept="37vLTw" id="6IgltWAZt90" role="37vLTJ">
-                            <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+                          <node concept="37vLTw" id="2dPLnUJT$FH" role="37vLTJ">
+                            <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
                           </node>
                           <node concept="3cpWs3" id="6IgltWB0LtN" role="37vLTx">
                             <node concept="Xl_RD" id="6IgltWB0LEs" role="3uHU7w">
-                              <property role="Xl_RC" value=" \&quot;)" />
+                              <property role="Xl_RC" value=" \&quot;);\n" />
                             </node>
                             <node concept="3cpWs3" id="6IgltWAZzy7" role="3uHU7B">
                               <node concept="3cpWs3" id="6IgltWAZyRH" role="3uHU7B">
@@ -591,31 +566,6 @@
                             <ref role="3gnhBz" to="a90u:3KE6QPahCnN" resolve="Sensor" />
                           </node>
                           <node concept="3clFbS" id="TNboOekG_P" role="3Kbo56">
-                            <node concept="3clFbJ" id="6IgltWBedHK" role="3cqZAp">
-                              <node concept="3clFbS" id="6IgltWBedHM" role="3clFbx">
-                                <node concept="3clFbF" id="6IgltWBeg5z" role="3cqZAp">
-                                  <node concept="d57v9" id="6IgltWBehwC" role="3clFbG">
-                                    <node concept="Xl_RD" id="6IgltWBehwJ" role="37vLTx">
-                                      <property role="Xl_RC" value=" + " />
-                                    </node>
-                                    <node concept="37vLTw" id="6IgltWBf6dA" role="37vLTJ">
-                                      <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3fqX7Q" id="TNboOekMzW" role="3clFbw">
-                                <node concept="2OqwBi" id="TNboOekOkT" role="3fr31v">
-                                  <node concept="Xl_RD" id="TNboOekM$0" role="2Oq$k0" />
-                                  <node concept="liA8E" id="TNboOekPkk" role="2OqNvi">
-                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                                    <node concept="37vLTw" id="TNboOekPKH" role="37wK5m">
-                                      <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
                             <node concept="1_3QMa" id="6IgltWBlDgD" role="3cqZAp">
                               <node concept="2OqwBi" id="6IgltWBlDVX" role="1_3QMn">
                                 <node concept="37vLTw" id="6IgltWBlDyL" role="2Oq$k0">
@@ -649,10 +599,10 @@
                                   <node concept="3clFbF" id="TNboOekQHG" role="3cqZAp">
                                     <node concept="d57v9" id="TNboOekRww" role="3clFbG">
                                       <node concept="Xl_RD" id="TNboOekRwB" role="37vLTx">
-                                        <property role="Xl_RC" value="String(\&quot; " />
+                                        <property role="Xl_RC" value="Serial.print(\&quot; " />
                                       </node>
-                                      <node concept="37vLTw" id="TNboOekQHE" role="37vLTJ">
-                                        <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+                                      <node concept="37vLTw" id="2dPLnUJTD9Z" role="37vLTJ">
+                                        <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
                                       </node>
                                     </node>
                                   </node>
@@ -660,7 +610,7 @@
                                     <node concept="d57v9" id="6IgltWBdB82" role="3clFbG">
                                       <node concept="3cpWs3" id="6IgltWBeaaH" role="37vLTx">
                                         <node concept="Xl_RD" id="6IgltWBeavq" role="3uHU7w">
-                                          <property role="Xl_RC" value="))" />
+                                          <property role="Xl_RC" value="));\n" />
                                         </node>
                                         <node concept="3cpWs3" id="6IgltWBdOYh" role="3uHU7B">
                                           <node concept="3cpWs3" id="6IgltWBdKW8" role="3uHU7B">
@@ -673,7 +623,7 @@
                                               </node>
                                             </node>
                                             <node concept="Xl_RD" id="6IgltWBdNrP" role="3uHU7w">
-                                              <property role="Xl_RC" value=" \&quot;) + String(analogRead(" />
+                                              <property role="Xl_RC" value=" \&quot;);\nSerial.print(analogRead(" />
                                             </node>
                                           </node>
                                           <node concept="2OqwBi" id="6IgltWBdSMK" role="3uHU7w">
@@ -686,8 +636,8 @@
                                           </node>
                                         </node>
                                       </node>
-                                      <node concept="37vLTw" id="6IgltWBf6vt" role="37vLTJ">
-                                        <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+                                      <node concept="37vLTw" id="2dPLnUJTD_C" role="37vLTJ">
+                                        <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
                                       </node>
                                     </node>
                                   </node>
@@ -719,10 +669,10 @@
                                   <node concept="3clFbF" id="TNboOekYZ8" role="3cqZAp">
                                     <node concept="d57v9" id="TNboOekZLU" role="3clFbG">
                                       <node concept="Xl_RD" id="TNboOel0ed" role="37vLTx">
-                                        <property role="Xl_RC" value="String(\&quot; " />
+                                        <property role="Xl_RC" value="Serial.print(\&quot; " />
                                       </node>
-                                      <node concept="37vLTw" id="TNboOekYZ6" role="37vLTJ">
-                                        <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+                                      <node concept="37vLTw" id="2dPLnUJTGSJ" role="37vLTJ">
+                                        <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
                                       </node>
                                     </node>
                                   </node>
@@ -730,7 +680,7 @@
                                     <node concept="d57v9" id="3tbkZ_90yIe" role="3clFbG">
                                       <node concept="3cpWs3" id="3tbkZ_92e93" role="37vLTx">
                                         <node concept="Xl_RD" id="3tbkZ_92evF" role="3uHU7w">
-                                          <property role="Xl_RC" value="))" />
+                                          <property role="Xl_RC" value="));\n" />
                                         </node>
                                         <node concept="3cpWs3" id="3tbkZ_91PUO" role="3uHU7B">
                                           <node concept="3cpWs3" id="3tbkZ_91Hgs" role="3uHU7B">
@@ -743,7 +693,7 @@
                                               </node>
                                             </node>
                                             <node concept="Xl_RD" id="3tbkZ_91JZr" role="3uHU7w">
-                                              <property role="Xl_RC" value=" \&quot;) + String(digitalRead(" />
+                                              <property role="Xl_RC" value=" \&quot;);\nSerial.print(digitalRead(" />
                                             </node>
                                           </node>
                                           <node concept="2OqwBi" id="3tbkZ_91QXb" role="3uHU7w">
@@ -756,8 +706,8 @@
                                           </node>
                                         </node>
                                       </node>
-                                      <node concept="37vLTw" id="3tbkZ_90yIq" role="37vLTJ">
-                                        <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+                                      <node concept="37vLTw" id="2dPLnUJTI3G" role="37vLTJ">
+                                        <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
                                       </node>
                                     </node>
                                   </node>
@@ -794,17 +744,17 @@
         </node>
         <node concept="3clFbF" id="TNboOexA3g" role="3cqZAp">
           <node concept="d57v9" id="TNboOexAQM" role="3clFbG">
-            <node concept="37vLTw" id="TNboOexA3e" role="37vLTJ">
-              <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+            <node concept="37vLTw" id="2dPLnUJTOFC" role="37vLTJ">
+              <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
             </node>
             <node concept="Xl_RD" id="TNboOexE2N" role="37vLTx">
-              <property role="Xl_RC" value=" + String(\&quot; \&quot;) + String(millis())" />
+              <property role="Xl_RC" value="Serial.print(\&quot; \&quot;);\nSerial.println(millis());\n" />
             </node>
           </node>
         </node>
         <node concept="3cpWs6" id="6IgltWBecv6" role="3cqZAp">
-          <node concept="37vLTw" id="6IgltWBf6Lf" role="3cqZAk">
-            <ref role="3cqZAo" node="6IgltWAZkG3" resolve="tmp" />
+          <node concept="37vLTw" id="2dPLnUJTOL7" role="3cqZAk">
+            <ref role="3cqZAo" node="2dPLnUJOhwC" resolve="tmp" />
           </node>
         </node>
       </node>

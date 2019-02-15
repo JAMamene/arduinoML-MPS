@@ -47,11 +47,8 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x49f3ae9b886ce6d0L, 0x3c2a1b6d4a468603L, "actions"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         if (SPropertyOperations.getBoolean(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685e1L, 0x35ee97acc8ff7c9L, "watch"))) {
-          if (!("".equals(tmp.value))) {
-            tmp.value += " + ";
-          }
-          tmp.value += "String(\" ";
-          tmp.value += SPropertyOperations.getString(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " " + ((SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a4685fdL, "value")) == "LOW" ? 0 : 1)) + " \")";
+          tmp.value += "Serial.print(\" ";
+          tmp.value += SPropertyOperations.getString(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a468601L, "actuator")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " " + ((SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685faL, 0x3c2a1b6d4a4685fdL, "value")) == "LOW" ? 0 : 1)) + " \");\n";
         }
       }
     });
@@ -84,23 +81,20 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
               boolean noneMatched = true;
               if (noneMatched && SConceptOperations.isSubConceptOf(cncpt, MetaAdapterFactory.getConcept(0x6d5f556878454ac1L, 0xba976d57e4d58942L, 0x3c2a1b6d4a4685f3L, "ArduinoML.structure.Sensor"))) {
                 noneMatched = false;
-                if (!("".equals(tmp.value))) {
-                  tmp.value += " + ";
-                }
                 SAbstractConcept cncpt1 = SNodeOperations.getConcept(it);
                 switch (conceptIndex2.index(cncpt1)) {
                   case 0:
                     if (true) {
                       SNode sensor = ((SNode) it);
-                      tmp.value += "String(\" ";
-                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \") + String(analogRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "))";
+                      tmp.value += "Serial.print(\" ";
+                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \");\nSerial.print(analogRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "));\n";
                     }
                     break;
                   case 1:
                     if (true) {
                       SNode sensor = ((SNode) it);
-                      tmp.value += "String(\" ";
-                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \") + String(digitalRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "))";
+                      tmp.value += "Serial.print(\" ";
+                      tmp.value += SPropertyOperations.getString(sensor, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + " \");\nSerial.print(digitalRead(" + Brick__BehaviorDescriptor.getEditorName_id2tBpSqvfOzW.invoke(sensor) + "));\n";
                     }
                     break;
                   default:
@@ -110,7 +104,7 @@ public final class Reachable__BehaviorDescriptor extends BaseBHDescriptor {
         }
       }
     });
-    tmp.value += " + String(\" \") + String(millis())";
+    tmp.value += "Serial.print(\" \");\nSerial.println(millis());\n";
     return tmp.value;
   }
 
